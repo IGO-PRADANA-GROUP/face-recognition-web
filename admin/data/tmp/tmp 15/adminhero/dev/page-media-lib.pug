@@ -1,0 +1,119 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #MEDIA             |                                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-body
+            .display-6 Media Library
+            p.small.text-muted
+              | 112 Files
+
+      .col-md-8
+        .pull-xs-right(role="toolbar")
+          a.btn.btn-icon(href="#"): i.fa.fa-user-plus
+          a.btn.btn-icon(href="#"): i.fa.fa-trash-o
+          a.btn.btn-icon.js-view-btn(href="#"): i.fa.fa-list-ul
+          a.btn.btn-icon(href="#"): i.fa.fa-rss
+          a.btn.btn-icon: i.fa.fa-star.text-warning
+          .dropdown
+            button#media-add.btn.btn-success(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown" data-plugin="submenupicker")
+              | Add
+            .dropdown-menu.dropdown-menu-right(aria-labelledby="media-add")
+              button.dropdown-item(type="button")
+                i.ion-plus.m-r-1
+                | New folder
+              .dropdown-divider
+              button.dropdown-item(type="button")
+                i.ion-arrow-up-c.m-r-1
+                | Upload files
+              button.dropdown-item(type="button")
+                i.ion-arrow-up-c.m-r-1
+                | Upload folder
+              .dropdown-divider
+              button.dropdown-item(type="button")
+                i.ion-social-google.m-r-1
+                | Connect google doc
+              .dropdown-item.dropdown-submenu
+                | more
+                .dropdown-menu
+                  a.dropdown-item(href="#")
+                    i.fa.fa-file-archive-o.m-r-1
+                    | Zip file
+                  a.dropdown-item(href="#")
+                    i.fa.fa-search-plus.m-r-1
+                    | Connect more app
+
+
+  // #MEDIA
+  .container-fluid
+    = '\n'
+    .panel-wrapper
+
+      .panel
+        .panel-body
+
+          .file-group.js-view-control.grid-view
+            a(href="" data-toggle="modal" data-target="#mediamodal").file-item.selected
+              .file-object.text-xs-center
+                .fa.fa-file-word-o.fa-lg
+              .file-body demo-select.docx
+            each val in ["1","2","3","5","6","7","8","4"]
+                a(href="" data-toggle="modal" data-target="#mediamodal").file-item
+                  .file-object.text-xs-center
+                    .fa.fa-file-word-o.fa-lg
+                  .file-body demo-#{i}.docx
+            each val in ["1","2","3","5","6","7","8","4"]
+                a(href="" data-toggle="modal" data-target="#mediamodal").file-item
+                  .file-object
+                    img(src="assets/images/media/"+val+".jpg", alt="")
+                  .file-body
+                    | product-#{i}.jpg
+
+
+block bottomhtml
+  #mediamodal.modal( class="fade-scale side" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog(role='document')
+        .modal-content
+          img.img-fluid(src="assets/images/1.jpg", alt="")
+          .modal-body
+            p
+              b GENERAL INFO
+            table.table.table-no-border.small
+              tr
+                td Type
+                td Image
+              tr
+                td Dimensions
+                td 1,600 x 5,446
+              tr
+                td Size
+                td 1 MB
+
+
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes

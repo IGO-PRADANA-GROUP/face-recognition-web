@@ -1,0 +1,144 @@
+extends ./partials/_base
+
+block vars
+  - var menu = true
+  - var layout_drawer = true
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #FORM              | Form styles                            |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Form Validation
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .panel-wrapper
+
+      .panel
+        .panel-body
+          .responsive-nav
+            ul.nav.nav-inline
+              li.nav-item
+                a.nav-link(href="form-validation.html")
+                  .menu-lable Basic
+              li.nav-item
+                a.nav-link.active(href="form-validation-2.html")
+                  .menu-lable Events
+              li.nav-item
+                a.nav-link(href="form-validation-3.html")
+                  .menu-lable Steps
+              li.nav-item
+                a.nav-link(href="http://parsleyjs.org/doc/index.html#psly-usage-form" target="_blank")
+                  .menu-lable Plugins official website
+
+      // #FORM
+
+      = '\n'
+      .panel.panel-default
+        .panel-heading
+          h6.panel-title Events
+        .panel-body
+          .row
+            .col-md-6
+              form.js-validate-2.m-b-3(method="get" action="")
+                .form-group.text-xs-right
+                  button.btn.btn-primary(type="submit") Click Submit to validate
+                .invalid-form-error-message.text-danger
+                .first
+                  b.title Block 1
+                  .form-group
+                    label.form-control-label(for="v-username") Username
+                    input.form-control.focus(required
+                      data-parsley-trigger="change"
+                      data-parsley-length="[4, 20]"
+                      data-parsley-group="block1"
+                      id="v-username" name="v-username" type="text" placeholder="username")
+
+                .second.m-y-2.p-t-2
+                  b.title Block 2
+                  .form-group
+                    label.form-control-label(for="v-email") Email
+                    input.form-control.focus(required
+                      data-parsley-group="block2"
+                      id="v-email" name="v-email" type="email" placeholder="username")
+                  .form-group
+                    label.form-control-label(for="v-language") Language
+                    select.form-control.c-select(required
+                      id="v-language"
+                      data-parsley-group="block2"
+                      )
+                      option(value="") Select
+                      option(value="us") US
+                      option(value="uk") UK
+                      option(value="cn") CN
+                  .form-group
+                    label.form-control-label(for="v-message") Message
+                    textarea.form-control(required
+                      id="v-message"
+                      name="v-message"
+                      data-parsley-group="block2"
+                      data-parsley-trigger="keyup"
+                      data-parsley-minlength="20"
+                      data-parsley-maxlength="100"
+                      data-parsley-minlength-message="At least a 20 character comment.."
+                      data-parsley-validation-threshold="10"
+                      rows="3")
+
+            .col-md-6
+              pre(data-src="assets/markups/validate-2.html")
+
+
+          // END PANEL BODY
+        // END PANEL
+  // END CONTAINER FIUID
+  block js
+    script.
+      $('.js-validate-2').parsley({
+        successClass: "has-success",
+        errorClass: "has-danger",
+        classHandler: function (el) {
+          return el.$element.closest('.form-group');
+        },
+        errorsContainer: function (el) {
+          return el.$element.closest('.form-group');
+        },
+        errorsWrapper: "<small class='text-danger help-block'></small>",
+        errorTemplate: "<span></span>",
+        }).on('form:validate', function (formInstance) {
+        var ok = formInstance.isValid({group: 'block1', force: true}) || formInstance.isValid({group: 'block2', force: true});
+        $('.invalid-form-error-message')
+          .html(ok ? '' : 'You must correctly fill *at least one of these two blocks!')
+          .toggleClass('filled', !ok);
+        if (!ok)
+          formInstance.validationResult = false;
+      });
+
+      window.Parsley.on('field:error', function() {
+        this.$element.addClass('form-control-danger')
+      });
+
+      window.Parsley.on('field:success', function() {
+        this.$element.addClass('form-control-success')
+      });

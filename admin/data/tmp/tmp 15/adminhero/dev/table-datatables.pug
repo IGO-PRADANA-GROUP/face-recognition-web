@@ -1,0 +1,62 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TABLE             |                                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-body
+            .display-6 Datatables
+            p.small.text-muted 
+              | Table plug-in for jQuery
+      .col-md-8
+        .pull-xs-right(role="toolbar")
+          a.btn.btn-icon.icon-only: i.fa.fa-rss
+          a.btn.btn-icon.icon-only: i.fa.fa-star.text-warning
+          a.btn.btn-success(href="https://datatables.net" target="_blank") Official website
+
+  // #TABLE
+  .container-fluid
+    .panel-wrapper
+
+      .panel
+        .panel-body
+          table.table(data-plugin="DataTable")
+            include ./partials/_table-data-demo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

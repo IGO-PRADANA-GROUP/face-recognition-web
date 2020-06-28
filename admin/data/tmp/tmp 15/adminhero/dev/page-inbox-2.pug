@@ -1,0 +1,239 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #INBOX             |                                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #INBOX
+  .layout
+
+    = '\n'
+    .layout-sidebar
+      .fixed-sidebar.bg-faded
+        .list-group
+          .list-group-item
+            .form-control-search
+              input.form-contro.form-control.form-control-clean.c-placeholder(type="text" placeholder="Search")
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/0.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle Judith Sullivan
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/1.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle  Marie Bailey
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/2.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle  Jayden Campbell
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/3.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle  Madelyn Fallon
+
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/4.jpg", alt="")
+                  .dot.dot-online
+              .media-body.media-middle  Brice Kendall
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/5.jpg", alt="")
+                  .dot.dot-online
+              .media-body.media-middle  Trey Monahan
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/6.jpg", alt="")
+                  .dot.dot-busy
+              .media-body.media-middle  Shamar Clark
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/7.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle  Tessa Clarke
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/0.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle Judith Sullivan
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/1.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle  Marie Bailey
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/2.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle  Jayden Campbell
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/3.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle  Madelyn Fallon
+
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/4.jpg", alt="")
+                  .dot.dot-online
+              .media-body.media-middle  Brice Kendall
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/5.jpg", alt="")
+                  .dot.dot-online
+              .media-body.media-middle  Trey Monahan
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/6.jpg", alt="")
+                  .dot.dot-busy
+              .media-body.media-middle  Shamar Clark
+          a.list-group-item(href="#")
+            .media
+              .media-left
+                .circle-box.circle-box-sm
+                  img.circle-object(src="assets/images/face/7.jpg", alt="")
+                  .dot.dot-offline
+              .media-body.media-middle  Tessa Clarke
+          .list-group-item
+            .dropup
+              a#vdemo(href="#"  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                .circle-box.circle-box-sm
+                  .circle-object.bg-dark +
+              .dropdown-menu(aria-labelledby="vdemo")
+                each val in ['1','2','3','4']
+                  a.dropdown-item(href="#")
+                    .media
+                      .media-left.media-middle
+                        .circle-box.circle-box-sm
+                          img(src="assets/images/face/"+val+".jpg", alt="")
+                          .dot.dot-online
+                      .media-body Username
+                a.dropdown-item(href="#")
+                  i.ion-search.m-x-1
+                  | Find more user
+
+      a.sidebar-togger(href="#"): i.ion-android-more-vertical
+
+    = '\n'
+    .layout-content
+
+      .message-wrapper
+        .message-wrapper-inner
+          .media
+            .media-left
+              a(href="").circle-box
+                img(src="assets/images/face/1.jpg", alt="")
+                span.dot.dot-online
+            .media-body
+              .messager
+                b Dayton Weber, NY
+                .message-meta
+                  | 10/29, 7:31pm
+              .message-is
+                p That did offers her took we to a had feedback not mostly than country.
+          .media.owner
+            .media-left
+              a(href="").circle-box
+                img(src="assets/images/face/0.jpg", alt="")
+                span.dot.dot-online
+            .media-body
+              .messager
+                b Amari Evans
+                .message-meta 10/29, 7:31pm
+              .file-item.border-success
+                .file-object.bg-success
+                  span Nov 5, 2015
+                  h4 $20.00 USD
+                .file-body.bg-success-lighten: a(href="#") invoice.pdf
+          .media
+            .media-left
+              a(href="").circle-box
+                img(src="assets/images/face/1.jpg", alt="")
+                span.dot.dot-online
+            .media-body
+              .messager
+                b Dayton Weber
+                .message-meta 10/29, 7:31pm
+              .message-is
+                p Counter. Derived his and watch than catch
+          .media.owner
+            .media-left
+              a(href="").circle-box
+                img(src="assets/images/face/0.jpg", alt="")
+                span.dot.dot-online
+            .media-body
+              .messager
+                b Amari Evans
+                .message-meta 10/29, 7:31pm
+              .message-is
+                p Phase it skyline is it prudently, can sense a another,
+          .media.owner
+            .media-left
+              a(href="").circle-box
+                img(src="assets/images/face/0.jpg", alt="")
+                span.dot.dot-online
+            .media-body
+              .messager
+                b Amari Evans
+                .message-meta 10/29, 7:31pm
+              .message-is
+                p Model tone answers, met line continues texts. It two finger. By helped safe her of the him, though, and peace little the person, question. The herself parents are, in him live with fall play long full to derivative having the of one by dry general the forward hungrier this it a goals employed shortcuts. Him, funny and pity logging of into for near the proposal. The and not first me. Happens, upon and of but area he nice, of copy. Intentionally policy organization floundering gift is rivalry. Its a believe. Text, must business on feel to publication instance. In written.
+      .p-a-2
+        .row
+          .col-sm-9
+            .form-group
+              textarea.form-control(rows="3") Your meesage..
+          .col-sm-3
+            .form-group
+              button.btn.btn-primary.btn-block(type="button") SEND

@@ -1,0 +1,32 @@
+
+//notifyjs-bootstrap-base notifyjs-bootstrap-primary
+=notify($color, $icon)
+  background: $color
+  text-shadow: none
+  border: none
+  border-radius: 2px
+  padding: $grid-gutter-width/2 $grid-gutter-width
+  padding-left: $grid-gutter-width*2.5
+  color: #fff
+  font-weight: 300
+  position: relative
+  &:before
+    content: $icon
+    position: absolute
+    left: $grid-gutter-width
+    top: $grid-gutter-width/1.7
+    color: #fff
+    font-size: 12px
+    font-family: "Ionicons"
+
+body
+  .notifyjs-bootstrap-primary
+    +notify($brand-primary, "\f2b2")
+  .notifyjs-bootstrap-danger
+    +notify($brand-danger, "\f12a")
+  .notifyjs-bootstrap-success
+    +notify($brand-success, "\f122")
+  .notifyjs-bootstrap-info
+    +notify($brand-info, "\f143")
+  .notifyjs-bootstrap-warning
+    +notify($brand-warning, "\f101")

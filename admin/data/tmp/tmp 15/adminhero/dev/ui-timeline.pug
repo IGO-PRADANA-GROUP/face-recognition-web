@@ -1,0 +1,138 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TIMELINE          | Timeline styles                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-left.media-middle
+            i.ion-usb.fa-2x
+          .media-body
+            .display-6 Timeline UI
+            .small.text-muted 
+              | Showcasing events with better user experience.
+      //- .col-md-8
+      //-   .pull-xs-right(role="toolbar")
+      //-     a.btn.btn-icon.icon-only: i.fa.fa-rss
+      //-     a.btn.btn-icon.icon-only: i.fa.fa-star.text-warning
+      //-     button.btn.btn-secondary(type="button" data-toggle="collapse" href="#qmenu" aria-expanded="false" aria-controls="qmenu") Open menu
+      //-     button.btn.btn-success(type="button") Add Data
+  // END PAGE HEADER
+  
+  = '\n'
+  .container-fluid
+    .panel-wrapper
+
+      = '\n'
+      .panel
+        .panel-body
+          = '\n'
+          .row
+            .col-md-6
+              h6.demo-sub-title Alternating (Default timeline)
+              .timeline-wrapper
+                for val in ['1','2','3']
+                  .timeline-item
+                    .timeline-center-label
+                    .timeline-content
+                      .timeline-content-body 
+                        p This is a content only item #{val}.
+            .col-md-6
+              h6.demo-sub-title Aside
+              .timeline-wrapper.timeline-wrapper-aside
+                for val in ['1','2','3']
+                  .timeline-item
+                    .timeline-center-label
+                    .timeline-content
+                      .timeline-content-body 
+                        p This is a content only item #{val}.
+      
+      = '\n'
+      .panel
+        .panel-body
+          // #TIMELINE
+          h6.demo-sub-title Style
+          .timeline-wrapper
+            .timeline-item
+              .timeline-center-label.bg-info
+              .timeline-content.bg-info
+                .timeline-content-body 
+                  p This is a content only item.
+            .timeline-item
+              .timeline-center-label
+                .circle-box
+                  .circle-object.bg-danger: i.ion-star
+              .timeline-content
+                .timeline-media.text-xs-center
+                  .display-6 2
+                  strong.text-uppercase January
+                .timeline-content-body 
+                  p Pith spineless, by in motivator, and tones, linux concise more brought wanted but it the have had follow customary must far fly.
+
+            .timeline-item
+              .timeline-center-label
+                .circle-box
+                  .circle-object.bg-dark: i.ion-image
+              .timeline-content
+                .timeline-media
+                  img(src="assets/images/5.jpg", alt="" width="100")
+                .timeline-content-body
+                  h6 That take be of train to
+                  p Pith spineless, by in motivator, and tones, linux concise more brought wanted but it the have had follow customary must far fly.
+            .timeline-item
+              .timeline-center-label.bg-faded-lighten
+                .circle-box
+                  .circle-object.bg-faded-lighten 6. 7
+              .timeline-content
+                .timeline-media
+                  h3.m-y-2.text-xs-center 102
+                  .m-b-1.text-info
+                    span.fa-2x.fa-fw.fa.ion-man
+                    span.fa-2x.fa-fw.fa.ion-man
+                    span.fa-2x.fa-fw.fa.ion-man
+                  .m-b-1.text-danger
+                    span.fa-2x.fa-fw.fa.ion-woman
+                .timeline-content-body 
+                  p As writers, before the written walls company yards sleep
+            .timeline-item
+              .timeline-center-label.bg-faded-lighten
+                i.text-danger.ion-radio-waves.fa-2x
+              .timeline-content.bg-dark-lighten
+                .timeline-content-body 
+                  p Doing of was blocks whose a after the relative success
+
+
+      .panel
+        .panel-body
+          h4.demo-sub-title Markup
+          pre(data-src="assets/markups/timeline.html")
+
+
+
+
+
+
+
+

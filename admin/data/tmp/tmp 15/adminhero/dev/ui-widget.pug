@@ -1,0 +1,282 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #WIDGETS           | Widgets styles                         |
+       | 11. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+
+
+  = '\n'
+  // #WIDGETS
+  = '\n'
+
+  .container-fluid.gridster
+    ul
+
+      // Data info with label
+      li.widget.bg-primary(data-row="1" data-col="1" data-sizex="1" data-sizey="1")
+        .w-main.w-center 27
+        .w-center.bg-primary-lighten.text-uppercase.small Download
+     
+      // Data info with link
+      li.widget(data-row="1" data-col="1" data-sizex="1" data-sizey="1")
+        a(href="").w-center.w-main
+          .ion-filing
+          | Folder
+        .w-center
+          .text-desc 4221 files
+      
+      // Reminder
+      li.widget.widget-v(data-row="2" data-col="1" data-sizex="2" data-sizey="1")
+        .w-section.bg-dark-lighten.w-main 22
+        .w-section
+          dl
+            dd Reviews Demo
+            dd 
+             i.fa.fa-circle.m-r-1.text-warning
+             | Meeting HK
+          .w-pin-bottom-right
+            a.btn.btn-sm.btn-link + Add
+      
+      // Product card
+      li.widget(data-row="1" data-col="1" data-sizex="2" data-sizey="2")
+        .image
+          img.img-fluid(src="assets/images/2.jpg", alt="")
+        .w-section
+          strong.text-uppercase Private Istanbul Tour
+          .text-desc Istanbul
+          p $990 / 11 days
+          .w-pin-bottom-right
+            a.btn.btn-sm.btn-secondary(href="#") BOOK NOW
+      
+      // Search & results
+      li.widget(data-row="1" data-col="1" data-sizex="2" data-sizey="2")
+        .w-section
+          .form-control-search
+            input.form-control.form-control-clean.c-placeholder(type="text" placeholder="Search")
+        .w-section
+          .list-group
+            a.list-group-item(href="#") Pike Place Market
+            a.list-group-item(href="#") St. Lawrence Market
+            a.list-group-item(href="#") CN Tower
+            a.list-group-item(href="#") Yonge Street
+        .w-pin-top-right
+          a.btn.btn-xs.btn-secondary(href="#") share
+      
+      // Item info
+      li.widget(data-row="2" data-col="1" data-sizex="1" data-sizey="2")
+        .image
+          img.img-fluid(src="assets/images/2.jpg", alt="")
+        a.w-section(href="#")
+          .w-main 27, Dec
+          .text-desc
+            | We always enjoy a Saturday morning at the St. You'll be able to find food here that you won't find anywhere else.
+        .w-pin-top-right
+          i.fa.fa-heart.text-danger.fa-fw
+        .w-pin-top-left
+          .text-desc 12 reviews
+        
+      // User card
+      li.widget(data-row="2" data-col="2" data-sizex="2" data-sizey="2")
+        .w-section(style="background: url(assets/images/1.jpg); background-size: cover")
+          .w-user
+            img(src="assets/images/face/6.jpg", alt="")
+            div: a.name(href="#") @Thusbox
+        .row.text-xs-center.p-b-2
+          .col-xs-4
+            .text-desc Followers 
+            b 1729
+          .col-xs-4 
+            .text-desc Following
+            b 212
+          .col-xs-4 
+            .text-desc Tweets
+            b 200
+      
+      // Tag
+      li.widget(data-row="2" data-col="2" data-sizex="2" data-sizey="2")
+        .w-section.bg-danger-lighten
+          .w-main Topics
+          .form-control-search
+            input.form-control.form-control-clean.c-placeholder(type="text" placeholder="keywords")
+        .w-section
+          .tag-cloud
+            a(href="#") Quite
+            a(href="#") Stick
+            a(href="#") Word
+            a(href="#") big
+            a(href="#") homeless
+            a(href="#") gentlemen
+            a(href="#") prayers
+            a(href="#") assistant
+            a(href="#") place
+  
+      // Data icon background
+      li.widget.bg-info(data-row="2" data-col="3" data-sizex="1" data-sizey="1")
+        .w-main.w-center 
+          .ion-person-stalker.fa-fw
+          | 12K
+      
+      // User card
+      li.widget(data-row="2" data-col="4" data-sizex="2" data-sizey="1")
+        .w-section
+          .media.circle-box
+            .media-left
+              img.media-object(src="assets/images/face/1.jpg", alt="" width="60")
+            .media-body
+              strong Braydon Dominguez
+              .small bdominguez@netaddress.com
+
+        .w-section.bg-faded
+          .row.text-xs-center
+            .col-xs-4
+              .text-desc Followers 
+              b 1729
+            .col-xs-4 
+              .text-desc Following
+              b 212
+            .col-xs-4 
+              .text-desc Tweets
+              b 200
+      
+      // Quick menu
+      li.widget.widget-v(data-row="2" data-col="4" data-sizex="3" data-sizey="1")
+        .w-section
+          a(href="").w-center
+            .fa-lg.ion-filing
+            .display-6 Folder
+            .text-desc 4221 files
+        .w-section
+          a(href="").w-center
+            .fa-lg.ion-social-youtube
+            .display-6 Youtube
+            .text-desc 21 files
+        .w-section
+          a(href="").w-center
+            .fa-lg.ion-android-archive
+            .display-6 Archive
+            .text-desc 22 files
+      
+      // Datepicker
+      li.widget(data-row="4" data-col="1" data-sizex="2" data-sizey="2")
+        .adminhero-datepicker(data-jqui="datepicker")
+        
+      // Weacther
+      li.widget(data-row="4" data-col="1" data-sizex="1" data-sizey="1")
+        .w-section.w-main.bg-dark(style="background: url(assets/images/3.jpg); background-size: cover")
+          .wi.wi-night-snow-wind
+          | 12 &#8451;
+      
+      // TODO
+      li.widget(data-row="5" data-col="2" data-sizex="2" data-sizey="2")
+        .w-section
+          .w-main TODO
+          .list-group.m-t-2
+            .list-group-item.checkbox
+              input(type="checkbox")
+              label Act would of was time stick another
+            .list-group-item.checkbox
+              input(type="checkbox")
+              label One in key manipulate found
+            .list-group-item.checkbox
+              input(type="checkbox" checked)
+              label What come the way
+            .list-group-item.checkbox
+              input(type="checkbox")
+              label Can made road
+        
+      // CD cover
+      li.widget.bg-dark(data-row="4" data-col="2" data-sizex="1" data-sizey="1")
+        a.w-section.w-center(style="background: url(assets/images/4.jpg); background-size: cover" href="#")
+          .ion-ios-play.fa-2x
+          .w-pin-bottom-left.small 465 watching now
+      
+      // Carousel
+      li.widget(data-row="5" data-col="1" data-sizex="2" data-sizey="2")
+        .slider(data-plugin="sss")
+          img(src="assets/images/2.jpg", alt="")
+          img(src="assets/images/1.jpg", alt="")
+        .w-section
+          strong.text-uppercase Private Istanbul Tour
+          .text-desc Istanbul
+          p $990 / 11 days
+          .w-pin-bottom-right
+            a.btn.btn-sm.btn-secondary(href="#") BOOK NOW
+
+      
+      li.widget.widget-v(data-row="5" data-col="2" data-sizex="2" data-sizey="1")
+        .w-center.w-main EProject
+        .w-center
+          .easypie
+            span(data-plugin="easyPieChart" data-percent="73") 73 %
+
+      li.widget(data-row="5" data-col="2" data-sizex="2" data-sizey="2")
+        .w-center.w-main This Month
+        .w-section
+          canvas#demo-line-chart(width="270" height="150")
+          #demo-line-chart-legend.legend.legend-inline.m-t-1
+
+      li.widget(data-row="5" data-col="2" data-sizex="2" data-sizey="2" style="background: url(assets/images/2-1.jpg); background-size: cover")
+        .w-section
+          canvas#demo-bar-chart(width="270" height="100")
+          #demo-bar-chart-legend.legend.legend-inline.m-t-1
+        .w-bottom.text-white We always enjoy a Saturday morning at the St. You'll be able to find food here that you won't find anywhere else.
+
+      li.widget(data-row="3" data-col="2" data-sizex="2" data-sizey="2")
+        .w-section.w-main.bg-warning-lighten $30,000
+        .w-bottom
+          dl.row.text-desc
+            dd.col-sm-4 USA
+            dl.col-sm-8: progress.progress.progress-lg.progress-warning(value="25" max="100")
+            dd.col-sm-4 CHINA
+            dl.col-sm-8: progress.progress.progress-lg.progress-warning(value="12" max="100")
+            dd.col-sm-4 MALAYSIA
+            dl.col-sm-8: progress.progress.progress-lg.progress-warning(value="14" max="100")
+        .w-bottom.bg-faded
+          .row.text-xs-center
+            .col-xs-6
+              .text-desc Followers 
+              b 124
+            .col-xs-6 
+              .text-desc Following
+              b 142
+      
+      // Blank
+      li.widget(data-row="5" data-col="2" data-sizex="2" data-sizey="2")
+        .w-section
+          .w-pin-top-left Blank
+        
+        
+      li.widget(data-row="5" data-col="4" data-sizex="2" data-sizey="1")
+        .w-center.w-main
+          a(href="#") Hou to make it.
+
+
+       
+
+block js
+  script(src="assets/scripts/demo/line-chart.js")
+  script(src="assets/scripts/demo/bar-chart.js")
+
+    
+
+    
+
+
+

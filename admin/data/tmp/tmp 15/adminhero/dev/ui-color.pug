@@ -1,0 +1,122 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #COLOR             | Color styles                           |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+      h2.page-header-title Color
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .panel-wrapper
+
+        = '\n'
+        // #COLOR
+        .panel
+          .panel-body.text-xs-center
+            .panel-heding
+              h5.pane-title  Sidebar colours
+              p Add class name to body
+            .demo-ui-show.clearfix
+              h4.demo-sub-title Gradient
+              each val in ['orchid','cadetblue','joomla','influenza','moss','mirage','stellar','servquick']
+                .demo-ui-col
+                  .demo-ui-color(class=""+val+"")
+                  | #{val}
+            .demo-ui-show.clearfix
+              h4.demo-sub-title.m-t-3 Flat
+              each val in ['f-dark','f-dark-blue','f-blue','f-green', 'f-deep-taupe']
+                .demo-ui-col
+                    .demo-ui-color(class=""+val+"")
+                    | #{val}
+
+        = '\n'
+        .panel
+          .panel-body.text-xs-center
+            p
+              | use class name
+              code.code bg-*
+              | ,
+              code.code bg-*-darken
+              | ,
+              code.code bg-*-lighten
+              | ,
+              code.code text-*
+              | ,
+              code.code border-*
+
+            p All bg-class, Apart from faded, all text color will change to white
+            p of course you can overwirte with text-class
+
+            .demo-display-flex.m-b-1.m-t-3
+              .row
+                each val in ['primary', 'info', 'danger', 'warning', 'success','purple', 'aqua', 'coral', 'brown', 'pink', 'red', 'inverse', 'dark', 'faded']
+                  .col-xs-6.col-md-3
+                    .p-a-2(class="bg-"+val+"-darken")
+                      | Hi
+                      a(href="#").m-x-1 Link
+                    .p-a-2(class="bg-"+val) こんにちは
+                    .p-a-2(class="bg-"+val+"-lighten")  你好
+                    .p-a-2(class="border-"+val style="border: 1px solid")
+                    .m-y-1
+                      span(class="text-"+val) #{val}
+
+          // END PANEL BODY
+        // END PANEL
+
+        = '\n'
+        .panel
+          .panel-body.text-xs-center
+            p
+              | Use opacity to make dynamic separate layout by class name
+              code.code bg-dark-opacity-*
+              | ,
+              code.code bg-white-opacity-*
+            p Mix custom background-color
+
+            .row.m-b-3
+              .col-sm-4
+              .col-sm-4
+                p Inline background-color
+                .asColorPicker-wrap
+                  input.form-control.js-custom-mix-demo-pick(type="text" data-plugin='asColorPicker' value="#4183D7")
+
+            .demo-display-flex.m-b-1.m-t-3
+              .row
+                .col-xs-6
+                  .p-a-2.js-custom-mix-demo(style="color:#fff; background-color: #4183D7")
+                    -for (var i=1; i<99; ++i)
+                     div(class="p-a-1 m-b-1 small bg-dark-opacity-"+i)
+                      | こん bg-dark-opacity-#{i}
+                .col-xs-6
+                  .p-a-2.js-custom-mix-demo(style="color:#fff; background-color: #4183D7")
+                    -for (var i=1; i<99; ++i)
+                     div(class="p-a-1 m-b-1 small bg-white-opacity-"+i)
+                      | こん bg-white-opacity-#{i}
+
+          // END PANEL BODY
+        // END PANEL
+    // END PAGE WRAPPER
+  // END CONTAINER FIUID

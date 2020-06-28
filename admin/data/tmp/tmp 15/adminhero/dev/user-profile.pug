@@ -1,0 +1,192 @@
+extends ./partials/_base
+
+block contents
+  // TABLE OF CONTENTS.
+     Use search to find needed section.
+     ===================================================================
+     | 01. #CSS               | All CSS links and file paths           |
+     | 02. #FAVICONS          | Favicon icon, app icons                |
+     | 03. #BODY              | Body tag                               |
+     | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+     | 05. #MAIN              | Dashboard right wrapper                |
+     | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+     | 07. #TOP               | Top header navigation                  |
+     | 08. #TOP NAV           | Top header right navigation            |
+     
+     ===================================================================
+
+block main
+  .layout
+  
+    = '\n'
+    .layout-content
+      .page-header
+        .media
+          .media-left.media-meddle
+            img(src="assets/images/face/8.jpg", alt="" width="80")
+          .media-body
+            .row
+              .col-sm-6
+                .display-6 Malcolm Bragg
+                .small
+                  | Operations Director
+                  br
+                  | Margem International Ltd.
+                a.small(href="")
+                  | sthurston@bushstad.com
+              .col-sm-6
+                .row
+                  .col-xs-4
+                    .text-desc Followers 
+                    b 1729
+                  .col-xs-4 
+                    .text-desc Following
+                    b 212
+                  .col-xs-4 
+                    .text-desc Tweets
+                    b 200
+
+      .panel
+        .panel-body
+          .timeline-wrapper.timeline-wrapper-aside
+            .timeline-item
+              .timeline-center-label
+              .timeline-content
+                .timeline-content-body 
+                  
+                    a(href="#") Zx Network 
+                    | replied to the thread
+                    a(href="#")  Follow a posters Twitter account?.
+
+            .timeline-item
+              .timeline-center-label
+              .timeline-content
+                .timeline-content-body 
+                  
+                    a(href="#") Orx4me 
+                    | replied to the thread 
+                    a(href="#")  RM Marketplace
+
+            .timeline-item
+              .timeline-center-label
+              .timeline-content
+                .timeline-content-body 
+                  
+                    a(href="#") CabCon 
+                    | set their home page.
+            
+            .timeline-item
+              .timeline-center-label
+              .timeline-content
+                .timeline-content-body 
+                  
+                    a(href="#") CabCon 
+                    | set their location as Germany.
+
+            .timeline-item
+              .timeline-center-label
+                .circle-box
+                  .circle-object.bg-dark: i.ion-image
+              .timeline-content
+                .timeline-media
+                  img(src="assets/images/5.jpg", alt="" width="100")
+                .timeline-content-body
+                  .display-6 That take be of train to
+                  | Pith spineless, by in motivator, and tones, linux concise more brought wanted but it the have had follow customary must far fly.
+
+            .timeline-item
+              .timeline-center-label
+              .timeline-content
+                .timeline-content-body 
+                  
+                    a(href="#") CabCon 
+                    | has a new avatar.
+
+            .timeline-item
+              .timeline-center-label
+              .timeline-content
+                .timeline-content-body 
+                  
+                  a(href="#") melbo  
+                  | replied to the thread 
+                  a(href="#") Content = More Members.
+            
+            .timeline-item
+              .timeline-center-label.bg-success
+              .timeline-content.bg-success
+                .timeline-content-body
+                  a.text-white(href="#") invoice.pdf
+      
+      .panel
+        .panel-body.text-xs-center
+          button.btn.btn-secondary.ladda-button.m-b-1.js-btn(type="button" data-style="zoom-in")
+            .ladda-label More
+                
+
+
+    = '\n'
+    .layout-sidebar.bg-faded
+      .list-group
+        .list-group-item
+          .form-control-search
+            input.form-contro.form-control.form-control-clean.c-placeholder(type="text" placeholder="Search")
+        a.list-group-item(href="#") 
+          i.icon.ion-android-mail
+          | Message
+        a.list-group-item(href="#") 
+          i.icon.ion-android-time
+          | Timeline
+        a.list-group-item(href="#")
+          i.icon.ion-paper-airplane
+          | Mail
+      hr
+
+      .list-group
+        a.list-group-item(href="user-profile.html") 
+          i.icon.ion-paintbucket
+          | User profile 1
+        a.list-group-item(href="user-profile-2.html") 
+          i.icon.ion-paintbucket
+          | User profile 2
+        a.list-group-item(href="user-profile-3.html") 
+          i.icon.ion-paintbucket
+          | User profile 3
+      a.sidebar-togger(href="#"): i.ion-android-more-vertical
+
+
+
+
+block js
+  script.
+    // Ladda btton
+    Ladda.bind('.js-btn', { timeout: 2000 } )
+
+    // Bind progress buttons and simulate loading progress
+      Ladda.bind( '.js-progress-btn', {
+        callback: function( instance ) {
+          var progress = 0;
+          var interval = setInterval( function() {
+            progress = Math.min( progress + Math.random() * 0.1, 1 );
+            instance.setProgress( progress );
+            if( progress === 1 ) {
+              instance.stop();
+              clearInterval( interval );
+            }
+          }, 200 );
+        }
+      } );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

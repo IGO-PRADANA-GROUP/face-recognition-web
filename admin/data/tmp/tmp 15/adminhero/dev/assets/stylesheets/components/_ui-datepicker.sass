@@ -1,0 +1,68 @@
+.ui-datepicker
+  +hero_box-shadow
+  font-family: inherit
+
+.ui-datepicker,
+.adminhero-datepicker
+  .ui-widget
+    box-shadow: none
+    font-family: inherit
+    background: none
+    border: none 
+    border-radius: 0
+  .ui-datepicker 
+    padding: 0
+    .ui-datepicker-title 
+      padding: 0 50px
+  .ui-datepicker-header
+    position: relative
+    height: 50px
+    line-height: 50px
+    text-align: center
+    margin-bottom: .2em
+    .ui-datepicker-year
+      margin: 0 .3em
+    .ui-datepicker-prev,
+    .ui-datepicker-next
+      position: absolute
+      width: 50px
+      height: 50px
+      left: 0
+      top: 0
+      text-indent: -999pt
+      cursor: pointer
+      span
+        font-family: "Ionicons"
+        &:after
+          content: "\f124"
+          +hero_center
+          text-indent: 0
+    .ui-datepicker-next
+      left: auto
+      right: 0
+      span:after
+        content: "\f125"
+  .ui-datepicker-calendar
+    width: 100%
+    td a
+      width: 30px 
+      height: 30px
+      line-height: 30px
+      display: inline-block
+      border-radius: 50%
+      text-align: center
+      margin: 2px
+      color: $gray-dark
+      +hero_transition
+      &.ui-state-highlight,
+      &:hover
+        color: $body-color
+        font-weight: 600
+    th
+      font-size: 12px
+      font-weight: 500
+      height: 30px
+      color: $gray-dark
+    th,
+    td
+      text-align: center

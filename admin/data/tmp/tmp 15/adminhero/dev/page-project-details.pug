@@ -1,0 +1,196 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #PROJECT DETAIL    |                                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-left
+            img(src="assets/images/app.png", alt="" width="45")
+          .media-body
+            .display-6 E Project
+            p.small.text-muted
+              | 4 people in teams
+
+      .col-md-8
+        .pull-xs-right(role="toolbar")
+          a.btn.btn-icon.icon-only: i.fa.fa-rss
+          a.btn.btn-icon.icon-only: i.fa.fa-star.text-warning
+          button.btn.btn-secondary(type="button") Cancel
+          button.btn.btn-success(type="button") Save
+
+
+  //#PROJECT DETAIL
+  .container-fluid
+    = '\n'
+    .row-no-gutter.panel-wrapper
+      .col-md-8
+        .panel(data-mh='g0')
+          .block-header Team members
+          .panel-body
+            p Developers
+            .nav.nav-inline.m-b-1
+              each val in ['0','1','2','3','4','5','6']
+                a(href="").circle-box.nav-item
+                  img(src="assets/images/face/"+val+".jpg", alt="")
+                  .dot.dot-online
+              .nav-item.dropdown.dropdown-right
+                button#addpeople.btn.btn-link.text-primary.nav-item(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                  i.icon.ion-plus
+                .dropdown-menu.dropdown-menu-vertical(aria-labelledby="addpeople")
+                  button.dropdown-item(type="button") New member
+                  button.dropdown-item(type="button") New group
+            p.m-t-3 Designers
+            .nav.nav-inline.m-b-1
+              each val in ['3','4','5','6']
+                a(href="").circle-box.nav-item
+                  img(src="assets/images/face/"+val+".jpg", alt="")
+                  .dot.dot-online
+              .nav-item.dropdown.dropdown-right
+                button#addpeople.btn.btn-link.text-primary.nav-item(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                  i.icon.ion-plus
+                .dropdown-menu.dropdown-menu-vertical(aria-labelledby="addpeople")
+                  button.dropdown-item(type="button") New member
+                  button.dropdown-item(type="button") New group
+            p.m-t-3 PM
+            .nav.nav-inline.m-b-1
+              each val in ['5','6']
+                a(href="").circle-box.nav-item
+                  img(src="assets/images/face/"+val+".jpg", alt="")
+                  .dot.dot-online
+              .nav-item.dropdown.dropdown-right
+                button#addpeople.btn.btn-link.text-primary.nav-item(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                  i.icon.ion-plus
+                .dropdown-menu.dropdown-menu-vertical(aria-labelledby="addpeople")
+                  button.dropdown-item(type="button") New member
+                  button.dropdown-item(type="button") New group
+
+      .col-md-4
+        .panel.bg-inverse-darken(data-mh='g0')
+          progress.progress.loader.js-loader.hidden(class="progress-primary" value="1" max="100")
+          .panel-heading
+            .panel-title
+            .panel-tool
+              a.js-reload.text-white(href="#" data-toggle="tooltip" title="Update data"): i.icon.ion-refresh
+          .panel-body
+            dl.row
+              dt.col-xs-5 Download
+              dd.col-xs-7
+                span(data-plugin="counterUp") 87
+                progress.progress(class="progress-success" value="87" max="100")
+              dt.col-xs-5 Remove
+              dd.col-xs-7
+                span(data-plugin="counterUp") 5
+                progress.progress(class="progress-danger" value="5" max="100")
+              dt.col-xs-5 inactive
+              dd.col-xs-7
+                span(data-plugin="counterUp") 2
+                progress.progress(class="progress-warning" value="2" max="100")
+            p Expect, shall from present us, exerted at violin, what by readiness to brief up a no normal the country, anyone basically, or he of so of game, the to got an of slide that long in vows in would, are and times future is we turned of sports. Away, stage still the task. Finger. Managers for
+            a.btn.btn-secondary.btn-sm(href="#") More
+    = '\n'
+
+    = '\n'
+    .row-no-gutter.panel-wrapper
+      .col-md-8
+        .panel(data-mh='g1')
+          .block-header Summary
+
+          = '\n'
+          .panel-body
+            .media-list
+              .media
+                .media-left
+                  a.circle-box(href)
+                    img.media-objct(src="assets/images/face/2.jpg", alt="")
+                    .dot.dot-offline
+                .media-body
+                  p
+                    a(href="#") Zx Network
+                    | replied to the thread
+                    a(href="#")  Follow a posters Twitter account?.
+                  .small.text-muted 24 minutes ago
+              .media
+                .media-left
+                  a.circle-box(href)
+                    img.media-objct(src="assets/images/face/1.jpg", alt="")
+                    .dot.dot-offline
+                .media-body
+                  p
+                    a(href="#") Orx4me
+                    | replied to the thread
+                    a(href="#")  RM Marketplace
+                    .small.text-muted 24 minutes ago
+              .media
+                .media-left
+                  a.circle-box(href)
+                    img.media-objct(src="assets/images/face/2.jpg", alt="")
+                    .dot.dot-busy
+                .media-body
+                  p
+                    a(href="#") CabCon
+                    | set their location as Germany.
+                    .small.text-muted 24 minutes ago
+              .media
+                .media-left
+                  a.circle-box(href)
+                    img.media-objct(src="assets/images/face/1.jpg", alt="")
+                    .dot.dot-online
+                .media-body
+                  p
+                    a(href="#") CabCon
+                    | set their home page.
+                    .small.text-muted 20 minutes ago
+            // END MEDIA LIST
+      // END COL SUMMERY
+      = '\n'
+
+      .col-md-4
+        .panel.widget.bg-inverse-darken(data-mh='g1')
+          .panel-heading
+            .panel-title info.
+            .panel-tool
+              a.text-white(href="#" data-toggle="tooltip" title="Edit info"): i.icon.ion-edit
+          .panel-body
+            dl
+              dt Project Lead
+              dd Annabel Baker
+            dl
+              dt Location
+              dd  New York
+            dl
+              dt Active
+              dd  241
+
+          // #MAP
+          .embed-responsive.embed-responsive-16by9
+            #map.embed-responsive-item
+      // END COL MAP
+    = '\n'
+
+block js
+  // Add Custom google map
+  script(src="//maps.googleapis.com/maps/api/js?sensor=false")
+  script(src="assets/scripts/demo/map.js")

@@ -1,0 +1,114 @@
+.timeline-wrapper
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 50%
+    width: 2px
+    margin-left: -1px
+    background: $gray
+    height: 100%
+    @include media-breakpoint-down(sm)
+      left: 4%
+
+  .timeline-item
+    position: relative
+    margin-bottom: 2rem
+    +hero_transition
+    +clearfix
+    &:not(:first-child)
+      min-height: 1em
+    @include media-breakpoint-up(md)
+      margin-bottom: 0
+      &:nth-child(odd)
+        .timeline-media
+          float: right
+          margin-right: 0
+          margin-left: 15px
+      &:nth-child(even)
+        .timeline-content
+          float: right
+          &:before
+            right: auto
+            left: -7px
+            border: none
+            border-left: 1px solid $gray
+            border-bottom: 1px solid $gray
+
+  &.timeline-wrapper-aside
+    &:before
+      left: 4%
+    .timeline-center-label
+      left: 4%
+    .timeline-item
+      margin-bottom: 2rem
+      .timeline-content
+        width: 90%
+      .timeline-media
+        float: left
+        margin-left: 0
+        margin-right: 15px
+      &:nth-child(odd)
+        .timeline-content
+          float: right
+          &:before
+            right: auto
+            left: -7px
+            border: none
+            border-left: 1px solid $gray
+            border-bottom: 1px solid $gray
+
+  .timeline-content
+    background-color: #fff
+    min-height: 1em
+    width: 90%
+    margin-left: 10%
+    padding: $grid-gutter-width/2
+    font-size: 1rem
+    border-radius: $border-radius*2
+    border: 1px solid $gray
+    position: relative
+    z-index: 2
+    +clearfix
+    @include media-breakpoint-up(md)
+      width: 44%
+      margin-left: 0
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: -7px
+      height: 14px
+      width: 14px
+      background-color: inherit
+      transform: translateY(-50%) rotate(45deg)
+      border-left: 1px solid $gray
+      border-bottom: 1px solid $gray
+      @include media-breakpoint-up(md)
+        left: auto
+        right: -7px
+        border: none
+        border-right: 1px solid $gray
+        border-top: 1px solid $gray
+
+  .timeline-center-label
+    position: absolute
+    z-index: 3
+    left: 4%
+    top: 50%
+    transform: translate(-45%, -50%)
+    @include media-breakpoint-up(md)
+      left: 50%
+    &:empty
+      width: 10px
+      height: 10px
+      background-color: $gray
+      border-radius: 50%
+  
+  .timeline-media
+    float: left
+    margin-right: 15px
+
+  .timeline-content-body 
+    overflow: auto

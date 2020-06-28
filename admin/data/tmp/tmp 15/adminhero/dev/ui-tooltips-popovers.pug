@@ -1,0 +1,68 @@
+extends ./partials/_base
+
+block contents
+  // TABLE OF CONTENTS.
+     Use search to find needed section.
+     ===================================================================
+     | 01. #CSS               | All CSS links and file paths           |
+     | 02. #FAVICONS          | Favicon icon, app icons                |
+     | 03. #BODY              | Body tag                               |
+     | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+     | 05. #MAIN              | Dashboard right wrapper                |
+     | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+     | 07. #TOP               | Top header navigation                  |
+     | 08. #TOP NAV           | Top header right navigation            |
+     | 09. #TOOLTIPS          | Tooltips styles                       |
+     | 10. #POPOVERS          | Popovers styles                       |
+     | 11. #PLUGINS           | All scripts and plugins                |
+     ===================================================================
+
+block main
+
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Tooltips & Popovers
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper
+
+      = '\n'
+      // #TOOLTIPS
+      = '\n'
+      .col-sm-12
+        .panel.panel-default
+          .panel-heading
+            .panel-title Tooltips
+          .panel-body
+            p
+              | Make
+              a(href="#" data-toggle="tooltip" title="Tooltip on top")  different
+              | be acknowledge forget phase one of if abundantly for to that acquired might a near thoughts and so, dressing magicians indulged we've head for, that sides for looked children onto sad. Films were state was meals that I those problem the were been to little. Separated doing out
+            .row.m-t-1.p-y-3
+              each val in ['left','right','bottom','top']
+                .col-xs-6.col-sm-3.p-y-3
+                  .tooltip(class="tooltip-"+val role="tooltip" style="opacity: 1")
+                    .tooltip-arrow
+                    .tooltip-inner Tooltip on the left
+
+      // #TOOLTIPS
+      = '\n'
+      .col-sm-12
+        .panel.panel-default
+          .panel-heading
+            .panel-title Popovers
+          .panel-body
+            .row
+              .col-md-4.p-b-3
+                button.btn.btn-primary(type="#" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?") Demo
+              .col-md-8
+                each val in ['left','right','bottom','top']
+                  .col-sm-6(style="width:300px;height:200px")
+                    .popover(class="popover-"+val role="tooltip" style="opacity: 1")
+                      .popover-arrow
+                      h3.popover-title Popover #{val}
+                      .popover-content Dressing magicians indulged we've head for, that sides for looked children onto sad. Films were state was meals that I those problem the were been to little. Separated doing out.

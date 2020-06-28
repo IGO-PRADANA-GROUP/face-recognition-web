@@ -1,0 +1,19 @@
+.dot
+  position: absolute
+  z-index: 1
+  right: -2px
+  bottom: 0
+  width: 35%
+  height: 35%
+  max-width: 10px
+  max-height: 10px
+  border: 1px solid #fff
+  border-radius: 50%
+  background-color: #ccc
+  z-index: 9
+  &.dot-online
+    background-color: $brand-success
+  &.dot-offline
+    background-color: $gray-dark
+  &.dot-busy
+    background-color: $brand-danger

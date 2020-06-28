@@ -1,0 +1,155 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #MODAL             | Modal styles                           |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Modal
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .panel-wrapper
+
+        = '\n'
+        // #MODAL
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-"+val value="1" max="100")
+          .panel-heading
+            .panel-title Modal
+          .panel-body
+            .row
+              .col-md-6
+                .modal( style="display:block; position: relative; with: 100%; box-shadow: 0 -2px 10px rgba(0,0,0,.2);; opacity:1; visibility:visible")
+                  .modal-dialog(role='document' style="width: 100%; margin: 0")
+                    .modal-content
+                      .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                          span(aria-hidden='true'): i.ion-close
+                        h4.modal-title Modal title
+                      .modal-body
+                        p Offers ear in two a future hologram the weary outfits out have errors wanted bale the met quite to that based texts. The as future in some queen's and that this slight text, everyday. Past, and felt this unprofitable didn't rivalry. nulla.
+                      .modal-footer
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                        button.btn.btn-primary(type='button') Save changes
+              .col-md-6
+                h6.demo-sub-title Position
+                each val in ['top', 'side']
+                  button.btn.btn-primary.js-position(type="button" data-toggle="modal" data-target="#po-"+val) #{val}
+
+                h6.demo-sub-title.m-t-3 Effect
+                each val, index in ['fade-scale', 'right-slide-in', 'bottom-slide-in', 'fall', 'flip-horizontal', 'flip-vertical', 'sign-3d', 'zoomIn', 'overlayer', ]
+                  button.btn.btn-primary.m-b-1.js-position(type="button" data-toggle="modal" data-target="#modal-"+index) #{val}
+
+          // END PANEL BODY
+        // END PANEL
+
+        = '\n'
+
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-#{val}" value="1" max="100")
+          .panel-heading
+            .panel-title Custom Layouts
+          .panel-body
+            .row
+              .col-md-6
+                .modal( style="display:block; position: relative; with: 100%; box-shadow: 0 -2px 10px rgba(0,0,0,.2); opacity:1; visibility:visible" )
+                  .modal-dialog(role='document' style="width: 100%; margin: 0")
+                    .modal-content.text-xs-center
+                      .block-header.bg-primary Hi, admin
+                      .modal-body
+                        h4.m-t-2 That yield a that thought how
+                        p Offers ear in two a future hologram the weary outfits out have errors wanted bale the met quite to that based texts. The as future in some queen's and that this slight text, everyday. Past, and felt this unprofitable didn't rivalry. nulla.
+                      .modal-footer.text-xs-center
+                        button.btn.btn-primary(type='button', data-dismiss='modal') Close
+              .col-md-6
+                .modal( style="display:block; position: relative; with: 100%; box-shadow: 0 -2px 10px rgba(0,0,0,.2); opacity:1; visibility:visible" )
+                  .modal-dialog(role='document' style="width: 100%; margin: 0")
+                    .modal-content.text-xs-center
+                      .block-header.text-success: i.ion-checkmark-circled
+                      .modal-body
+                        h4 Done.
+                        p Offers ear in two a future hologram the weary outfits out have errors wanted bale the met quite to
+                      .modal-footer.text-xs-center
+                        button.btn.btn-success(type='button', data-dismiss='modal') Close
+
+            .row.m-t-3
+              .col-md-6
+                .modal( style="display:block; position: relative; with: 100%; box-shadow: 0 -2px 10px rgba(0,0,0,.2); opacity:1; visibility:visible" )
+                  .modal-dialog(role='document' style="width: 100%; margin: 0")
+                    .modal-content.text-xs-center.bg-dark
+                      .block-header lol
+                      .modal-body
+                        h4.m-t-2 That yield a that thought how
+                        p Offers ear in two a future hologram the weary outfits out have errors wanted bale the met quite to that based texts. The as future in some queen's and that this slight text, everyday. Past, and felt this unprofitable didn't rivalry. nulla.
+                      .modal-footer
+                        button.btn.btn-link.text-white(type='button', data-dismiss='modal') Close
+              .col-md-6
+                .modal( style="display:block; position: relative; with: 100%; box-shadow: 0 -2px 10px rgba(0,0,0,.2); opacity:1; visibility:visible" )
+                  .modal-dialog(role='document' style="width: 100%; margin: 0")
+                    .modal-content
+                      .modal-body
+                        .media
+                          .media-left
+                            a(href="")
+                              img.img-rounded(src="assets/images/face/1.jpg", alt="" width="100")
+                          .media-body
+                            h6 Dayton Weber
+                            small.text-muted Consultant
+
+                            p Offers ear in two a future hologram the weary outfits out have errors wanted bale the met quite to
+                      .modal-footer
+                        button.btn.btn-secondary.btn-small(type='button', data-dismiss='modal') Close
+                        button.btn.btn-success.btn-small(type='button', data-dismiss='modal') View profile
+
+
+
+  // END CONTAINER FIUID
+block bottomhtml
+  each val in ['top', 'center', 'bottom', 'side']
+    .modal(id="po-"+val class="fade-scale "+val tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true'): i.ion-close
+            h4.modal-title Modal title
+          .modal-body
+            p Offers ear in two a future hologram the weary outfits out have errors wanted bale the met quite to that based texts. The as future in some queen's and that this slight text, everyday. Past, and felt this unprofitable didn't rivalry.
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes
+  each val, index in ['fade-scale', 'right-slide-in', 'bottom-slide-in', 'fall', 'flip-horizontal', 'flip-vertical', 'sign-3d', 'zoomIn', 'overlayer', ]
+    .modal.top(id="modal-"+index class=""+val+"" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true'): i.ion-close
+            h4.modal-title Modal title
+          .modal-body
+            p Offers ear in two a future hologram the weary outfits out have errors wanted bale the met quite to that based texts. The as future in some queen's and that this slight text, everyday. Past, and felt this unprofitable didn't rivalry.
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes

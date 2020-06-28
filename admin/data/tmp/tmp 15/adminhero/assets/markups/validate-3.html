@@ -1,0 +1,99 @@
+<form class="js-validate-3" method="get" action="">
+  <div class="form-group text-xs-right">
+    <button class="btn btn-primary" type="submit">Click Submit to validate</button>
+  </div>
+
+  <div class="invalid-form-error-message text-danger"></div>
+
+  <div class="form-step-section">
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input class="form-control" type="text" name="firstname" required="" data-parsley-group="block-0">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input class="form-control" type="text" name="lastname" required="" data-parsley-group="block-0">
+    </div>
+  </div>
+
+  <div class="form-step-section">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="form-control" type="email" name="email" required="" data-parsley-group="block-1">
+    </div>
+  </div>
+
+  <div class="form-step-section">
+    <div class="form-group">
+      <label for="color">Favorite color:</label>
+      <input class="form-control" type="text" name="color" required="" data-parsley-group="block-2">
+    </div>
+  </div>
+
+  <div class="form-navigation">
+    <button class="previous btn btn-info pull-left" type="button" style="display: none;">&lt; Previous</button>
+    <button class="next btn btn-info pull-right" type="button">Next &gt;</button>
+    <input class="btn btn-primary pull-right" type="submit" style="display: none;"><span class="clearfix"></span>
+  </div>
+
+</form>
+
+<script>
+  var $sections = $('.form-step-section');
+
+  function navigateTo(index) {
+    // Mark the current section with the class 'current'
+    $sections
+      .removeClass('current')
+      .eq(index)
+        .addClass('current');
+    // Show only the navigation buttons that make sense for the current section:
+    $('.form-navigation .previous').toggle(index > 0);
+    var atTheEnd = index >= $sections.length - 1;
+    $('.form-navigation .next').toggle(!atTheEnd);
+    $('.form-navigation [type=submit]').toggle(atTheEnd);
+  }
+
+  function curIndex() {
+    // Return the current index by looking at which section has the class 'current'
+    return $sections.index($sections.filter('.current'));
+  }
+
+  // Previous button is easy, just go back
+  $('.form-navigation .previous').click(function() {
+    navigateTo(curIndex() - 1);
+  });
+
+  var parslelConfig = {
+    successClass: "has-success",
+    errorClass: "has-danger",
+    classHandler: function (el) {
+      return el.$element.closest('.form-group');
+    },
+    errorsContainer: function (el) {
+      return el.$element.closest('.form-group');
+    },
+    errorsWrapper: "<small class='text-danger help-block'></small>",
+    errorTemplate: "<span></span>",
+  }
+
+  // Next button goes forward iff current block validates
+  $('.form-navigation .next').click(function() {
+    if ($('.js-validate-3').parsley(parslelConfig).validate({group: 'block-' + curIndex()}))
+      navigateTo(curIndex() + 1);
+  });
+
+  // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
+  $sections.each(function(index, section) {
+    $(section).find(':input').attr('data-parsley-group', 'block-' + index);
+  });
+  navigateTo(0); // Start at the beginning
+
+  window.Parsley.on('field:error', function() {
+    this.$element.addClass('form-control-danger')
+  });
+
+  window.Parsley.on('field:success', function() {
+    this.$element.addClass('form-control-success')
+  });
+</script>

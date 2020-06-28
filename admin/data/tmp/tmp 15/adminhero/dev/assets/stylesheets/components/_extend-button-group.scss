@@ -1,0 +1,10 @@
+// Make the div behave like a button
+.btn-group,
+.btn-group-vertical {
+  .btn-icon {
+    border-radius: 0;
+    &:hover {
+      background: none
+    }
+  }
+}

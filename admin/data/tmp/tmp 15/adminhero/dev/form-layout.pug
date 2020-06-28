@@ -1,0 +1,238 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #INLINE            |                                        |
+       | 12. #TOOLBAR           |                                        |
+       | 13. #BASIC             |                                        |
+       | 14. #NO LABEL          |                                        |
+       | 15. #HORIZONTAL        |                                        |
+       | 16. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-body
+            .display-6 Form layouts
+            .small.text-muted
+              | Use a form layout that is appropriate for the content and app
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.js-grid-wrapper.panel-wrapper
+
+      // #INLINE
+      .col-xs-12.js-grid
+        .panel
+          .panel-heading
+            h6.panel-title Inline
+          .panel-body
+            form.form-inline
+              .form-group
+                label.form-control-label(for="inputInlineUsername") Username
+                input#inputInlineUsername.form-control(type="text", name="inputUsername", placeholder="Username", autocomplete="off")
+              .form-group
+                label.form-control-label(for="inputInlinePassword") Password
+                input#inputInlinePassword.form-control(type="password", name="inputPassword", placeholder="Password", autocomplete="off")
+              .form-group
+                .checkbox
+                  input#formInlineRemember(type="checkbox", name="inputCheckboxRemember", checked="", autocomplete="off")
+                  label(for="formInlineRemember") Remember me
+              .form-group
+                button.btn.btn-primary.btn-outline(type="submit") Login
+
+            form.form-inline.m-t-3
+              .form-group
+                input#inputInlineUsername.form-control(type="text", name="inputUsername", placeholder="Username", autocomplete="off")
+              .form-group
+                input#inputInlinePassword.form-control(type="password", name="inputPassword", placeholder="Password", autocomplete="off")
+              .form-group
+                .checkbox
+                  input#formInlineRemember2(type="checkbox", name="inputCheckboxRemember", checked="", autocomplete="off")
+                  label(for="formInlineRemember2") Remember me
+              .form-group
+                button.btn.btn-primary.btn-outline(type="submit") Login
+      // END COL
+      = '\n'
+
+      // #TOOLBAR
+      .col-xs-12.js-grid
+        .panel
+          .panel-heading
+            h6.panel-title Toolbar
+          .panel-body
+            .form-inline.toolbar
+              .form-group.form-control-search
+                input.form-control.form-control(type="text" placeholder="Search")
+              .form-group
+                ul.pagination.pagination-merge
+                  li.page-item
+                    a.page-link(href="#", aria-label="Previous")
+                      span(aria-hidden="true"): i.ion-chevron-left
+                      span.sr-only Previous
+                  li.page-item
+                    a.page-link(href="#", aria-label="Next")
+                      span(aria-hidden="true"): i.ion-chevron-right
+                      span.sr-only Next
+              .form-group.hidden-md-down
+                .switch.switch-xs
+                  input(type="checkbox")
+                  label
+              .form-group.hidden-md-down
+                .checkbox
+                  input#formInlineRemember(type="checkbox", name="inputCheckboxRemember", checked="", autocomplete="off")
+                  label(for="formInlineRemember") Check
+              .form-group.hidden-md-down
+                button.btn.btn-secondary-outline(type="submit") Add new
+              .form-group.hidden-lg-down
+                .dropdown
+                  button#demoDd-1.btn.btn-secondary-outline.dropdown-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    i.ion-gear-b
+                  .dropdown-menu(aria-labelledby="demoDd-1")
+                    button.dropdown-item(type="button") Keep
+                    button.dropdown-item(type="button") Reply
+                    button.dropdown-item(type="button") Reply All
+              .form-group.hidden-lg-down
+                .btn-group(role="group")
+                  each val in ['shuffle', 'loop', 'clock']
+                    button.btn.btn-secondary-outline(type='button')
+                      i(class="ion-"+val)
+              .form-group
+                button.btn.btn-facebook(type="button")
+                  i.fa.icon.fa-facebook
+                  .btn-label Sign up with facebook
+      // END COL
+      = '\n'
+
+      // #BASIC
+      .col-xs-12.col-sm-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            h6.panel-title BASIC FORM
+          .panel-body
+            form(autocomplete="off")
+              .row
+                .form-group.col-sm-6
+                  label.form-form-control-label(for="formBasicFirstName") First Name
+                  input#formBasicFirstName.form-control(type="text", name="inputFirstName", placeholder="First Name", autocomplete="off")
+                .form-group.col-sm-6
+                  label.form-form-control-label(for="formBasicLastName") Last Name
+                  input#formBasicLastName.form-control(type="text", name="inputLastName", placeholder="Last Name", autocomplete="off")
+              .form-group
+                label.form-form-control-label Gender
+                div
+                  .radio.radio-inline
+                    input#formBasicMale(type="radio", name="inputGender")
+                    label(for="formBasicMale") Male
+                  .radio.radio-inline
+                    input#formBasicFemale(type="radio", name="inputGender", checked="")
+                    label(for="formBasicFemale") Female
+              .form-group
+                label.form-form-control-label(for="formBasicEmail") Email Address
+                input#formBasicEmail.form-control(type="email", name="inputEmail", placeholder="Email Address", autocomplete="off")
+              .form-group
+                label.form-form-control-label(for="formBasicPassword") Password
+                input#formBasicPassword.form-control(type="password", name="inputPassword", placeholder="Password", autocomplete="off")
+              .form-group
+                .checkbox
+                  input#formBasicRemember(type="checkbox", name="inputCheckbox", checked="", autocomplete="off")
+                  label(for="formBasicRemember") Remember Me
+              .form-group
+                button.btn.btn-primary(type="button") Sign Up
+            // END BASIC FORM
+        // END PANEL
+      // END COL
+      = '\n'
+
+      // #NO LABEL
+      .col-xs-12.col-sm-6.js-grid
+        .panel
+          .panel-heading
+            h6.panel-title No label
+          .panel-body
+            form
+              .row
+                .form-group.col-sm-6
+                  input.form-control(type="text", name="firstname", placeholder="First Name", autocomplete="off")
+                .form-group.col-sm-6
+                  input.form-control(type="text", name="lastname", placeholder="Last Name", autocomplete="off")
+              .form-group
+                .radio.radio-inline
+                  input#noLabelMale(type="radio", name="inputRadioGender")
+                  label(for="noLabelMale") Male
+                .radio.radio-inline
+                  input#noLabelFemale(type="radio", name="inputRadioGender", checked="")
+                  label(for="noLabelFemale") Female
+              .form-group
+                input.form-control(type="email", name="email", placeholder="Email Address", autocomplete="off")
+              .form-group
+                input.form-control(type="password", name="password", placeholder="Password", autocomplete="off")
+              .form-group
+                textarea.form-control(placeholder="About you")
+              .form-group
+                .checkbox
+                  input#inputCheckboxAgree(type="checkbox", name="inputCheckboxesAgree", checked="", autocomplete="off")
+                  label(for="inputCheckboxAgree") Agree Policy
+              .form-group
+                button.btn.btn-primary(type="button") Submit
+      // END COL
+      = '\n'
+
+      // #HORIZONTAL
+      .col-xs-12.col-sm-6.js-grid
+        .panel
+          .panel-heading
+            h6.panel-title HORIZONTAL
+          .panel-body
+            form.form-horizontal
+            .form-group.row
+              label.col-sm-3.form-control-label Your Name:
+              .col-sm-9
+                input.form-control(type="text", name="name", placeholder="Full Name", autocomplete="off")
+            .form-group.row
+              label.col-sm-3.form-control-label Your Gender:
+              .col-sm-9
+                .radio.radio-inline
+                  input#formHorizontalMale(type="radio", name="inputRadiosMale2")
+                  label(for="formHorizontalMale") Male
+                .radio.radio-inline
+                  input#formHorizontalFemale(type="radio", name="inputRadiosMale2", checked="")
+                  label(for="formHorizontalFemale") Female
+            .form-group.row
+              label.col-sm-3.form-control-label Your Email:
+              .col-sm-9
+                input.form-control(type="email", name="email", placeholder="@email.com", autocomplete="off")
+            .form-group.row
+              label.col-sm-3.form-control-label Description:
+              .col-sm-9
+                textarea.form-control(placeholder="Briefly Describe Yourself")
+            .form-group.row
+              .col-sm-9.col-sm-offset-3
+                button.btn.btn-primary(type="button") Submit
+                button.btn.btn-default.btn-outline(type="reset") Reset
+      // END COL
+      = '\n'
+
+    // ROW
+  // END CONTAINER FIUID

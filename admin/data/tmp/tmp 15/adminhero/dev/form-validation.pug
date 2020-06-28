@@ -1,0 +1,150 @@
+extends ./partials/_base
+
+block vars
+  - var menu = true
+  - var layout_drawer = true
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #FORM              | Form styles                            |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Form Validation
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .panel-wrapper
+
+      .panel
+        .panel-body
+          .responsive-nav
+            ul.nav.nav-inline
+              li.nav-item
+                a.nav-link.active(href="form-validation.html")
+                  .menu-lable Basic
+              li.nav-item
+                a.nav-link(href="form-validation-2.html")
+                  .menu-lable Events
+              li.nav-item
+                a.nav-link(href="form-validation-3.html")
+                  .menu-lable Steps
+              li.nav-item
+                a.nav-link(href="http://parsleyjs.org/doc/index.html#psly-usage-form" target="_blank")
+                  .menu-lable Plugins official website
+
+
+      // #FORM
+
+      = '\n'
+      .panel.panel-default
+        .panel-heading
+          h6.panel-title Basic
+        .panel-body
+          .row
+            .col-md-6
+              form.js-validate-1.m-b-3(method="get" action="")
+                .form-group.text-xs-right
+                  button.btn.btn-primary(type="submit") Click Submit to validate
+                .form-group
+                  label.form-control-label(for="v-username") Username
+                  input.form-control.focus(required
+                    data-parsley-trigger="change"
+                    id="v-username" name="v-username" type="text" placeholder="username")
+                .form-group
+                  label.form-control-label(for="v-email") Email
+                  input.form-control.focus(required
+                    id="v-email" name="v-email" type="email" placeholder="username")
+                .form-group
+                  label.form-control-label(for="v-language") Language
+                  select.form-control.c-select(required
+                    id="v-language"
+                    )
+                    option(value="") Select
+                    option(value="us") US
+                    option(value="uk") UK
+                    option(value="cn") CN
+                .form-group
+                  label.form-control-label(for="v-message") Message
+                  textarea.form-control(required
+                    id="v-message"
+                    name="v-message"
+                    data-parsley-trigger="keyup"
+                    data-parsley-minlength="20"
+                    data-parsley-maxlength="100"
+                    data-parsley-minlength-message="At least a 20 character comment.."
+                    data-parsley-validation-threshold="10"
+                    rows="3")
+                .form-group
+                    label.form-control-label(for="v-sizes") Sizes
+                    .checkbox
+                      input(name="v-sizes" id="sizesF" type="checkbox" value="" required data-parsley-mincheck="2")
+                      label S
+                    .checkbox
+                      input(name="v-sizes" id="sizesM" type="checkbox" value="")
+                      label M
+                    .checkbox
+                      input(name="v-sizes" id="sizesO" type="checkbox" value="")
+                      label L
+                    .checkbox
+                      input(name="v-sizes" id="sizesXL" type="checkbox" value="")
+                      label XL
+                .form-group
+                    label.form-control-label(for="v-colour") Colour
+                    .radio
+                      input(name="v-colour" id="colourB" type="radio" value="" required)
+                      label Block
+                    .radio
+                      input(name="v-colour" id="colourW" type="radio" value="")
+                      label White
+                .form-group.text-xs-right
+                  button.btn.btn-primary(type="submit") Submit
+            .col-md-6
+              pre(data-src="assets/markups/validate-1.html")
+
+
+          // END PANEL BODY
+        // END PANEL
+  // END CONTAINER FIUID
+  block js
+    script.
+      $(".js-validate-1").parsley({
+          successClass: "has-success",
+          errorClass: "has-danger",
+          classHandler: function (el) {
+            return el.$element.closest('.form-group');
+          },
+          errorsContainer: function (el) {
+            return el.$element.closest('.form-group');
+          },
+          errorsWrapper: "<small class='text-danger help-block'></small>",
+          errorTemplate: "<span></span>",
+      });
+
+      window.Parsley.on('field:error', function() {
+        this.$element.addClass('form-control-danger')
+      });
+
+      window.Parsley.on('field:success', function() {
+        this.$element.addClass('form-control-success')
+      });

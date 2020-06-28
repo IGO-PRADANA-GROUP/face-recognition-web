@@ -1,0 +1,1 @@
+<script>location.href = "tabel/home/index.php";</script>

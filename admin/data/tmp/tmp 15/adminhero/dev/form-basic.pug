@@ -1,0 +1,238 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #FORM              | Form styles                            |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Form General Elements
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.js-grid-wrapper.panel-wrapper
+
+            // #FORM
+
+            = '\n'
+            .col-sm-12.js-grid
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title Elements
+                .panel-body
+                  .row.m-b-3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Focus
+                      input.form-control.focus(type="text" placeholder="focus")
+                    .form-group.col-sm-4
+                      h4.demo-sub-title disabled
+                      fieldset.disabled
+                        input.form-control(type="text" placeholder="disabled" disabled)
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Static
+                      .form-control-static email@example.com
+                  .row.m-b-3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title No border & background
+                      input.form-control.form-control-clean(type="text" placeholder="Type")
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Custom placeholder
+                      input.form-control.form-control-clean.c-placeholder(type="text" placeholder="Type")
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Border bottom only
+                      input.form-control.form-control-border-b(type="text" placeholder="type")
+                  .row.m-b-3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Select
+                      select.form-control.c-select
+                        option 1
+                        option 2
+                        option 3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Select
+                      select.form-control(multiple)
+                        option 1
+                        option 2
+                        option 3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Textarea
+                      textarea.form-control(rows="3")
+                  .row.m-b-3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Checkboxes
+                      .checkbox
+                        input(type="checkbox" value="" checked)
+                        label checked
+                      .checkbox
+                        input(type="checkbox" value="")
+                        label unchecked
+                      .checkbox
+                        input(type="checkbox" value="" checked disabled)
+                        label checked
+                      .checkbox
+                        input(type="checkbox" value="" disabled)
+                        label unchecked
+
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Radios
+                      .radio
+                        input(type="radio" value="" checked)
+                        label checked
+                      .radio
+                        input(type="radio" value="")
+                        label unchecked
+                      .radio
+                        input(type="radio" value="" checked disabled)
+                        label checked
+                      .radio
+                        input(type="radio" value="" disabled)
+                        label unchecked
+                    .form-group.col-sm-4
+                      h4.demo-sub-title File browser, multiple support
+                      .form-group.c-upload
+                        input(data-plugin="upload" type="file" name="file" data-multiple-caption="{count} files selected"  multiple )
+                        label(for="file")
+                          | Upload files
+                      .form-group.c-upload
+                        input(data-plugin="upload" type="file" name="file-1" data-multiple-caption="{count} files selected"  multiple )
+                        label(for="file")
+                          i.m-r-1.fa.fa-upload
+                          | Upload files with icon
+                  .row.m-b-3
+                    .form-group.col-sm-8
+                      h4.demo-sub-title Colours
+                      .nav.nav-inline
+                        each val in ['primary', 'info', 'danger', 'warning', 'success','purple', 'aqua', 'coral', 'brown', 'pink', 'red', 'inverse', 'dark']
+                          .nav-item
+                            .radio(class="radio-"+val)
+                              input(type="radio" value="" checked)
+                              label
+                            .checkbox(class="checkbox-"+val)
+                              input(type="checkbox" value="" checked)
+                              label
+                    .col-sm-4
+                      h4.demo-sub-title Search
+                      .form-group.input-group
+                        input.form-control(type="text" placeholder="Search")
+                        .input-group-btn
+                          button.btn.btn-primary(type="button"): i.icon.ion-ios-search-strong
+                      .form-group.form-control-search
+                        input.form-control(type="text" placeholder="Search")
+                      .form-group.form-control-search
+                        input.form-control.form-control-sm(type="text" placeholder="Search")
+
+
+                // END PANEL BODY
+              // END PANEL
+            // END COL
+
+            = '\n'
+            .col-md-6.js-grid.js-sizer
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title Sizes & Inline
+                .panel-body
+                  .form-inline
+                    .form-group
+                      input.form-control.form-control-lg(type="text" placeholder="")
+                    .form-group
+                      a.btn.btn-primary.btn-lg(href="#") Submit
+                  .form-inline.m-y-1
+                    .form-group
+                      input.form-control(type="text" placeholder="")
+                    .form-group
+                      a.btn.btn-primary(href="#") Submit
+                  .form-inline
+                    .form-group
+                      input.form-control.form-control-sm(type="text" placeholder="")
+                    .form-group
+                      a.btn.btn-primary.btn-sm(href="#") Submit
+              // END PANEL
+            // END COL
+
+            = '\n'
+            .col-md-6.js-grid
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title Validation states
+                .panel-body
+                  each val in ['success', 'danger', 'warning']
+                    .form-group(class="has-"+val)
+                      label.form-control-label(class="has-"+val) Input with #{val}
+                      input.form-control(type="text" placeholder="" class="form-control-"+val)
+
+              // END PANEL
+            // END COL
+
+            = '\n'
+            .col-md-6.js-grid
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title With help
+                .panel-body
+                  .row
+                    .form-group.col-sm-6
+                      input.form-control.focus(type="text" placeholder="normal")
+                      .text-muted.help-block  Some inline text with a small tag looks like this.
+                    .form-group.col-sm-6
+                      input.form-control.focus(type="text" placeholder="with p tag")
+                      p.text-muted.help-block  Some inline text with a small tag looks like this.
+              // END PANEL
+            // END COL
+
+            = '\n'
+            .col-md-6.js-grid
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title Play with addon
+                .panel-body
+                  .input-group
+                    span#basic-addon1.input-group-addon @
+                    input.form-control(type="text", placeholder="Username", aria-describedby="basic-addon1")
+                  br
+                  .input-group
+                    input.form-control(type="text", placeholder="Recipient's username", aria-describedby="basic-addon2")
+                    span#basic-addon2.input-group-addon @example.com
+                  br
+                  .input-group
+                    span#basic-addon3.input-group-addon https://example.com/users/
+                    input#basic-url.form-control(type="text", aria-describedby="basic-addon3")
+                  br
+                  .input-group
+                    span.input-group-addon $
+                    input.form-control(type="text", aria-label="Amount (to the nearest dollar)")
+                    span.input-group-addon .00
+                  br
+                  .form-group.input-group
+                    input.form-control(type="text" placeholder="Name")
+                    .input-group-btn
+                      button.btn.btn-primary(type="button"): i.icon.ion-plus-round
+
+
+              // END PANEL
+            // END COL
+
+
+
+    // ROW
+  // END CONTAINER FIUID

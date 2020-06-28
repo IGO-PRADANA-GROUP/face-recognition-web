@@ -1,0 +1,20 @@
+$sm: '(max-width: 544px)'
+$md: '(max-width: 768px)'
+$md-lg: '(min-width: 768px) and (max-width: 996px)'
+$lg: '(min-width: 1360px)'
+
+$md-up: '(min-width: 996px)'
+$md-down: '(max-width: 996px)'
+
+$no-hd: 'screen and (-webkit-max-device-pixel-ratio: 1)'
+$hd: 'screen and (-webkit-min-device-pixel-ratio: 2)'
+
+// ios
+// fixed ios/safari vh
+$ipad-portrait: 'screen and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait)'
+$ipad-landscape: 'screen and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape)'
+$i5: 'screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)'
+
+=rwd($media)
+  @media #{$media}
+    @content

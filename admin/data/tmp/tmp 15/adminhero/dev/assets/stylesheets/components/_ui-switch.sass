@@ -1,0 +1,53 @@
+=switch($size-switch, $color)
+  position: relative
+  height: $size-switch
+  line-height: $size-switch
+  display: inline-block
+  input
+    position: relative
+    width: $size-switch*1.5
+    height: $size-switch
+    z-index: 3
+    cursor: pointer
+    opacity: 0
+    transition: all 4s ease
+    &:checked + label
+      background-color: $color
+      border-color: $color
+      &:before
+        background: #fff
+        margin-left: $size-switch*.8
+  label
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: $size-switch*1.8
+    border-radius: $size-switch
+    height: 100%
+    user-select: none
+    background-color: $gray
+    border: 2px solid $input-border-color
+    color: $input-border-color
+    transition: border-color 0.4s
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      z-index: 1
+      width: ($size-switch - 4px)
+      height: ($size-switch - 4px)
+      border-radius: 50%
+      background: #fff
+      transition: margin 0.4s, background 0.4s
+
+.switch
+  +switch(34px, $brand-success)
+
+.switch-sm
+  +switch(28px, $brand-success)
+
+.switch-xs
+  +switch(22px, $brand-success)
+
+

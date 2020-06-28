@@ -1,0 +1,36 @@
+$social: (
+  facebook: #3b5998,
+  twitter: #55acee,
+  google: #4285f4,
+  google-plus: #dc4e41,
+  dribbble: #ea4c89,
+  github: #333333,
+  instagram: #3f729b, 
+  whatsapp: #43d854, 
+  foursquare: #f94877,
+  pinterest: #bd081c,
+  tumblr: #35465c,
+  reddit: #ff4500,
+  linkedin: #0077b5,
+  skype: #00aff0,
+  youtube: #cd201f,
+  twitch: #6441a5,
+  spotify: #2ebd59,
+  behance: #1769ff
+);
+
+@each $social, $color in $social {
+  .btn-#{$social} {
+    background-color: $color;
+    color: #fff;
+    &:hover,
+    &:active,
+    &:active:focus,
+    &.hover,
+    &.active,
+    &:focus,{
+      color: #fff;
+      background: darken($color, 5%)
+    }
+  }
+}

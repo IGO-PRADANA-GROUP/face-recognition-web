@@ -1,0 +1,197 @@
+// The dropdown wrapper (`<div>`)
+
+.dropup, .dropdown {
+  display: inline-block;
+}
+
+.dropdown-menu-inner {
+  max-height: 300px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// The dropdown menu
+// .dropdown-menu:not(.colorpicker):not(.daterangepicker):not(.dropdown-menu-side) {
+.dropdown-menu {
+  min-width: 190px;
+  box-shadow: 0 3px 5px rgba(#000, .1);
+  margin-top: 0;
+  display: block;
+  transform: translateY(-1%) scale(.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease;
+  transform-origin: left top;
+  
+  .open > & {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropup & {
+     transform-origin: left bottom;
+  }
+
+  &.dropdown-menu-right {
+    transform-origin: right top;
+  }
+
+  // dir
+  // only work on large view
+  @media all and (min-width: 992px) {
+    .dropdown-right &{
+      top: -10px;
+      left: 100%;
+      transform-origin: left center;
+    }
+
+    .dropdown-left &{
+      top: -10px;
+      left: auto;
+      right: 100%;
+      transform-origin: right center;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 200px;
+  }
+
+}
+
+
+.dropdown-item {
+  display: block;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%; // For `<button>`s
+  padding: 8px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: $line-height;
+  color: #212121;
+  text-align: inherit; // For `<button>`s
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background: none; // For `<button>`s
+  border-radius: $border-radius;
+  border: 0; // For `<button>`s
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  &.open {
+    color: $dropdown-link-hover-color;
+    text-decoration: none;
+    background-color: $dropdown-link-hover-bg;
+  }
+  
+  // media
+  &.media {
+    margin-top: 0;
+    padding: 10px 20px;
+  }
+
+  // checkbox
+  .checkbox {
+    margin-bottom: 0;
+  }
+}
+
+.dropdown-divider {
+  margin: 0;
+}
+
+.dropdown-toggle {
+  &::after {
+    .dropdown-right & {
+      transform: rotate(-90deg);
+    }
+    .dropdown-left & {
+      transform: translate(0, -50%) rotate(-270deg);
+      position: absolute;
+      top: 50%;
+      left: 2px;
+    }
+  }
+}
+
+
+// Dropdown section headers
+.dropdown-header {
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 0;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  line-height: $line-height;
+  color: $dropdown-header-color;
+  white-space: nowrap; // as with > li > a
+  border-bottom: 2px solid $gray-lighter
+}
+
+.dropdown-item-more {
+  margin-top: 5px;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.dropdown-item-desc {
+  color: $gray-light;
+  font-size: 12px;
+  float: right;
+  margin-top: 3px;
+  margin-left: 1em;
+}
+
+.dropdown-menu-lg {
+  min-width: 350px !important;
+  p {
+    max-width: 300px !important;
+  }
+}
+
+.dropdown-submenu {
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    content: "";
+    border-left: $caret-width solid;
+    border-top: $caret-width solid transparent;
+    border-bottom: $caret-width solid transparent;
+    transform: translate(0, -50%);
+  }
+}
+
+.dropdown-menu-right {
+  .dropdown-submenu::after {
+    top: 50%;
+    right: auto;
+    left: 9px;
+    transform: translate(0, -50%) rotate(180deg);
+  }
+}
+
+
+// for vertical style
+// only work on large view
+@media all and (min-width: 992px) {
+  .dropdown-menu-vertical{
+    padding: 10px;
+    display: flex !important;
+
+    .dropdown-item {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+
+
+

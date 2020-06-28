@@ -1,0 +1,69 @@
+<form class="js-validate-2" method="get" action="" novalidate="">
+  <div class="form-group text-xs-right">
+    <button class="btn btn-primary" type="submit">Click Submit to validate</button>
+  </div>
+
+  <div class="invalid-form-error-message text-danger help-block"></div>
+
+  <div class="first">
+    <div class="form-group">
+      <label class="form-control-label" for="v-username">Username</label>
+      <input class="form-control focus" required="" data-parsley-trigger="change" data-parsley-length="[4, 20]" data-parsley-group="block1" id="v-username" name="v-username" type="text" placeholder="username">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="second">
+    <div class="form-group">
+      <label class="form-control-label" for="v-email">Email</label>
+      <input class="form-control focus" required="" data-parsley-group="block2" id="v-email" name="v-email" type="email" placeholder="username">
+    </div>
+
+    <div class="form-group">
+      <label class="form-control-label" for="v-language">Language</label>
+      <select class="form-control c-select" required="" id="v-language" data-parsley-group="block2">
+        <option value="">Select</option>
+        <option value="us">US</option>
+        <option value="uk">UK</option>
+        <option value="cn">CN</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-control-label" for="v-message">Message</label>
+      <textarea class="form-control" required="" id="v-message" name="v-message" data-parsley-group="block2" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="At least a 20 character comment.." data-parsley-validation-threshold="10" rows="3"></textarea>
+    </div>
+  </div>
+
+</form>
+
+<script>
+  $('.js-validate-2').parsley({
+    successClass: "has-success",
+    errorClass: "has-danger",
+    classHandler: function (el) {
+      return el.$element.closest('.form-group');
+    },
+    errorsContainer: function (el) {
+      return el.$element.closest('.form-group');
+    },
+    errorsWrapper: "<small class='text-danger help-block'></small>",
+    errorTemplate: "<span></span>",
+    }).on('form:validate', function (formInstance) {
+    var ok = formInstance.isValid({group: 'block1', force: true}) || formInstance.isValid({group: 'block2', force: true});
+    $('.invalid-form-error-message')
+      .html(ok ? '' : 'You must correctly fill *at least one of these two blocks!')
+      .toggleClass('filled', !ok);
+    if (!ok)
+      formInstance.validationResult = false;
+  });
+
+  window.Parsley.on('field:error', function() {
+    this.$element.addClass('form-control-danger')
+  });
+
+  window.Parsley.on('field:success', function() {
+    this.$element.addClass('form-control-success')
+  });
+</script>

@@ -1,0 +1,44 @@
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\bin\Debug\absensiwajah.exe
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\bin\Debug\absensiwajah.pdb
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\bin\Debug\Emgu.Util.xml
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\bin\Debug\Emgu.CV.xml
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\bin\Debug\Emgu.CV.UI.xml
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\obj\x86\Debug\MultiFaceRec.FrmPrincipal.resources
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\obj\x86\Debug\absensiwajah.Properties.Resources.resources
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\obj\x86\Debug\absensiwajah.csproj.GenerateResource.Cache
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\obj\x86\Debug\absensiwajah.exe
+E:\localhost\xampp\htdocs\PROJECT\NTAPS\SQ\2018\BLOG\ABSENSI WAJAH WEB\aplikasi absensi\absenwajah\obj\x86\Debug\absensiwajah.pdb
+D:\absenwajah\obj\x86\Debug\absensiwajah.exe
+D:\absenwajah\obj\x86\Debug\absensiwajah.pdb
+D:\absenwajah\bin\Debug\absensiwajah.exe
+D:\absenwajah\bin\Debug\absensiwajah.pdb
+D:\absenwajah\bin\Debug\Emgu.Util.xml
+D:\absenwajah\bin\Debug\Emgu.CV.xml
+D:\absenwajah\bin\Debug\Emgu.CV.UI.xml
+D:\absenwajah\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\absenwajah\obj\x86\Debug\MultiFaceRec.FrmPrincipal.resources
+D:\absenwajah\obj\x86\Debug\absensiwajah.Properties.Resources.resources
+D:\absenwajah\obj\x86\Debug\absensiwajah.csproj.GenerateResource.Cache
+D:\absenwajah - penulis\obj\x86\Debug\absensiwajah.exe
+D:\absenwajah - penulis\obj\x86\Debug\absensiwajah.pdb
+D:\absenwajah - penulis\bin\Debug\absensiwajah.exe
+D:\absenwajah - penulis\bin\Debug\absensiwajah.pdb
+D:\absenwajah - penulis\bin\Debug\Emgu.Util.xml
+D:\absenwajah - penulis\bin\Debug\Emgu.CV.xml
+D:\absenwajah - penulis\bin\Debug\Emgu.CV.UI.xml
+D:\absenwajah - penulis\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\absenwajah - penulis\obj\x86\Debug\MultiFaceRec.FrmPrincipal.resources
+D:\absenwajah - penulis\obj\x86\Debug\absensiwajah.Properties.Resources.resources
+D:\absenwajah - penulis\obj\x86\Debug\absensiwajah.csproj.GenerateResource.Cache
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\obj\x86\Debug\absensiwajah.exe
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\obj\x86\Debug\absensiwajah.pdb
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\bin\Debug\absensiwajah.exe
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\bin\Debug\absensiwajah.pdb
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\bin\Debug\Emgu.Util.xml
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\bin\Debug\Emgu.CV.xml
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\bin\Debug\Emgu.CV.UI.xml
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\obj\x86\Debug\MultiFaceRec.FrmPrincipal.resources
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\obj\x86\Debug\absensiwajah.Properties.Resources.resources
+E:\localhost\xampp\htdocs\Project\Mahasiswa\2019\Stemik\ENDAH\absensi wajah smp db 3 kota jambi\C#\absenwajah - penulis\obj\x86\Debug\absensiwajah.csproj.GenerateResource.Cache

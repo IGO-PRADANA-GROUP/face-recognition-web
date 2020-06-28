@@ -1,0 +1,45 @@
+.message-wrapper
+  height: 400px
+  border: 1px solid $gray
+  position: relative
+  margin-bottom: $grid-gutter-width/2
+  .message-wrapper-inner
+    overflow: auto
+    position: absolute
+    height: 100%
+    width: 100%
+    padding: $grid-gutter-width/2
+
+.message-inbox
+  .media
+    max-width: 65%
+  .owner
+    margin-left: 35%
+    .media-left,
+      float: right
+      padding-right: 0
+      padding-left: 15px
+    .messager
+      text-align: right
+    .message-is
+      background-color: lighten($brand-info, 40%)
+      border-color: lighten($brand-info, 40%)
+
+.message-edit,
+.message-is
+  margin: .5rem 0
+
+.message-is
+  background-color: $gray
+  box-shadow: 0 0 2px rgba(#000, .1)
+  border: 1px solid $gray
+  padding: 1rem
+  border-radius: $border-radius
+  position: relative
+  p
+    font-size: 13px
+    line-height: 1.5
+
+.message-meta
+  color: $gray-dark
+  font-size: 12px

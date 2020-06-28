@@ -1,0 +1,251 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #MESSAGES          | Message styles                         |
+       | 12. #INBOX             | Inbox styles                           |
+       | 13. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Messages
+  // END PAGE HEADER
+
+  = '\n'
+  
+  .container-fluid
+    .row.panel-wrapper
+        
+      = '\n'
+      // #MESSAGES
+      .panel
+        .panel-body
+          .row
+            = '\n'
+            
+            .col-md-6
+              h4.demo-sub-title Comments
+              .message-wrapper
+                .message-wrapper-inner
+                  .media
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/1.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      b Dayton Weber, NY
+                      .message-meta 
+                        | 10/29, 7:31pm
+                        a.pull-xs-right(href="#edit" data-toggle="modal") Edit
+                      //- #msg-1.message-edit
+                      //-   textarea.form-control That did offers her took we to a had feedback not mostly than country. 
+                      //-   .text-xs-right
+                      //-     button.btn.btn-link.btn-sm(type="button") Update
+                      //-     button.btn.btn-link.btn-sm.text-danger(type="button") Delete
+                      .message-is
+                        p That did offers her took we to a had feedback not mostly than country. 
+                      .media
+                        .media-left
+                          a(href="").circle-box
+                            img(src="assets/images/face/4.jpg", alt="")
+                            span.dot.dot-busy
+                        .media-body
+                          b Dayton Weber, Designer Manila
+                          .message-meta 10/29, 7:31pm
+                          .message-is
+                            p Word the two and high and desk the rhetoric they this sitting like.
+                  .media
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/0.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      b Amari Evans
+                      .message-meta 10/29, 7:31pm
+                      .message-is
+                        p Principlesk not mostly than country. 
+                  .media
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/1.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      b Dayton Weber
+                      .message-meta 10/29, 7:31pm
+                      .message-is
+                        p Counter. Derived his and watch than catch
+                  .media
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/0.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      b Amari Evans
+                      .message-meta 10/29, 7:31pm
+                      .message-is
+                        p Phase it skyline is it prudently, can sense a another,
+                  .media
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/0.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      b Amari Evans
+                      .message-meta 10/29, 7:31pm
+                      .message-is
+                        p Model tone answers, met line continues texts. It two finger. By helped safe her of the him, though, and peace little the person, question. The herself parents are, in him live with fall play long full to derivative having the of one by dry general the forward hungrier this it a goals employed shortcuts. Him, funny and pity logging of into for near the proposal. The and not first me. Happens, upon and of but area he nice, of copy. Intentionally policy organization floundering gift is rivalry. Its a believe. Text, must business on feel to publication instance. In written.
+              
+              .row
+                .col-sm-9
+                  .form-group
+                    textarea.form-control(rows="3") Your meesage..
+                .col-sm-3
+                  .form-group
+                    button.btn.btn-primary.btn-block(type="button") SEND
+            // END COL
+            .col-md-6
+              P Markup
+              pre(data-src="assets/markups/message.html")
+    
+      // #INBOX
+      .panel
+        .panel-body
+          .row
+            = '\n'
+            .col-md-6
+              h4.demo-sub-title Inbox
+              .message-wrapper.message-inbox
+                .message-wrapper-inner
+                  .media
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/1.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      .messager
+                        b Dayton Weber, NY
+                        .message-meta 
+                          | 10/29, 7:31pm
+                      .message-is
+                        p That did offers her took we to a had feedback not mostly than country. 
+                  .media.owner
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/0.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      .messager
+                        b Amari Evans
+                        .message-meta 10/29, 7:31pm
+                      .file-item.border-success
+                        .file-object.bg-success
+                          span Nov 5, 2015
+                          h4 $20.00 USD
+                        .file-body.bg-success-lighten: a(href="#") invoice.pdf
+                  .media
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/1.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      .messager
+                        b Dayton Weber
+                        .message-meta 10/29, 7:31pm
+                      .message-is
+                        p Counter. Derived his and watch than catch
+                  .media.owner
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/0.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      .messager
+                        b Amari Evans
+                        .message-meta 10/29, 7:31pm
+                      .message-is
+                        p Phase it skyline is it prudently, can sense a another,
+                  .media.owner
+                    .media-left
+                      a(href="").circle-box
+                        img(src="assets/images/face/0.jpg", alt="")
+                        span.dot.dot-online
+                    .media-body
+                      .messager
+                        b Amari Evans
+                        .message-meta 10/29, 7:31pm
+                      .message-is
+                        p Model tone answers, met line continues texts. It two finger. By helped safe her of the him, though, and peace little the person, question. The herself parents are, in him live with fall play long full to derivative having the of one by dry general the forward hungrier this it a goals employed shortcuts. Him, funny and pity logging of into for near the proposal. The and not first me. Happens, upon and of but area he nice, of copy. Intentionally policy organization floundering gift is rivalry. Its a believe. Text, must business on feel to publication instance. In written.
+              .row
+                .col-sm-9
+                  .form-group
+                    input.form-control(type="text")
+                .col-sm-3
+                  .form-group
+                    button.btn.btn-primary.btn-block(type="button") SEND
+
+
+            // END COL
+            .col-md-6
+              P Markup
+              p 
+                | The inbox style markup is exactly same as message, just need add extra class to message-wrapper. become
+                code .message-wrapper.message-inbox
+                | . After that, you just need define user owner message, Add class 
+                code .owner
+                | to media elemet.
+
+              pre(data-src="assets/markups/inbox.html")
+
+            = '\n'
+          // END ROW
+        // END PANEL BODY
+      // END PANEL
+
+    // ROW
+  // END CONTAINER FIUID
+block bottomhtml
+  #edit.modal(class="fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true'): i.ion-close
+            h4.modal-title Edit Message
+          .modal-body
+            form
+              textarea.form-control That did offers her took we to a had feedback not mostly than country. 
+
+          |       
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            |         
+            button.btn.btn-primary(type='button') Save changes
+
+
+
+
+
+
+
+
+
+
+
+

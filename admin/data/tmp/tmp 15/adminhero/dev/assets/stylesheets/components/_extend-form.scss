@@ -1,0 +1,134 @@
+//
+// Upload
+//
+.c-upload{
+  position: relative;
+  input {
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+    cursor: pointer;
+  }
+  > label {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 400;
+    height: $input-height;
+    padding: $input-padding-y $input-padding-x;
+    font-size: $font-size-base;
+    line-height: $line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    border: $input-btn-border-width solid $input-border-color;
+    @include border-radius($input-border-radius);
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+  }
+}
+
+.radio.radio-inline,
+.checkbox.checkbox-inline {
+  padding: $input-padding-y $input-padding-x;
+  display: inline-flex;
+}
+
+.checkbox + .checkbox,
+.radio + .radio {
+  margin-top: 5px;
+}
+
+.c-select {
+  padding: $input-padding-y 40px $input-padding-y $input-padding-x;
+  &.form-control-sm {
+    padding:$input-padding-y-sm  40px  $input-padding-y-sm $input-padding-x-sm
+  }
+  &.form-control-lg {
+    padding:$input-padding-y-lg 40px $input-padding-y-lg $input-padding-x-lg
+  }
+}
+
+.form-control-label {
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 400;
+}
+
+.help-block {
+    margin-top: .2rem;
+}
+
+.form-inline {
+  .form-control-label {
+    margin-right: $grid-gutter-width/2
+  }
+  @include media-breakpoint-up(md) {
+    .form-group + .form-group {
+      margin-left: $grid-gutter-width/2
+    }
+  }
+}
+
+
+.form-control-search {
+  position: relative;
+
+  > input {
+    padding-left: 30px;
+  }
+
+  &:after {
+    content: "\f4a4";
+    font-family: "Ionicons";
+    color: inherit;
+    position: absolute;
+    top: 52%;
+    left: .5em;
+    transform: translateY(-50%)
+  }
+}
+
+.form-control-clean {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+.c-placeholder {
+  $color: inherit;
+  $fw: 300;
+  $fz: 1rem;
+
+  &::-moz-placeholder{
+    color: $color;
+    font-weight: $fw;
+    font-size: $fz; }
+  &:-ms-input-placeholder{
+    color: $color;
+    font-weight: $fw;
+    font-size: $fz; }
+  &::-webkit-input-placeholder{
+    color: $color;
+    font-weight: $fw;
+    font-size: $fz; }
+  &:placeholder-shown{
+    color: $color;
+    font-weight: $fw;
+    font-size: $fz; }
+}
+
+.form-control-border-b {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $input-border-color;
+}
+
+.form-step-section {
+  display: none;
+  &.current {
+    display: inherit;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "AdminHero",
+  "version": "1.2.1",
+  "license": "ISC",
+  "description": "Admin Dashboard",
+  "author": "ThusBox",
+  "devDependencies": {
+    "browser-sync": "^2.7.1",
+    "coffee-script": "^1.9.2",
+    "gulp": "^3.8.11",
+    "gulp-cached": "^1.1.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-notify": "^2.2.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.0.0",
+    "gulp-pug": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.0",
+    "gulp-strip-comments": "^2.2.1",
+    "gulp-uglify": "^1.5.2",
+    "gulp-util": "^3.0.7",
+    "webpack-stream": "3.2.0",
+    "watch": "1.0.0"
+  }
+}

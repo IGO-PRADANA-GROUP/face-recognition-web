@@ -1,0 +1,363 @@
+extends ./partials/_base
+
+block vars
+  - var menu = false
+  - var layout_drawer = false
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #SIDEBAR           |                                        |
+       | 11. #WEATHER           | Right top side weather info            |
+       | 12. #ACTIVITY          | Right side status stream               |
+       | 13. #NUMBER BOX        | Oversale demo                          |
+       | 13. #STATUS            | Table                                  |
+       | 13. #MEMBER            | Member table                           |
+       | 14. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  //- player list
+  .scroll-wrapper.bg-faded-lighten
+    .row.broadcard-reduce
+      .col-xs-6.col-sm-3.col-md-2
+        .broadcard.active
+          .broadcard-info #221#{item}
+          .circle-box
+            img(src="assets/images/face/10.jpg")
+          .broadcard-info Kurumi Nara
+      each item in ['2','3','4','5','6','7','8','9']
+        .col-xs-6.col-sm-3.col-md-2
+          a.broadcard(href="#")
+            .broadcard-info #221#{item}
+            .circle-box
+              img(src="assets/images/face/"+item+".jpg")
+            .broadcard-info Kurumi Nara
+
+      each item in ['2','3','4','5','6','7','8','9']
+        .col-xs-6.col-sm-3.col-md-2
+          a.broadcard(href="#")
+            .broadcard-info #221#{item}
+            .circle-box
+              img(src="assets/images/face/"+item+".jpg")
+            .broadcard-info Kurumi Nara
+  .layout
+
+    = '\n'
+    .layout-content(data-mh='g2')
+      .page-header
+        .media
+          .media-left.media-meddle
+            img.img-circle(src="assets/images/face/10.jpg", alt="" width="80")
+          .media-body
+            .row
+              .col-lg-6
+                .display-6 Malcolm Bragg
+                .small
+                  | Operations Director
+                  br
+                  | Margem International Ltd.
+                a.small(href="")
+                  | sthurston@bushstad.com
+              .col-lg-6
+                .list-inline.m-t-2.text-xs-right
+                  .list-inline-item
+                    a.btn-rounded.btn.btn-secondary-outline(href="#") Add to Queue
+                  .list-inline-item
+                    a.btn-rounded.btn.btn-primary(href="#") Add to Team
+
+      //- Tabel
+      .p-x-2
+        .table-bar
+          .form-inline
+            .form-group
+              label.form-control-label Filter
+              select.form-control.c-select.form-control-sm
+                option Edinburgh
+                option Tokyo
+                option San Francisco
+            .form-group.form-control-search
+              input.form-control.form-control-sm(type="text" placeholder="Search")
+            .pull-sm-right
+              .form-group
+                .dropdown
+                  button#tabletopdd.btn.btn-primary.btn-sm.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                    | Go to
+                  .dropdown-menu.dropdown-menu-right(aria-labelledby="tabletopdd")
+                    button.dropdown-item(type="button") 2016
+                    button.dropdown-item(type="button") 2015
+                    button.dropdown-item(type="button") 2014
+        .table-responsive
+          table.table.table-hover
+            thead.bg-faded
+              tr
+                th Rank
+                th(width="150") Player
+                th Bye
+                th Pts
+                th Com
+                th Att
+                th PaYd
+                th Int
+                th RuYd
+                th Rec
+            tbody
+              tr
+                td 1
+                td: a(href="#") CalmTwinkle Nixon
+                td 400
+                td 19
+                td 23
+                td --
+                td --
+                td --
+                td --
+                td --
+              tr
+                td 2
+                td: a(href="#") PoshPegasus
+                td 43
+                td 19
+                td --
+                td 2
+                td --
+                td 2
+                td --
+                td --
+              tr
+                td 3
+                td: a(href="#") SpottedWitch
+                td 42
+                td 21
+                td 3
+                td 2
+                td --
+                td 32
+                td 2
+                td 1
+              tr
+                td 4
+                td: a(href="#") BouncyCentaur
+                td 86
+                td 19
+                td 23
+                td --
+                td --
+                td --
+                td --
+                td --
+              tr
+                td 5
+                td: a(href="#") PoshPegasus
+                td 43
+                td 19
+                td --
+                td --
+                td --
+                td 2
+                td --
+                td --
+              tr
+                td 6
+                td: a(href="#") SpottedWitch
+                td 42
+                td 21
+                td 3
+                td 2
+                td --
+                td --
+                td --
+                td 1
+              tr
+                td 7
+                td: a(href="#") Sealixir
+                td 2
+                td --
+                td 3
+                td 2
+                td --
+                td --
+                td --
+                td 1
+              tr
+                td 9
+                td: a(href="#") LoyalCaptain
+                td 72
+                td 21
+                td 3
+                td 2
+                td --
+                td 2
+                td --
+                td 1
+
+      //- Message board
+      .panel.panel-default
+        .panel-body
+          .display-6.m-b-2 Live Message Board
+          .table-responsive
+            table.table.table-border
+              tbody
+                tr
+                  td
+                    .media.media-middle
+                      .media-left
+                        img.img-circle(src="assets/images/face/2.jpg" width='30')
+                      .media-body
+                        .media-heading: a(href="#") AskingHeroine
+                        small.text-muted.pull-xs-right Aug 10, 2017 - 12:18 PM
+                        p Pith spineless, by in motivator, and tones linux
+                tr
+                  td
+                    .media.media-middle
+                      .media-left
+                        img.img-circle(src="assets/images/face/3.jpg" width='30')
+                      .media-body
+                        .media-heading: a(href="#") Sealixir
+                        small.text-muted.pull-xs-right Aug 10, 2017 - 12:18 PM
+                        p Pith spineless, by in motivator, and tones linux
+                tr
+                  td
+                    .media.media-middle
+                      .media-left
+                        img.img-circle(src="assets/images/face/8.jpg" width='30')
+                      .media-body
+                        .media-heading: a(href="#") KindEmu
+                        small.text-muted.pull-xs-right Aug 10, 2017 - 12:18 PM
+                        p Pith spineless, by in motivator, and tones linux
+                tr
+                  td
+                    .media.media-middle
+                      .media-left
+                        img.img-circle(src="assets/images/face/7.jpg" width='30')
+                      .media-body
+                        .media-heading: a(href="#") DreamChimpanzee
+                        small.text-muted.pull-xs-right Aug 10, 2017 - 12:18 PM
+                        p Pith spineless, by in motivator, and tones linux
+
+
+    = '\n'
+    // #SIDEBAR
+    .layout-sidebar
+      // #PICK QUEUE
+      .panel.panel-default.bg-faded(data-mh='g2')
+        .panel-body
+          .display-6 Pick Queue
+
+          form.form-inline
+            .form-group
+              label.form-control-label Auto
+            .form-group
+              .radio.radio-inline
+                input#formBasicMale(type="radio", name="inputGender")
+                label(for="formBasicMale") Yes
+              .radio.radio-inline
+                input#formBasicFemale(type="radio", name="inputGender", checked="")
+                label(for="formBasicFemale") No
+
+          .media.m-t-2
+            .media-left
+              img.img-circle(src="assets/images/face/9.jpg", alt="" width="30")
+            .media-body
+              strong Franco Montgomery
+              .small
+                | Operations Director
+                br
+                | Margem International Ltd.
+
+          .m-t-1
+            form.form.m-b-1
+              .form-group.form-control-search
+                input.form-control.form-control-sm(type="text" placeholder="Search")
+            table.table.table-sm.small
+              tbody
+                tr
+                  td #
+                  td Player
+                  td CN.
+                tr
+                  td 1.
+                  td: a(href="#") Alexander Harvey
+                  td TE
+                tr
+                  td 2.
+                  td: a(href="#") Franco Montgomery
+                  td CN
+                tr
+                  td 3.
+                  td: a(href="#") Kayden Ross
+                  td JP
+                tr
+                  td 4.
+                  td: a(href="#") Frankie Austin
+                  td JP
+                tr
+                  td 5.
+                  td: a(href="#") Bodhi Parks
+                  td KR
+                tr
+                  td 6.
+                  td: a(href="#") Carl Wong
+                  td QB
+                tr
+                  td 7.
+                  td: a(href="#") Corey Bell
+                  td QB
+                tr
+                  td 8.
+                  td: a(href="#") TinyFrog
+                  td XD
+
+        .m-t-1
+          ul.list-group.list-group-tasks
+            li.list-group-item.border-info(href="#")
+              p.list-group-item-text
+                a(href="#") Zx Network
+                | replied to the thread
+                a(href="#")  Follow a posters Twitter account?.
+              p
+                small.text-muted 20 minutes ago · 5 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") Orx4me
+                | replied to the thread
+                a(href="#")  RM Marketplace
+              p
+                small.text-muted 20 minutes ago · 0 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") CabCon
+                | set their home page.
+              p
+                small.text-muted 20 minutes ago · 1 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") CabCon
+                | set their location as Germany.
+              p
+                small.text-muted 24 minutes ago · 0 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") CabCon
+                | has a new avatar.
+              p
+                small.text-muted 26 minutes ago · 0 replies
+
+
+
+      a.sidebar-togger(href="#"): i.ion-android-more-vertical
+
+
+block js

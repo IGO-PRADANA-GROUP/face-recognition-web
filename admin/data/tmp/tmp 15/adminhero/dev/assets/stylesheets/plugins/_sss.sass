@@ -1,0 +1,36 @@
+.sss
+  overflow: hidden
+  position: relative
+  .ssslide
+    width: 100%
+    margin: 0
+    padding: 0
+    position: absolute
+    top: 0
+    left: 0
+    display: none
+    overflow: hidden
+
+.sssnext,
+.sssprev
+  position: absolute
+  right: 20px
+  z-index: 1
+  width: 20px
+  height: 20px
+  bottom: 20px
+  color: rgba(#f8f8f8, .7)
+  cursor: pointer
+  background: rgba(#fff, .5)
+  font-size: 10px
+  font-family: "Ionicons"
+  &:after
+    content: '\f125'
+    +hero_center
+.sssnext
+  +border-right-radius($border-radius)
+.sssprev
+  right: 40px
+  +border-left-radius($border-radius)
+  &:after
+    content: '\f124'

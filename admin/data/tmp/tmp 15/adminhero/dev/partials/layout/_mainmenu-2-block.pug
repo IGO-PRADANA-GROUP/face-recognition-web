@@ -1,0 +1,179 @@
+.mainmenu-block
+
+  // SITE MAINMENU
+  nav.menu-block.menu-block
+    ul.nav
+      li.nav-item.bg-white-opacity-2
+        a.nav-link(
+          href="#ddsidemenu2"
+          aria-expanded="false"
+          aria-controls="ddsidemenu2"
+          data-toggle="collapse")
+          i.icon.ion-ios-gear
+          .menu-block-label
+            | Change Mode
+        #ddsidemenu2.collapse
+          .row.m-x-0
+            a.col-sm-4.grid-link.text-white(href='#'): i.icon.fa.fa-gamepad
+            a.col-sm-4.grid-link.text-white(href='#'): i.icon.fa.fa-music
+            a.col-sm-4.grid-link.text-white(href='#'): i.icon.fa.fa-wikipedia-w
+
+    ul.nav
+      li.nav-item: a.nav-link(href="index.html")
+        i.icon.ion-home
+        .menu-block-label
+          | Home
+
+      li.nav-item: a.nav-link(href="http://thusbox.com/doc/adminhero/" target="_blank")
+        i.icon.ion-ios-list-outline
+        .menu-block-label
+          | Documentation
+
+      li.nav-item: a.nav-link(href="ui-widget.html")
+        i.icon.ion-pizza
+        .menu-block-label Widgets
+
+      li.menu-block-has-sub.nav-item
+        a.nav-link(href="#")
+          i.icon.ion-monitor
+          .menu-block-label
+            | Dashboard
+            span.label.label-success new
+
+        ul.nav.menu-block-sub
+          li.nav-item: a.nav-link(href="dashboard-1.html") Dashboard Basic
+          li.nav-item: a.nav-link(href="dashboard-2.html")
+            | Game Dashboard
+            span.label.label-success new
+
+      //li.header GENERAL
+
+      li.menu-block-has-sub.nav-item
+        a.nav-link(href="#")
+          i.icon.ion-ios-grid-view-outline
+          .menu-block-label Layouts
+        ul.nav.menu-block-sub
+          li.nav-item: a.nav-link(href="layout-basic.html") Basic layout
+          li.nav-item: a.nav-link(href="layout-left-sidebar.html") Left Sidebar
+          li.nav-item: a.nav-link(href="layout-left-fixed-sidebar.html") Left Fixed Sidebar
+          li.nav-item: a.nav-link(href="layout-right-sidebar.html") Right Sidebar
+          li.nav-item: a.nav-link(href="layout-right-fixed-sidebar.html") Right Fixed Sidebar
+          li.nav-item: a.nav-link(href="layout-menu-collapsed.html") Menu Collapsed
+          li.nav-item: a.nav-link(href="layout-menu-expended.html") Menu Expended
+          li.nav-item: a.nav-link(href="layout-header.html") Header Styles
+
+      li.menu-block-has-sub.nav-item
+        a.nav-link(href="#")
+          i.icon.ion-grid
+          .menu-block-label Tables
+        ul.nav.menu-block-sub
+          li.nav-item: a.nav-link(href="table-ui.html") Table UI
+          li.nav-item: a.nav-link(href="table-basic.html") Table Basic
+          li.nav-item: a.nav-link(href="table-bootstrap.html") Table Bootstrap
+          li.nav-item: a.nav-link(href="table-datatables.html") Table Datatables
+
+      li.menu-block-has-sub.nav-item
+        a.nav-link(href="#")
+          i.icon.ion-toggle
+          .menu-block-label Form
+        ul.nav.menu-block-sub
+          li.nav-item: a.nav-link(href="form-basic.html") Form basic
+          li.nav-item: a.nav-link(href="form-advanced.html") Form advanced
+          li.nav-item: a.nav-link(href="form-layout.html") Form layout
+
+      li.menu-block-has-sub.nav-item
+        a.nav-link(href="#")
+          i.icon.ion-cube
+          .menu-block-label UI Elements
+          span.label.label-success new
+        ul.nav.menu-block-sub
+          li.nav-item: a.nav-link(href="ui-button.html") Buttons
+          li.nav-item: a.nav-link(href="ui-chart.html") Chart
+          li.nav-item: a.nav-link(href="ui-color.html") Color
+          li.nav-item: a.nav-link(href="ui-dropdowns.html") Dropdowns
+          li.nav-item: a.nav-link(href="ui-files.html") Files
+          li.nav-item: a.nav-link(href="ui-labels-badges.html") Badges & Labels
+          li.nav-item: a.nav-link(href="ui-messages.html") Messages
+          li.nav-item: a.nav-link(href="ui-modal.html") Modal
+          li.nav-item: a.nav-link(href="ui-navigation.html") Navigation
+          li.nav-item: a.nav-link(href="ui-notifications.html") Notication
+          li.nav-item: a.nav-link(href="ui-panel.html") Panel
+          li.nav-item: a.nav-link(href="ui-progress.html") Progress
+          li.nav-item: a.nav-link(href="ui-tab.html") Tabs
+          li.nav-item: a.nav-link(href="ui-timeline.html") Timeline
+          li.nav-item: a.nav-link(href="ui-tooltips-popovers.html") Tooltips & Popovers
+          li.nav-item: a.nav-link(href="ui-editor.html") Editor
+          li.nav-item: a.nav-link(href="ui-type.html") type
+          li.nav-item: a.nav-link(href="ui-widget.html") Widget
+          li.nav-item: a.nav-link(href="ui-scrollers.html") Scrollers
+          li.nav-item: a.nav-link(href="ui-broadcard.html")
+            | Broadcard
+            span.label.label-success new
+
+
+      //li.header.nav-item APP
+
+      li.menu-block-has-sub.nav-item
+        a.nav-link(href="#")
+          i.icon.ion-document
+          .menu-block-label Page view
+        ul.nav.menu-block-sub
+          li.nav-item: a.nav-link(href="page-tasks.html") Tasks
+          li.nav-item: a.nav-link(href="page-project-details.html") Project Details
+          li.nav-item: a.nav-link(href="page-media-lib.html") Media Library
+          li.nav-item: a.nav-link(href="page-tracker.html") Tracker
+          li.nav-item: a.nav-link(href="page-mail.html") Mail
+          li.nav-item: a.nav-link(href="page-inbox.html") Inbox
+          li.nav-item: a.nav-link(href="page-inbox-2.html") Inbox 2
+
+      //- Todo
+      //- li.menu-block-has-sub.nav-item
+      //-   a.nav-link(href="#")
+      //-     i.icon.ion-bag
+      //-     .menu-block-label E-commerce
+      //-   ul.nav.menu-block-sub
+      //-     li.nav-item: a.nav-link(href="ecommerce-overview.html") Overview
+      //-     li.nav-item: a.nav-link(href="ecommerce-product.html") Product
+      //-     li.nav-item: a.nav-link(href="ecommerce-purchases.html") Orders
+      //-     li.nav-item: a.nav-link(href="ecommerce-client.html") Clients
+      //-     li.nav-item: a.nav-link(href="ecommerce-setting.html") Settings
+      //-     li.nav-item: a.nav-link(href="ecommerce-invoice.html") Invoice
+
+      li.menu-block-has-sub.nav-item
+        a.nav-link(href="#")
+          i.icon.ion-android-people
+          .menu-block-label User
+        ul.nav.menu-block-sub
+          li.nav-item: a.nav-link(href="user-login.html") Login
+          li.nav-item: a.nav-link(href="user-login-2.html") Login 2
+          li.nav-item: a.nav-link(href="user-login-3.html") Login 3
+          li.nav-item: a.nav-link(href="user-register.html") Register
+          li.nav-item: a.nav-link(href="user-register-2.html") Register 2
+          li.nav-item: a.nav-link(href="user-register-3.html") Register 3
+          li.nav-item: a.nav-link(href="user-register-4.html") Register 4
+          li.nav-item: a.nav-link(href="user-lists.html") Users Lists
+          li.nav-item: a.nav-link(href="user-profile.html") User Profile
+          li.nav-item: a.nav-link(href="user-profile-2.html") User Profile 2
+          li.nav-item: a.nav-link(href="user-profile-3.html") User Profile 3
+
+      //li.header.nav-item user interface
+
+
+      li.menu-block-has-sub.nav-item
+        a.nav-link(href="#")
+          i.icon.ion-android-funnel
+          .menu-block-label Menu Level
+        ul.nav.menu-block-sub
+          li.nav-item: a.nav-link(href="#") Commas
+          li.nav-item.menu-block-has-sub
+            a(href="#") Neversa
+            ul.nav.menu-block-sub
+              li.nav-item: a.nav-link(href="#") Incurred
+              li.nav-item: a.nav-link(href="#") Preparation
+          li.nav-item: a.nav-link(href="#") Country
+    // END SITE MAINMENU
+
+    //- stats
+    //- .p-a-2
+    //-   span.small.pull-xs-right This Month Earnings
+    //-   canvas#demo-bar-chart

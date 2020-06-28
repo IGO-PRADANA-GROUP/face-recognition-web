@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!-- Web config-->
+
+    <!-- TABLE OF CONTENTS.
+    Use search to find needed section.
+    ===================================================================
+    | 01. #CSS               | All CSS links and file paths           |
+    | 02. #FAVICONS          | Favicon icon, app icons                |
+    | 03. #BODY              | Body tag                               |
+    | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+    | 05. #MAIN              | Dashboard right wrapper                |
+    | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+    | 07. #TOP               | Top header navigation                  |
+    | 08. #TOP NAV           | Top header right navigation            |
+    
+    ===================================================================
+    
+    -->
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminHero</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <!-- lib-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic">
+    <link rel="stylesheet" href="assets/stylesheets/ionicons.css">
+    <link rel="stylesheet" href="assets/stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="assets/stylesheets/weather-icons.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/animate.css">
+    <link rel="stylesheet" href="assets/stylesheets/glyphicon.css">
+
+    <!-- plugin-->
+    <link rel="stylesheet" href="assets/stylesheets/plugin/bootstrap-table.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/nifty-modal.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/jquery.bootstrap-touchspin.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/bootstrap-colorpicker.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/select2.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/multi-select.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/plugin/ladda.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/daterangepicker.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/jquery.timepicker.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/jqvmap.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/bootstrap-submenu.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/code.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/jquery.dataTables.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/jquery.gridster.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/summernote.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugin/bootstrap-markdown.min.css">
+
+    <!-- Theme-->
+    <link id="mainstyle" rel="stylesheet" href="assets/stylesheets/skin.css">
+
+    <!-- Demo only-->
+    <link id="mainstyle" rel="stylesheet" href="assets/stylesheets/demo.css">
+
+    <!-- This page only-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries--><!--[if lt IE 9]>
+    <script src="assets/scripts/html5shiv.js"></script>
+    <script src="assets/scripts/respond.js"></script><![endif]-->
+    <script src="assets/scripts/modernizr-custom.js"></script>
+    <script src="assets/scripts/respond.js"></script>
+    <!-- Possible Classes
+    * orchid
+    * cadetblue
+    * f-dark
+    
+    -->
+  </head>
+
+  <body class="f-dark">
+
+    <!-- #SIDEMENU-->
+    <div class="mainmenu-block">
+      <!-- SITE MAINMENU-->
+      <nav class="menu-block">
+        <ul class="nav">
+          <li class="nav-item mainmenu-user-profile"><a href="user-profile.html">
+              <div class="circle-box"><img src="assets/images/face/1.jpg" alt="">
+                <div class="dot dot-success"></div>
+              </div>
+              <div class="menu-block-label"><b>Odalys Broussard</b><br>Managing Director</div></a></li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html" class="nav-link"> <i class="icon ion-home"></i>
+              <div class="menu-block-label">
+                 
+                Home
+              </div></a></li>
+          <li class="nav-item"><a href="ui-widget.html" class="nav-link"> <i class="icon ion-pizza"></i>
+              <div class="menu-block-label">Widgets</div></a></li>
+          <li class="menu-block-has-sub nav-item"><a href="#" class="nav-link"><i class="icon ion-monitor"> </i>
+              <div class="menu-block-label">
+                 
+                Dashboard<span class="label label-success">new</span>
+              </div></a>
+            <ul class="nav menu-block-sub">
+              <li class="nav-item"><a href="dashboard-1.html" class="nav-link">Dashboard 1</a></li>
+            </ul>
+          </li>
+          <!--li.header GENERAL-->
+          <li class="menu-block-has-sub nav-item"><a href="#" class="nav-link"> <i class="icon ion-ios-grid-view-outline"></i>
+              <div class="menu-block-label">Layouts</div></a>
+            <ul class="nav menu-block-sub">
+              <li class="nav-item"><a href="layout-basic.html" class="nav-link">Basic layout</a></li>
+              <li class="nav-item"><a href="layout-left-sidebar.html" class="nav-link">Left Sidebar</a></li>
+              <li class="nav-item"><a href="layout-right-sidebar.html" class="nav-link">Right Sidebar</a></li>
+              <li class="nav-item"><a href="layout-boxed.html" class="nav-link">Boxed layout</a></li>
+              <li class="nav-item"><a href="layout-menu-collapsed.html" class="nav-link">Menu Collapsed</a></li>
+              <li class="nav-item"><a href="layout-menu-expended.html" class="nav-link">Menu Expended</a></li>
+              <li class="nav-item"><a href="layout-header.html" class="nav-link">Header Styles</a></li>
+            </ul>
+          </li>
+          <li class="menu-block-has-sub nav-item"><a href="#" class="nav-link"> <i class="icon ion-grid"></i>
+              <div class="menu-block-label">Tables</div></a>
+            <ul class="nav menu-block-sub">
+              <li class="nav-item"><a href="table-ui.html" class="nav-link">Table UI</a></li>
+              <li class="nav-item"><a href="table-basic.html" class="nav-link">Table Basic</a></li>
+              <li class="nav-item"><a href="table-bootstrap.html" class="nav-link">Table Bootstrap</a></li>
+              <li class="nav-item"><a href="table-datatables.html" class="nav-link">Table Datatables</a></li>
+            </ul>
+          </li>
+          <li class="menu-block-has-sub nav-item"><a href="#" class="nav-link"> <i class="icon ion-toggle"></i>
+              <div class="menu-block-label">Form</div></a>
+            <ul class="nav menu-block-sub">
+              <li class="nav-item"><a href="form-basic.html" class="nav-link">Form basic</a></li>
+              <li class="nav-item"><a href="form-advanced.html" class="nav-link">Form advanced</a></li>
+              <li class="nav-item"><a href="form-layout.html" class="nav-link">Form layout</a></li>
+            </ul>
+          </li>
+          <li class="menu-block-has-sub nav-item"><a href="#" class="nav-link"> <i class="icon ion-cube"></i>
+              <div class="menu-block-label">UI Elements</div></a>
+            <ul class="nav menu-block-sub">
+              <li class="nav-item"><a href="ui-button.html" class="nav-link">Buttons</a></li>
+              <li class="nav-item"><a href="ui-chart.html" class="nav-link">Chart</a></li>
+              <li class="nav-item"><a href="ui-color.html" class="nav-link">Color</a></li>
+              <li class="nav-item"><a href="ui-dropdowns.html" class="nav-link">Dropdowns</a></li>
+              <li class="nav-item"><a href="ui-files.html" class="nav-link">Files</a></li>
+              <li class="nav-item"><a href="ui-labels-badges.html" class="nav-link">Badges & Labels</a></li>
+              <li class="nav-item"><a href="ui-messages.html" class="nav-link">Messages</a></li>
+              <li class="nav-item"><a href="ui-modal.html" class="nav-link">Modal</a></li>
+              <li class="nav-item"><a href="ui-navigation.html" class="nav-link">Navigation</a></li>
+              <li class="nav-item"><a href="ui-notifications.html" class="nav-link">Notication</a></li>
+              <li class="nav-item"><a href="ui-panel.html" class="nav-link">Panel</a></li>
+              <li class="nav-item"><a href="ui-progress.html" class="nav-link">Progress</a></li>
+              <li class="nav-item"><a href="ui-tab.html" class="nav-link">Tabs</a></li>
+              <li class="nav-item"><a href="ui-timeline.html" class="nav-link">Timeline</a></li>
+              <li class="nav-item"><a href="ui-tooltips-popovers.html" class="nav-link">Tooltips & Popovers</a></li>
+              <li class="nav-item"><a href="ui-editor.html" class="nav-link">Editor</a></li>
+              <li class="nav-item"><a href="ui-type.html" class="nav-link">type</a></li>
+              <li class="nav-item"><a href="ui-widget.html" class="nav-link">Widget</a></li>
+            </ul>
+          </li>
+          <!--li.header.nav-item APP-->
+          <li class="menu-block-has-sub nav-item"><a href="#" class="nav-link"> <i class="icon ion-document"></i>
+              <div class="menu-block-label">Page view</div></a>
+            <ul class="nav menu-block-sub">
+              <li class="nav-item"><a href="page-tasks.html" class="nav-link">Tasks</a></li>
+              <li class="nav-item"><a href="page-project-details.html" class="nav-link">Project Details</a></li>
+              <li class="nav-item"><a href="page-media-lib.html" class="nav-link">Media Library</a></li>
+              <li class="nav-item"><a href="page-tracker.html" class="nav-link">Tracker</a></li>
+              <li class="nav-item"><a href="page-mail.html" class="nav-link">Mail</a></li>
+              <li class="nav-item"><a href="page-inbox.html" class="nav-link">Inbox</a></li>
+              <li class="nav-item"><a href="page-inbox-2.html" class="nav-link">Inbox 2</a></li>
+            </ul>
+          </li>
+          <li class="menu-block-has-sub nav-item"><a href="#" class="nav-link"> <i class="icon ion-android-people"></i>
+              <div class="menu-block-label">User</div></a>
+            <ul class="nav menu-block-sub">
+              <li class="nav-item"><a href="user-login.html" class="nav-link">Login</a></li>
+              <li class="nav-item"><a href="user-login-2.html" class="nav-link">Login 2</a></li>
+              <li class="nav-item"><a href="user-login-3.html" class="nav-link">Login 3</a></li>
+              <li class="nav-item"><a href="user-register.html" class="nav-link">Register</a></li>
+              <li class="nav-item"><a href="user-register-2.html" class="nav-link">Register 2</a></li>
+              <li class="nav-item"><a href="user-register-3.html" class="nav-link">Register 3</a></li>
+              <li class="nav-item"><a href="user-register-4.html" class="nav-link">Register 4</a></li>
+              <li class="nav-item"><a href="user-lists.html" class="nav-link">Users Lists</a></li>
+              <li class="nav-item"><a href="user-profile.html" class="nav-link">User Profile</a></li>
+              <li class="nav-item"><a href="user-profile-2.html" class="nav-link">User Profile</a></li>
+              <li class="nav-item"><a href="user-profile-3.html" class="nav-link">User Profile</a></li>
+            </ul>
+          </li>
+          <!--li.header.nav-item user interface-->
+          
+          <li class="menu-block-has-sub nav-item"><a href="#" class="nav-link"><i class="icon ion-android-funnel"></i>
+              <div class="menu-block-label">Menu Level</div></a>
+            <ul class="nav menu-block-sub">
+              <li class="nav-item"><a href="#" class="nav-link">Commas</a></li>
+              <li class="nav-item menu-block-has-sub"><a href="#">Neversa</a>
+                <ul class="nav menu-block-sub">
+                  <li class="nav-item"><a href="#" class="nav-link">Incurred</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">Preparation</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Country</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- END SITE MAINMENU-->
+    </div>
+
+    <!-- #MAIN-->
+    <div class="main-wrapper">
+
+      <!-- VIEW WRAPPER-->
+      <div class="view-wrapper">
+
+        <!-- TOP WRAPPER-->
+        <div class="topbar-wrapper">
+
+          <!-- NAV FOR MOBILE-->
+          <div class="topbar-wrapper-mobile-nav"><a href="#" class="topbar-togger js-minibar-toggler"><i class="icon ion-ios-arrow-back hidden-md-down"></i><i class="icon ion-navicon-round hidden-lg-up"></i></a><a href="#" class="topbar-togger pull-xs-right hidden-lg-up js-nav-toggler"><i class="icon ion-android-person"></i></a>
+
+            <!-- ADD YOUR LOGO HEREText logo: a.topbar-wrapper-logo(href="#") AdminHero
+            --><a href="index.html" class="topbar-wrapper-logo demo-logo">AdminHero</a>
+          </div>
+          <!-- END NAV FOR MOBILE-->
+
+          <!-- SEARCH-->
+          <div class="topbar-wrapper-search">
+            <form>
+              <input type="search" placeholder="Search" class="form-control"><a href="#" class="topbar-togger topbar-togger-search js-close-search"><i class="icon ion-close"></i></a>
+            </form>
+          </div>
+          <!-- END SEARCH-->
+
+          <!-- TOP RIGHT MENU-->
+          <ul class="nav navbar-nav topbar-wrapper-nav">
+            <li class="nav-item"><a href="#" class="nav-link js-search-togger"><i class="icon ion-ios-search-strong"></i></a></li>
+
+            <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="nav-link"><i class="icon fa fa-columns"></i><span class="badge badge-success status">4</span></a>
+
+              <!-- #RIGHT BLOCK-->
+              <!-- 
+              RIGHT PANEL 
+              * same dropdown-menu markup, add '.dropdown-menu-side'
+              -->
+              <div class="dropdown-menu dropdown-menu-side"><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/2.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Ryan Sears</div>
+                    <p class="text-muted small">Rome; Hard there to deeply verbal page goals a accept into it pri</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle">
+                    <div class="media-object circle-object bg-info"><i class="ion-calendar"></i></div>
+                  </div>
+                  <div class="media-body">
+                    <div class="media-heading">Event remind.</div>
+                    <p class="text-muted small">10 min ago</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle">
+                    <div class="media-object circle-object bg-success">40%</div>
+                  </div>
+                  <div class="media-body">
+                    <div class="media-heading">Event remind.</div>
+                    <div class="progress">
+                      <progress value="46" max="100" class="progress progress-danger loader"></progress>
+                    </div>
+                    <p class="text-muted small">10 min ago</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle">
+                    <div class="media-object circle-object bg-danger">2d</div>
+                  </div>
+                  <div class="media-body">
+                    <div class="media-heading">Project deadline.</div>
+                    <div class="progress">
+                      <progress value="80" max="100" class="progress progress-success loader"></progress>
+                    </div>
+                    <p class="text-muted small">80% completion</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/1.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/2.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/3.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/4.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/1.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/2.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/3.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/4.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/1.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/2.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/3.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/4.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/1.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/2.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/3.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a><a href="#" class="dropdown-item media circle-box">
+                  <div class="media-left media-middle"><img src="assets/images/face/4.jpg" alt="" class="media-object circle-object"></div>
+                  <div class="media-body">
+                    <div class="media-heading">Judith Sullivan</div>
+                    <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                  </div></a>
+              </div>
+              <!-- END RIGHt PANEL-->
+            </li>
+
+            <li class="nav-item dropdown"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="nav-link"><i class="icon ion-android-notifications-none"></i><span class="badge badge-danger status">9+</span></a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-header">Notifications (5)</div>
+                <div class="dropdown-menu-inner"><a href="#" class="dropdown-item media circle-box">
+                    <div class="media-left media-middle"><img src="assets/images/face/2.jpg" alt="" class="media-object circle-object"></div>
+                    <div class="media-body">
+                      <div class="media-heading">Ryan Sears</div>
+                      <p class="text-muted small">Pink do well together specially name if design postage briefs big into in her working</p>
+                    </div></a><a href="#" class="dropdown-item media circle-box">
+                    <div class="media-left media-middle">
+                      <div class="media-object circle-object bg-danger"><i class="fa fa-bug"></i></div>
+                    </div>
+                    <div class="media-body">
+                      <div class="media-heading">Server Error</div>
+                      <p class="text-muted small">3 minutes ago</p>
+                    </div></a><a href="#" class="dropdown-item media circle-box">
+                    <div class="media-left media-middle">
+                      <div class="media-object circle-object bg-success"><i class="fa fa-check"></i></div>
+                    </div>
+                    <div class="media-body">
+                      <div class="media-heading">Server Error Reports</div>
+                      <p class="text-muted small">3 minutes ago</p>
+                    </div></a><a href="#" class="dropdown-item media circle-box">
+                    <div class="media-left media-middle"><img src="assets/images/face/1.jpg" alt="" class="media-object circle-object"></div>
+                    <div class="media-body">
+                      <div class="media-heading">Judith Sullivan</div>
+                      <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                    </div></a><a href="#" class="dropdown-item media circle-box">
+                    <div class="media-left media-middle"><img src="assets/images/face/2.jpg" alt="" class="media-object circle-object"></div>
+                    <div class="media-body">
+                      <div class="media-heading">Judith Sullivan</div>
+                      <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                    </div></a><a href="#" class="dropdown-item media circle-box">
+                    <div class="media-left media-middle"><img src="assets/images/face/3.jpg" alt="" class="media-object circle-object"></div>
+                    <div class="media-body">
+                      <div class="media-heading">Judith Sullivan</div>
+                      <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                    </div></a><a href="#" class="dropdown-item media circle-box">
+                    <div class="media-left media-middle"><img src="assets/images/face/4.jpg" alt="" class="media-object circle-object"></div>
+                    <div class="media-body">
+                      <div class="media-heading">Judith Sullivan</div>
+                      <p class="text-muted small">Option wouldn't small hardly of and more believe The fundamentals</p>
+                    </div></a>
+                </div><a href="#" class="dropdown-item">
+                  <div class="text-xs-center"><i class="ion-more"></i></div></a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon ion-android-mail"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon ion-android-exit"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link close-mobile-nav js-close-mobile-nav"><i class="icon ion-close"></i></a></li>
+            <!-- END TOP RIGHT MENU-->
+          </ul>
+        </div>
+        <!--END TOP WRAPPER-->
+
+
+        <!-- PAGE CONTENT HERE-->
+        <!-- END PAGE CONTENT-->
+
+      </div>
+      <!-- END VIEW WAPPER-->
+
+    </div>
+    <!-- END MAIN WRAPPER-->
+
+
+    <!-- WEB PERLOAD-->
+    <div id="preload">
+      <ul class="loading">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="assets/scripts/jquery-1.11.3.min.js"></script>
+    <script src="assets/scripts/jquery-ui.js"></script>
+
+    <!-- Moment: Full featured date library for parsing, validating, manipulating, and formatting dates.-->
+    <script src="assets/scripts/moment.min.js"></script>
+
+    <!-- Fastclick: Polyfill to remove click delays on browsers with touch UIs.-->
+    <script src="assets/scripts/fastclick.js"></script>
+
+    <!-- Tether: Included in Bootstrap package.-->
+    <script src="assets/scripts/tether.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Masonry: Grid layout library.-->
+    <script src="assets/scripts/masonry.pkgd.min.js"></script>
+
+    <!-- Peity: is a simple jQuery plugin that converts an element's content into a simple <svg>.-->
+    <script src="assets/scripts/jquery.peity.min.js"></script>
+
+    <!-- imagesloaded: Detect when images have been loaded.-->
+    <script src="assets/scripts/imagesloaded.pkgd.js"></script>
+
+    <!-- MatchHeight: A responsive equal heights-->
+    <script src="assets/scripts/jquery.matchHeight.js"></script>
+
+    <!-- Select2: JQuery based replacement for select boxes-->
+    <script src="assets/scripts/select2.full.min.js"></script>
+
+    <!-- jQuery multiselect: jQuery plugin which is a drop-in replacement for the standard <select> element -->
+    <script src="assets/scripts/jquery.multi-select.js"></script>
+
+    <!-- Bootstrap-tagsinput: jQuery tags input plugin based on Twitter Bootstrap. -->
+    <script src="assets/scripts/bootstrap-tagsinput.js"></script>
+
+    <!-- Bootstrap-maxlength: Display the maximum lenght of the field-->
+    <script src="assets/scripts/bootstrap-maxlength.min.js"></script>
+
+    <!-- Chartjs: Simple HTML5 Charts using the canvas element-->
+    <script src="assets/scripts/Chart.min.js"></script>
+    <script src="assets/scripts/Chart.config.js"></script>
+
+    <!-- Bootstrap-touchspin: A mobile and touch friendly input spinner component for Bootstrap 3.-->
+    <script src="assets/scripts/jquery.bootstrap-touchspin.min.js"></script>
+
+    <!-- Colorpicker: Colorpicker plugin for the Twitter Bootstrap toolkit.-->
+    <script src="assets/scripts/bootstrap-colorpicker.js"></script>
+
+    <!-- Date Range Picker: A JavaScript component for choosing date ranges. -->
+    <script src="assets/scripts/daterangepicker.js"></script>
+
+    <!-- jquery.timepicker: A lightweight, customizable javascript timepicker plugin.-->
+    <script src="assets/scripts/jquery.timepicker.js"></script>
+
+    <!-- Bootstrap-submenu-->
+    <script src="assets/scripts/bootstrap-submenu.js"></script>
+
+    <!-- Prismjs: Code syntax highlighting library -->
+    <script src="assets/scripts/prism.js"></script>
+
+    <!-- bootstrap-table: An extended Bootstrap table-->
+    <script src="assets/scripts/bootstrap-table/bootstrap-table.js"></script>
+
+    <!-- Grid layout-->
+    <script src="assets/scripts/jquery.gridster.js"></script>
+
+    <!-- super simple slider-->
+    <script src="assets/scripts/sss.min.js"></script>
+
+    <!-- Easy-pie-chart: Lightweight  pie charts-->
+    <script src="assets/scripts/jquery.easypiechart.min.js"></script>
+
+    <!-- Summernote: Lightweight html5 editor-->
+    <script src="assets/scripts/summernote.min.js"></script>
+
+    <!-- Bootstrap plugin for markdown editing-->
+    <script src="assets/scripts/behave.js"></script>
+    <script src="assets/scripts/markdown.js"></script>
+    <script src="assets/scripts/to_markdown.js"></script>
+    <script src="assets/scripts/bootstrap-markdown.js"></script>
+
+    <!-- DataTables: It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.-->
+    <script src="assets/scripts/jquery.dataTables.min.js"></script>
+    <script src="assets/scripts/dataTables.bootstrap.js"></script>
+
+    <!-- Ladda: Buttons with built-in loading indicators.-->
+    <script src="assets/scripts/spin.min.js"></script>
+    <script src="assets/scripts/ladda.min.js"></script>
+
+    <!-- Counterup: Counts up to a targeted number when the number becomes visible.-->
+    <script src="assets/scripts/waypoints.min.js"></script>
+    <script src="assets/scripts/jquery.counterup.min.js"></script>
+
+    <!-- Theme js-->
+    <script src="assets/scripts/upload.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+    <!-- Below js just for this page only-->
+  </body>
+</html>

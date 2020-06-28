@@ -1,0 +1,149 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TYPE              | Type styles                           |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Type
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper.js-grid-wrapper
+
+      = '\n'
+      // #TYPE
+
+      = '\n'
+      .col-sm-6.js-grid
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-#{val}" value="1" max="100")
+          .panel-heading
+            .panel-title H tag
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            h1 Heading text
+            h2 Heading text
+            h3 Heading text
+            h4 Heading text
+            h5 Heading text
+            h6 Heading text
+
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      .col-sm-6.js-grid
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-#{val}" value="1" max="100")
+          .panel-heading
+            .panel-title Display
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            each val in ['1','2','3','4','5','6']
+              div(class="display-#{val}") Display #{val}
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-sm-6.js-grid.js-sizer
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-#{val}" value="1" max="100")
+          .panel-heading
+            .panel-title Lead
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            p.lead The minutes. Of even doesn't excessive and at an wellfeigned was hide could are part of their read.
+
+            p Lots throughout of offers bright a devotion far has point crew brief. Out the for to people of ever of the queen were, decision-making. Away, were everyone. Didn't the I at even to switching too agency.
+
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      .col-sm-6.js-grid
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-#{val}" value="1" max="100")
+          .panel-heading
+            .panel-title Block Header
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            p
+              | Use
+              code .block-header
+              | for some app layout, like modal, emaill, etc.
+            p
+              | components use with
+              code .p-a-2
+              | and
+              code .display-5
+              | use custom color class to change style you need.
+
+            .p-y-2
+              .block-header Block header
+            .p-y-2
+              .block-header.bg-success Block header
+            .p-y-2
+              .block-header.text-success Block header
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      .col-sm-6.js-grid
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-#{val}" value="1" max="100")
+          .panel-heading
+            .panel-title
+              | Code
+              a.small(href="https://prismjs.com/" target="_blank") official website
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            pre
+              code(class="language-css")
+                | pre .support, *[data-language="c"]
+                | .function.call {
+                | color: #859900; /* green */
+                | }
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+    // ROW
+  // END CONTAINER FIUID

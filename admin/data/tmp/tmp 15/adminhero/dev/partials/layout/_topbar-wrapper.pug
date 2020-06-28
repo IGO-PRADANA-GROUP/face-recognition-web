@@ -1,0 +1,178 @@
+.topbar-wrapper
+  = '\n'
+  // NAV FOR MOBILE
+  .topbar-wrapper-mobile-nav
+    if layout_drawer
+      a.topbar-togger.js-minibar-toggler(href="#")
+        i.icon.ion-navicon-round
+    else
+      a.topbar-togger.js-minibar-toggler(href="#")
+        i.icon.ion-ios-arrow-back.hidden-md-down
+        i.icon.ion-navicon-round.hidden-lg-up
+
+    a.topbar-togger.pull-xs-right.hidden-lg-up.js-nav-toggler(href="#")
+      i.icon.ion-android-person
+    = '\n'
+    // ADD YOUR LOGO HERE
+      Text logo: a.topbar-wrapper-logo(href="#") AdminHero
+    a.topbar-wrapper-logo.demo-logo(href="index.html") AdminHero
+     //- img(src="assets/images/demo-logo.png", alt="" width='35')
+    //- a.topbar-wrapper-logo(href="#") AdminHero
+  // END NAV FOR MOBILE
+  = '\n'
+  // SEARCH
+  .topbar-wrapper-search
+    form
+      input.form-control(type="search" placeholder="Search")
+
+      a.topbar-togger.topbar-togger-search.js-close-search(href="#"): i.icon.ion-close
+  // END SEARCH
+  = '\n'
+  // TOP RIGHT MENU
+  ul.nav.navbar-nav.topbar-wrapper-nav
+
+    li.nav-item
+      a.nav-link.js-search-togger(href="#"): i.icon.ion-ios-search-strong
+
+    = '\n'
+    li.nav-item.dropdown
+      a.nav-link(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+        i.icon.fa.fa-columns
+        span.badge.badge-success.status 4
+      = '\n'
+      // #RIGHT BLOCK
+      //
+        RIGHT PANEL
+        * same dropdown-menu markup, add '.dropdown-menu-side'
+      .dropdown-menu.dropdown-menu-side
+        ul.nav.nav-tabs.nav-justified
+          li.nav-item
+            a.nav-link.active(data-target="#demoright-1" aria-controls="demoright-1" role="tab" data-toggle="tab"): i.ion-help-buoy.icon
+          li.nav-item
+            a.nav-link(data-target="#demoright-2" aria-controls="demoright-2" role="tab" data-toggle="tab"): i.ion-quote.icon
+          li.nav-item
+            a.nav-link(data-target="#demoright-3" aria-controls="demoright-3" role="tab" data-toggle="tab"): i.ion-gear-b.icon
+        .tab-content
+          .tab-pane.active.fade.in(role="tabpanel" id="demoright-1")
+            a.dropdown-item.media.circle-box(href="#")
+                .media-left.media-middle
+                  img.media-object.circle-object(src="assets/images/face/2.jpg", alt="")
+                .media-body
+                  .media-heading Ryan Sears
+                  p.text-muted.small Rome; Hard there to deeply verbal page goals a accept into it pri
+            a.dropdown-item.media.circle-box(href="#")
+                .media-left.media-middle
+                  .media-object.circle-object.bg-info
+                    i.ion-calendar
+                .media-body
+                  .media-heading Event remind.
+                  p.text-muted.small 10 min ago
+            a.dropdown-item.media.circle-box(href="#")
+                .media-left.media-middle
+                  .media-object.circle-object.bg-success 40%
+                .media-body
+                  .media-heading Event remind.
+                  .progress
+                    progress.progress.progress-danger.loader(value="46" max="100")
+                  p.text-muted.small 10 min ago
+            a.dropdown-item.media.circle-box(href="#")
+                .media-left.media-middle
+                  .media-object.circle-object.bg-danger 2d
+                .media-body
+                  .media-heading Project deadline.
+                  .progress
+                    progress.progress.progress-success.loader(value="80" max="100")
+                  p.text-muted.small 80% completion
+            each val in ['1','2','3','4']
+              a.dropdown-item.media.circle-box(href="#")
+                  .media-left.media-middle
+                    img.media-object.circle-object(src="assets/images/face/"+val+".jpg", alt="")
+                  .media-body
+                    .media-heading Judith Sullivan
+                    p.text-muted.small Option wouldn't small hardly of and more believe The fundamentals
+            each val in ['1','2','3','4']
+              a.dropdown-item.media.circle-box(href="#")
+                  .media-left.media-middle
+                    img.media-object.circle-object(src="assets/images/face/"+val+".jpg", alt="")
+                  .media-body
+                    .media-heading Judith Sullivan
+                    p.text-muted.small Option wouldn't small hardly of and more believe The fundamentals
+            each val in ['1','2','3','4']
+              a.dropdown-item.media.circle-box(href="#")
+                  .media-left.media-middle
+                    img.media-object.circle-object(src="assets/images/face/"+val+".jpg", alt="")
+                  .media-body
+                    .media-heading Judith Sullivan
+                    p.text-muted.small Option wouldn't small hardly of and more believe The fundamentals
+            each val in ['1','2','3','4']
+              a.dropdown-item.media.circle-box(href="#")
+                  .media-left.media-middle
+                    img.media-object.circle-object(src="assets/images/face/"+val+".jpg", alt="")
+                  .media-body
+                    .media-heading Judith Sullivan
+                    p.text-muted.small Option wouldn't small hardly of and more believe The fundamentals
+          .tab-pane.p-a-1.fade(role="tabpanel" id="demoright-2")
+          .tab-pane.p-a-1.fade(role="tabpanel" id="demoright-3")
+      // END RIGHt PANEL
+
+    = '\n'
+    li.nav-item.dropdown
+      a.nav-link(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+        i.icon.ion-android-notifications-none
+        span.badge.badge-danger.status 9+
+      .dropdown-menu.dropdown-menu-right
+        .dropdown-header Notifications (5)
+        .dropdown-menu-inner
+          a.dropdown-item.media.circle-box(href="#")
+            .media-left.media-middle
+              img.media-object.circle-object(src="assets/images/face/2.jpg", alt="")
+            .media-body
+              .media-heading Ryan Sears
+              p.text-muted.small Pink do well together specially name if design postage briefs big into in her working
+          a.dropdown-item.media.circle-box(href="#")
+            .media-left.media-middle
+              .media-object.circle-object.bg-danger
+                i.fa.fa-bug
+            .media-body
+              .media-heading Server Error
+              p.text-muted.small 3 minutes ago
+          a.dropdown-item.media.circle-box(href="#")
+            .media-left.media-middle
+              .media-object.circle-object.bg-success
+                i.fa.fa-check
+            .media-body
+              .media-heading Server Error Reports
+              p.text-muted.small 3 minutes ago
+          each val in ['1','2','3','4']
+            a.dropdown-item.media.circle-box(href="#")
+              .media-left.media-middle
+                img.media-object.circle-object(src="assets/images/face/"+val+".jpg", alt="")
+              .media-body
+                .media-heading Judith Sullivan
+                p.text-muted.small Option wouldn't small hardly of and more believe The fundamentals
+        a.dropdown-item(href="#")
+          .text-xs-center: i.ion-more
+
+    li.nav-item.dropdown
+      a.nav-link(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+        i.icon.ion-paintbucket
+      .dropdown-menu.dropdown-menu-right.dropdown-menu-lg
+        .js-color-switcher.demo-color-switcher
+          .dropdown-header Flat
+          .list-inline
+            each val in ['f-dark','f-dark-blue','f-blue','f-green', 'f-deep-taupe']
+              a.list-inline-item(href="#" data-color=""+val+"")
+                .demo-skin-grid(class=""+val+"")
+          .dropdown-header Gradient
+          .list-inline
+            each val in ['orchid','cadetblue','joomla','influenza','moss','mirage','stellar','servquick']
+              a.list-inline-item(href="#" data-color=""+val+"")
+                .demo-skin-grid(class=""+val+"")
+
+
+    li.nav-item
+      a.nav-link(href="#"): i.icon.ion-android-exit
+
+    li.nav-item
+      a.nav-link.close-mobile-nav.js-close-mobile-nav(href="#"): i.icon.ion-close
+    // END TOP RIGHT MENU

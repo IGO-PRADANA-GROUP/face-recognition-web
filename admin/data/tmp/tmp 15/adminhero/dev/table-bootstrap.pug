@@ -1,0 +1,216 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TABLE             | Bootstrap tables                       |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-body
+            .display-6 
+              | Bootstrap 
+              b Tables
+            p.small.text-muted 
+              | An extended Bootstrap table
+      .col-md-8
+        .pull-xs-right(role="toolbar")
+          a.btn.btn-icon.icon-only: i.fa.fa-rss
+          a.btn.btn-icon.icon-only: i.fa.fa-star.text-warning
+          a.btn.btn-success(href="https://github.com/wenzhixin/bootstrap-table" target="_blank") Official website
+
+  // END PAGE HEADER
+
+  = '\n'
+  
+  .container-fluid
+    .panel-wrapper
+      
+      = '\n'
+      // #TABLE
+
+      = '\n'
+      .panel.panel-default
+        .panel-body
+          = '\n'
+          // SORT TABLE
+          h4.view-header.text-uppercase Basic Sort
+          p 
+            | Use 
+            code sortName
+            |, 
+            code sortOrder
+            |, 
+            code sortable
+            | options, and 
+            code sortable
+            | , order column options to set the basic sort of bootstrap table.
+
+          table.table.table-no-bordered(
+            data-toggle="table" 
+            data-height="300" 
+            data-sort-name="name"
+            data-sort-order="desc"
+            data-url="../assets/data/table-demo-data.json")
+            thead
+              tr
+                th(data-field="id" data-sortable="true") ID
+                th(data-field="name" data-sortable="true") NAME
+                th(data-field="price" data-sortable="true") PRICE
+            
+          // END SORT TABLE
+        // END PANEL BODY
+      // END PANEL 1
+      
+      = '\n'
+      .panel.panel-default
+        .panel-body
+          = '\n'
+          // COLUMNS TABLE
+          h4.view-header.text-uppercase Columns & Select
+          p 
+            |Use 
+            code showColumns
+            |, 
+            code minimumCountColumns 
+            | options, and 
+            code visible
+            |, 
+            code switchable 
+            | column options to show the columns menu list use to switch.
+          
+          .row
+            .col-md-6
+              table.table.table-no-bordered(
+                data-toggle="table" 
+                data-height="300" 
+                data-id-field="id"
+                data-show-columns="true"
+                data-url="../assets/data/table-demo-data-2.json")
+                thead
+                  tr
+                    th(data-field="state" data-radio="true")
+                    th(data-field="name" data-sortable="false") Name
+                    th(data-field="price") Price
+                    th(data-field="column1") column1
+                    th(data-field="column2" data-visible="false") Columns2
+                    th(data-field="column3" data-switchable="false") Columns3
+                    th(data-field="column4" data-visible="false") Columns4
+            .col-md-6
+              table.table.table-no-bordered(
+                data-toggle="table" 
+                data-height="300" 
+                data-id-field="id"
+                data-show-columns="true"
+                data-url="../assets/data/table-demo-data-2.json")
+                thead
+                  tr
+                    th(data-field="state" data-checkbox="true")
+                    th(data-field="name" data-sortable="false") Name
+                    th(data-field="price") Price
+                    th(data-field="column1") column1
+                    th(data-field="column2" data-visible="false") Columns2
+                    th(data-field="column3" data-switchable="false") Columns3
+                    th(data-field="column4" data-visible="false") Columns4
+          
+          // END COLUMNS TABLE
+        // END PANEL BODY
+      // END PANEL 2
+
+      = '\n'
+      .panel.panel-default
+        .panel-body
+          = '\n'
+          // TOOLBAR TABLE
+          h4.view-header.text-uppercase Custom Toolbar
+          P 
+            | Use 
+            code toolbar
+            | option to define the custom toolbars.
+          #js-custom-toolbar.btn-group.btn-group-sm.hidden-md-down
+            button.btn.btn-secondary-outline(type='button')
+              i.ion-star
+            button.btn.btn-secondary-outline(type='button')
+              i.ion-funnel
+            button.btn.btn-secondary-outline(type='button')
+              i.ion-locked
+
+          table.table.table-no-bordered(
+            data-toggle="table"
+            data-height="300"
+            data-toolbar="#js-custom-toolbar"
+            data-show-refresh="true"
+            data-show-toggle="true"
+            data-show-columns="true"
+            data-search="true"
+            data-url="../assets/data/table-demo-data-3.json")
+            thead
+              tr
+                th(data-field="id" data-sortable="true") ID
+                th(data-field="gender" data-sortable="true") GENDER
+                th(data-field="first_name" data-sortable="true") FIRST NAME
+                th(data-field="last_name" data-sortable="true") LAST NAME
+                th(data-field="email" data-sortable="true") EMAIL
+                th(data-field="ip_address" data-sortable="true") IP
+            
+          // END TOOLBAR TABLE
+        // END PANEL BODY
+      // END PANEL 3
+
+      = '\n'
+      .panel.panel-default
+        .panel-body
+          = '\n'
+          // PAGENAVIGATE TABLE
+          h4.view-header.text-uppercase PAGENAVIGATE
+          P 
+            | The default side pagination of table is 
+            code client
+            | .
+          table.table.table-no-bordered(
+            data-toggle="table"
+            data-height="300"
+            data-show-refresh="true"
+            data-show-toggle="true"
+            data-pagination="true"
+            data-show-columns="true"
+            data-search="true"
+            data-url="../assets/data/table-demo-data-3.json")
+            thead
+              tr
+                th(data-field="id" data-sortable="true") ID
+                th(data-field="gender" data-sortable="true") GENDER
+                th(data-field="first_name" data-sortable="true") FIRST NAME
+                th(data-field="last_name" data-sortable="true") LAST NAME
+                th(data-field="email" data-sortable="true") EMAIL
+                th(data-field="ip_address" data-sortable="true") IP
+            
+          // END PAGENAVIGATE TABLE
+        // END PANEL BODY
+      // END PANEL 4
+
+    // END PAGE WRAPPER
+  // END CONTAINER FIUID
+
+
+

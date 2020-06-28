@@ -1,0 +1,93 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #FILE              | Files styles                           |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+      h2.page-header-title Files
+  // END PAGE HEADER
+
+  = '\n'
+  // #FILE
+  = '\n'
+  .container-fluid
+    .panel-wrapper
+      .panel
+        .panel-body
+          p A single file item fluid element, you can set a col-* parent wrapper to define this size.
+           h4.demo-sub-title.m-t-3 Image & icon & text
+          .row
+            .col-sm-6.col-md-3
+              .file-item
+                .file-object.text-xs-center
+                  .fa.fa-file-word-o.fa-lg
+                .file-body: a(href="#") happy.docx
+            .col-sm-6.col-md-3
+              .file-item
+                .file-object
+                  img(src="assets/images/1.jpg", alt="")
+                .file-body: a(href="#") Happy.jpg
+            .col-sm-6.col-md-3
+              .file-item.bg-success-border
+                .file-object.bg-success
+                  b.small 7 Jan 2015
+                  h4 $20.00 USD
+                .file-body.bg-success-lighten: a(href="#") invoice.pdf
+         
+          h4.demo-sub-title.m-t-2 Iframe
+          .row
+            .col-sm-6.col-md-4
+              .file-item
+                .file-object
+                  iframe(scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/226062740&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true")
+                .file-body: a(href="#") Happy.jpg
+            .col-sm-6.col-md-4
+              .file-item(data-mh='f1')
+                .embed-responsive.embed-responsive-16by9
+                  #map.embed-responsive-item
+                .file-body: a(href="#") View map
+
+          h4.demo-sub-title.m-t-2 Group file
+          a.btn.btn-icon.js-view-btn(href="#"): i.fa.fa-list-ul.fa-lg
+          .file-group.js-view-control.grid-view
+              - for (var i = 1; i < 9; ++i)
+                a(href="" data-toggle="modal" data-target="#mediamodal").file-item
+                  .file-object.text-xs-center
+                    .fa.fa-file-word-o.fa-lg
+                  .file-body demo-#{i}.docx
+block js
+  // Add Custom google map
+  script(src="//maps.googleapis.com/maps/api/js?sensor=false")
+  script(src="assets/scripts/demo/map.js")
+
+
+
+
+
+
+
+
+
+
+
+

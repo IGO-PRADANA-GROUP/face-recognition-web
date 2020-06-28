@@ -1,0 +1,177 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #NOTIFICATIONS     | Notifications styles                   |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header.text-xs-center
+    h2.page-header-title Notification & Status
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .panel-wrapper
+
+        = '\n'
+        // #NOTIFICATION
+        = '\n'
+
+        .panel(class="panel-#{val}")
+          .panel-heading
+            h6.panel-title
+              | Notifications
+              small: a(href="#" target="_blank") Notify
+          .panel-body
+            .row
+              .col-md-6
+                .text-uppercase.m-y-2.text-capitalize
+                  h6.demo-sub-title General
+                  each val in ['primary', 'warning', 'info', 'danger', 'success']
+                    button.btn.btn-sm(type="button" class="btn-"+val+" js-notify-"+val) #{val}
+              .col-md-6
+                .text-uppercase.m-y-2.text-capitalize
+                  h6.demo-sub-title Directions
+                  p The position string option is used to describe both vertical and horizontal alignment. Element notifications and Global notifications can be vertically repositioned to: "top", "middle" or "bottom" and horozontally repositioned to: "left", "center" or "right"
+                  each val in ['top-left', 'top-center', 'top-right']
+                    button.btn.btn-sm.btn-primary.m-b-1(type="button" class="js-"+val) #{val}
+                  each val in ['right-top', 'right-middle', 'right-bottom']
+                    button.btn.btn-sm.btn-info.m-b-1(type="button" class="js-"+val) #{val}
+
+          // END PANEL BODY
+        // END PANEL
+
+    // END PAGE WRAPPER
+  // END CONTAINER FIUID
+
+block js
+  script(src="assets/scripts/plugins/notify.js")
+  script.
+    $('.js-top-left').on('click', function() {
+      return $.notify('You got a new message', {
+        position: 'top left',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        className: 'primary'
+      });
+      });
+
+      $('.js-top-center').on('click', function() {
+      return $.notify('You got a new message', {
+        position: 'top center',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        className: 'primary'
+      });
+      });
+
+      $('.js-top-right').on('click', function() {
+      return $.notify('You got a new message', {
+        position: 'top right',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        className: 'primary'
+      });
+      });
+
+      $('.js-right-top').on('click', function() {
+      return $.notify('You got a new message', {
+        position: 'right top',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        className: 'primary'
+      });
+      });
+
+      $('.js-right-middle').on('click', function() {
+      return $.notify('You got a new message', {
+        position: 'right middle',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        className: 'primary'
+      });
+      });
+
+      $('.js-right-bottom').on('click', function() {
+      return $.notify('You got a new message', {
+        position: 'right bottom',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        className: 'primary'
+      });
+      });
+
+      $('.js-notify-primary').on('click', function() {
+      return $.notify('You got a new message', {
+        className: 'primary',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        position: 'top right'
+      });
+      });
+
+      $('.js-notify-info').on('click', function() {
+      return $.notify('You got a new message', {
+        className: 'info',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        position: 'top right'
+      });
+      });
+
+      $('.js-notify-warning').on('click', function() {
+      return $.notify('You got a new message', {
+        className: 'warning',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        position: 'top right'
+      });
+      });
+
+      $('.js-notify-danger').on('click', function() {
+      return $.notify('You got a new message', {
+        className: 'danger',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        position: 'top right'
+      });
+      });
+
+      $('.js-notify-success').on('click', function() {
+      return $.notify('You got a new message', {
+        className: 'success',
+        hideDuration: '10',
+        showAnimation: 'fadeIn',
+        hideAnimation: 'fadeOut',
+        position: 'top right'
+      });
+      });

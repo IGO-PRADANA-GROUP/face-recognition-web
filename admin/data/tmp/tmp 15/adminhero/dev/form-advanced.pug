@@ -1,0 +1,389 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #SELECT2           |                                        |
+       | 12. #TAG INPUT         |                                        |
+       | 13. #MULTISELECT       |                                        |
+       | 14. #MAXLENGTH         |                                        |
+       | 15. #TOUCHSPIN         |                                        |
+       | 16. #COLORPICKER       |                                        |
+       | 17. #DATE PICKER       |                                        |
+       | 18. #TIME PICKER       |                                        |
+       | 19. #SWITCH            |                                        |
+       | 20. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Form Advanced Elements
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper
+
+            // #SELECT2
+            = '\n'
+            .col-sm-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Select2
+                    a.small(href="https://select2.github.io/" target="_blank") official website
+                .panel-body
+                  .row.m-b-3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Select2
+                      select.form-control(data-plugin="select2")
+                        include ./partials/_select-option-demo.pug
+                    .form-group.col-sm-4
+                      h4.demo-sub-title multiple
+                      select.form-control(data-plugin="select2" multiple)
+                        include ./partials/_select-option-demo.pug
+                    .form-group.col-sm-4
+                      h4.demo-sub-title multiple
+                      select.form-control(data-plugin="select2" multiple data-placeholder="Select a state")
+                        include ./partials/_select-option-demo.pug
+
+
+            // #SELECT2
+            = '\n'
+            .col-sm-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | bootstrap select
+                    a.small(href="http://silviomoreto.github.io/bootstrap-select/examples/" target="_blank") official website
+                .panel-body
+                  .row.m-b-3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Standard
+                      select.form-control(data-plugin="selectpicker")
+                        include ./partials/_select-option-demo.pug
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Live search & Key words
+                      select.form-control(data-plugin="selectpicker" data-live-search="true")
+                        option(data-tokens="ketchup mustard") Hot Dog, Fries and a Soda
+                        option(data-tokens="mustard") Burger, Shake and a Smile
+                        option(data-tokens="frosting") Sugar, Spice and all things nice
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Standard
+                      select.form-control(data-plugin="selectpicker" multiple data-max-options="2")
+                        include ./partials/_select-option-demo.pug
+                  .row.m-b-3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Placeholder
+                      select.form-control(data-plugin="selectpicker" multiple data-max-options="2" title="Choose one of the following...")
+                        include ./partials/_select-option-demo.pug
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Selected text format
+                      select.form-control(data-plugin="selectpicker" multiple data-selected-text-format="count")
+                        include ./partials/_select-option-demo.pug
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Styling
+                      select.form-control(data-plugin="selectpicker" multiple data-selected-text-format="count" data-style="btn-primary")
+                        include ./partials/_select-option-demo.pug
+                  .row.m-b-3
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Icon
+                      select.form-control(data-plugin="selectpicker")
+                        option(data-icon="fa fa-chrome icon") Chrome
+                        option(data-icon="fa fa-firefox icon") Firefox
+                        option(data-icon="fa fa-safari icon") Safari
+                        option(data-icon="fa fa-opera icon") Opera
+                        option(data-icon="fa fa-edge icon") Microsoft Edge
+                        option(data-icon="fa fa-internet-explorer icon") Internet Explorer
+                    .form-group.col-sm-4
+                      h4.demo-sub-title Subtext
+                      select.form-control(data-plugin="selectpicker" )
+                        option(data-subtext="Developer") Chrome
+                        option(data-subtext="Developer") Firefox
+                        option Safari
+                        option Opera
+                        option Microsoft Edge
+                        option Internet Explorer
+
+
+            // #TAG INPUT
+            = '\n'
+            .col-sm-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Bootstrap Tags Input
+                    a.small(href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/" target="_blank") official website
+                .panel-body
+                  .row.m-b-3
+                    .form-group.col-sm-6
+                      h4.demo-sub-title Basic
+                      p
+                        | Just add
+                        code data-role="tagsinput"
+                        | to your input field to automatically change it to a tags input field.
+                      input.form-control(type="text" placeholder="Type" data-role="tagsinput" value="Amsterdam,Washington,Sydney,Beijing,Cairo")
+
+            // #MULTISELECT
+            = '\n'
+            .col-sm-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Multiselect
+                    a.small(href="http://loudev.com/#demos" target="_blank") OFFICIAL WEBSITE
+                .panel-body
+                  .row.m-b-3
+                    .form-group.col-sm-6
+                      h4.demo-sub-title Basic
+                      select(data-plugin='multiselect')
+                        include ./partials/_select-option-demo.pug
+                    .form-group.col-sm-6
+                      h4.demo-sub-title Public methods
+                      select.js-multiselect-2(data-plugin='multiselect')
+                        include ./partials/_select-option-demo.pug
+                      .m-y-1
+                        button#select-all.btn.btn-secondary.text-uppercase(type='button') select all
+                        button#deselect-all.btn.btn-secondary.text-uppercase(type='button') deselect all
+
+            // #MAXLENGTH
+            = '\n'
+            .col-sm-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Maxlength
+                    a.small(href="https://github.com/mimo84/bootstrap-maxlength" target="_blank") official website
+                .panel-body
+                  .row.m-b-3
+                    .col-xs-12
+                      p
+                        | Add
+                        code data-plugin="maxlength"
+                        | and
+                        code maxlength="255"
+                        | The badge will show up by default when the remaining chars are 10 or less:
+                    .form-group.col-sm-6
+                      h4.demo-sub-title Basic implementation
+                      input.form-control(type="text" placeholder="This input has a limit of 25 chars." data-plugin="maxlength" maxlength="25" )
+                    .form-group.col-sm-6
+                      h4.demo-sub-title Textarea
+                      textarea.form-control(rows="6" placeholder="This textarea has a limit of 225 chars." data-plugin="maxlength" maxlength="255" )
+
+            // #TOUCHSPIN
+            = '\n'
+            .col-sm-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Bootstrap touchspin
+                    a.small(href="https://github.com/istvan-ujjmeszaros/bootstrap-touchspin" target="_blank") OFFICIAL WEBSITE
+                .panel-body
+                  .row.m-b-3
+                    .col-xs-12
+                      p A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys.
+                    .form-group.col-sm-6
+                      h4.demo-sub-title Basic
+                      input.form-control(type="text" data-plugin='TouchSpin' value="23")
+                    .form-group.col-sm-6
+                      h4.demo-sub-title With prefix
+                      input.form-control.js-touchspin-postfix-demo(type="text" data-plugin='TouchSpin' value="23")
+
+            // #COLORPICKER
+            = '\n'
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Colorpicker
+                    a.small(href="https://mjolnic.com/bootstrap-colorpicker/" target="_blank") OFFICIAL WEBSITE
+                .panel-body
+                  .row.m-b-3
+                    .col-sm-4
+                      h4.demo-sub-title Basic
+                      .asColorPicker-wrap
+                        input.form-control(type="text" data-plugin='asColorPicker' value="#F06292")
+                    .col-sm-4
+                      h4.demo-sub-title Palettes
+                      .asColorPicker-wrap
+                        input.form-control.js-demo-asColorPicker-palettes(type="text" value="#FFF176")
+                    .col-sm-4
+                      h4.demo-sub-title Complex
+                      .asColorPicker-wrap
+                        input.form-control.js-demo-asColorPicker-complex(type="text" value="#29B6F6")
+
+                  .row.m-b-3
+                    .col-sm-4
+                      h4.demo-sub-title Gradient
+                      .asColorPicker-wrap
+                        input.form-control.js-demo-asColorPicker-gradient(type="text" value="#3F51B5")
+
+
+            // #DATEPICKER
+            = '\n'
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Datepicker
+                    a.small(href="https://github.com/eternicode/bootstrap-datepicker" target="_blank") OFFICIAL WEBSITE
+                .panel-body
+                  .row.m-b-3
+                    .col-sm-4
+                      h4.demo-sub-title Baisc
+                      .datepicker-wrapper.open
+                        input.form-control(type="text" data-plugin='datepicker' placeholder="dd/mm/yyyy")
+                    .col-sm-8
+                      h4.demo-sub-title Date Range
+                      .datepicker-wrapper.open
+                        .input-daterange.input-group(data-plugin='datepicker')
+                          input.form-control(type="text" name="start" placeholder="dd/mm/yyyy")
+                          span.input-group-addon to
+                          input.form-control(type="text" name="end" placeholder="dd/mm/yyyy")
+
+
+            // #DATE PICKER
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Date Range Picker
+                    a.small(href="http://www.daterangepicker.com/#examples" target="_blank") OFFICIAL WEBSITE
+                .panel-body
+                  .row.m-b-3
+                    .col-sm-4
+                      h4.demo-sub-title Date Range
+                      .daterange-wrapper
+                        input.form-control(type="text" data-plugin='daterangepicker')
+                    .col-sm-5
+                      h4.demo-sub-title Date and Time
+                      .daterange-wrapper
+                        input.form-control#js-date-time(type="text"  value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM")
+                    .col-sm-3
+                      h4.demo-sub-title Single Date
+                      .daterange-wrapper
+                        input.form-control#js-one-date(type="text"  value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM")
+
+            = '\n'
+
+            // #TIME PICKER
+            = '\n'
+            .col-xs-4
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Timepicker
+                    a.small(href="http://jonthornton.github.io/jquery-timepicker/" target="_blank") OFFICIAL WEBSITE
+                .panel-body
+                  h4.demo-sub-title Basic
+                  input.form-control(type="text" data-plugin='timepicker')
+
+            // #SWITCH
+            = '\n'
+            .col-xs-8
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | Switch
+                .panel-body
+                  .row
+                    .col-xs-4
+                      .switch
+                        input(type="checkbox")
+                        label
+                    .col-xs-4
+                      .switch.switch-sm
+                        input(type="checkbox")
+                        label
+                    .col-xs-4
+                      .switch.switch-xs
+                        input(type="checkbox")
+                        label
+
+
+            // #LABELAUTY
+            = '\n'
+            .col-xs-12
+              .panel.panel-default
+                .panel-heading
+                  h6.panel-title
+                    | labelauty
+                    a.small(href="https://github.com/fntneves/jquery-labelauty" target="_blank") OFFICIAL WEBSITE
+                .panel-body
+                  .row
+                    .col-xs-3
+                      h4.demo-sub-title Basic input
+                      input(type="checkbox" data-plugin='labelauty')
+                    .col-xs-3
+                      h4.demo-sub-title Toggle message
+                      input(type="checkbox" data-plugin='labelauty' data-labelauty="Don't synchronize files|Synchronize my files")
+                    .col-xs-3
+                      h4.demo-sub-title Message
+                      input(type="checkbox" data-plugin='labelauty' data-labelauty="Synchronize my files")
+                    .col-xs-3
+                      h4.demo-sub-title Radio
+                      input(type="radio" data-plugin='labelauty' name="demo-radio-la")
+                      input(type="radio" data-plugin='labelauty' name="demo-radio-la" checked)
+                      input(type="radio" data-plugin='labelauty' name="demo-radio-la")
+
+    // END ROW
+
+  // END CONTAINER FIUID
+
+block js
+  script.
+
+    $('#select-all').click(function(){
+      $('.js-multiselect-2').multiSelect('select_all');
+      return false;
+    });
+
+    $('#deselect-all').click(function(){
+      $('.js-multiselect-2').multiSelect('deselect_all');
+      return false;
+    });
+
+    $('.js-touchspin-postfix-demo').TouchSpin({
+      postfix: '%'
+    })
+
+    $('#js-date-time').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+            format: 'MM/DD/YYYY h:mm A'
+        }
+    });
+
+    $('#js-one-date').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true
+    });
+
+    $(".js-demo-asColorPicker-palettes").asColorPicker({
+      mode: 'palettes'
+    });
+
+    $(".js-demo-asColorPicker-complex").asColorPicker({
+      mode: 'complex'
+    });
+
+    $(".js-demo-asColorPicker-gradient").asColorPicker({
+      mode: 'gradient'
+    });

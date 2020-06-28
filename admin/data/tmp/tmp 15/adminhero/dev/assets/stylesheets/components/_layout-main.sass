@@ -1,0 +1,201 @@
+
+.main-wrapper
+  position: relative
+  margin-left: $mainmenu-width
+  background: #fff
+  min-height: 100vh
+  z-index: 2
+  opacity: 1
+  &.max-lg
+    max-width: 1470px
+  +rwd($i5)
+    min-height: 800px
+  +hero_transition
+  .layout-drawer &
+    margin-left: 0
+
+.mainmenu-block
+  width: $mainmenu-width
+  height: 100%
+  color: #f1f1f1
+  padding-bottom: 100px
+  position: fixed
+  z-index: 1
+  overflow: auto
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1)
+  -webkit-overflow-scrolling: touch
+  .layout-drawer &
+    z-index: 99
+    transform: translateX(-$mainmenu-width )
+
+.view-wrapper
+  position: relative
+  min-height: 100vh
+  z-index: 3
+  padding-top: $mainmenu-height
+  background-color: #f7f7f7
+  +hero_transition
+  +rwd($i5)
+    min-height: 800px
+
+.topbar-wrapper
+  height: $mainmenu-height
+  border-bottom: 1px solid #eee
+  position: fixed
+  z-index: 9999 // must higher then dropdown menu
+  background: #fff
+  top: 0
+  left: $mainmenu-width
+  width: calc(100% - #{$mainmenu-width})
+  transform: translateZ(0)
+  opacity: 1
+  +clearfix
+  +hero_transition
+  body.scrolling &
+    box-shadow: 8px 4px 19px rgba(0, 0, 0, 0.1)
+  .minibar &
+    left: $mainmenu-minibar-width
+    width: calc(100% - #{$mainmenu-minibar-width})
+
+  .layout-drawer &
+    left: 0
+    width: 100%
+
+.dropdown-menu-side.dropdown-menu
+  position: fixed
+  padding: 0
+  padding-bottom: $mainmenu-height
+  top: $mainmenu-height
+  right: 0
+  left: auto
+  z-index: 3
+  height: 100vh
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  box-shadow: -3px 6px 10px rgba(#000, .1)
+  +hero_transition
+  @include media-breakpoint-up(lg)
+    width: 300px
+    display: block
+    transform: translateX(100%) translateZ(0)
+
+.dropdown.open .dropdown-menu-side.dropdown-menu
+  transform: translateX(0) translateZ(0)
+
+.drawer-close
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 98
+  background-color: #fff
+  opacity: 0
+
+.minibar.layout-drawer .mainmenu-block
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.68)
+  transform: translateX(0)
+
+// ===============
+// Theme ui special css
+// Don't modify
+// Minibar
+// for main menu && only large view
+//+rwd($md-up)
+@include media-breakpoint-up(lg)
+
+  .minibar
+    &:not(.layout-drawer) .main-wrapper
+      margin-left: $mainmenu-minibar-width
+
+    &:not(.layout-drawer) .mainmenu-block
+      width: $mainmenu-minibar-width
+      .header,
+      .menu-block-label,
+      .menu-block-has-sub a:after,
+      .badge,
+        opacity: 0
+        visibility: hidden
+        +hero_transition
+
+    // when mouse over
+    &:not(.layout-drawer) .mainmenu-block:hover
+      width: $mainmenu-width
+      .header,
+      .menu-block-label,
+      .menu-block-has-sub a:after,
+      .badge,
+      .header
+        opacity: 1
+        visibility: visible
+        hero_transition-delay: .1s
+
+      ~ .main-wrapper
+        margin-left: $mainmenu-width
+        .topbar-wrapper
+          left: $mainmenu-width
+
+//======================
+// Mobile for main menu
+// Theme ui special css
+// Don't modify
+//+rwd($md-down)
+@include media-breakpoint-down(md)
+  .main-wrapper
+    margin-left: 0
+  .topbar-wrapper
+    left: 0
+    width: 100%
+    .topbar-wrapper-nav > li
+      position: static
+    .navbar-nav .open .dropdown-menu:not(.dropdown-menu-side)
+      width: 100%
+      position: absolute
+  .minibar:not(.layout-drawer)
+    overflow-x: hidden !important
+    position: fixed
+    width: 100%
+    .layout-sidebar
+      display: none
+    .topbar-wrapper,
+      margin-left: $mainmenu-width - $mainmenu-minibar-width
+    .main-wrapper
+      margin-left: $mainmenu-width
+
+//======================
+// Mobile for sidebar
+// Theme ui special css
+// Don't modify
+.sidebar-togger
+  position: absolute
+  z-index: 9
+  right: -10px
+  top: 200px
+  height: 100px
+  line-height: 100px
+  padding: 0 5px
+  background-color: #ccc
+  color: #212121
+  display: none
+  +hero_box-shadow
+  i
+    transform: rotate(90deg)
+
+// +rwd($md)
+@include media-breakpoint-down(sm)
+  .sidebar-togger
+    display: block
+  .layout-sidebar
+    position: fixed
+    top: $mainmenu-height
+    z-index: 3
+    left: -250px
+    width: 250px
+    height: 100%
+    +hero_box-shadow
+    +hero_transition
+    &.active
+      left: 0
+      -webkit-overflow-scrolling: touch
+      .sidebar-togger
+        right: 0

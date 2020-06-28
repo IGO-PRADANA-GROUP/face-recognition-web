@@ -1,0 +1,78 @@
+@each $colorlist, $color in $colorlist {
+
+  .bg-#{$colorlist} {
+    background-color: $color !important;
+    @if $colorlist == faded{
+      color: $body-color;
+    } @else {
+      color: #fff;
+      > a {
+          color: rgba(#fff, .8);
+          &:hover  {
+            color: #fff
+          }
+        }
+    }
+  }
+
+  .bg-#{$colorlist}-darken {
+    background-color: darken($color, 5%) !important;
+    @if $colorlist == faded{
+      color: $body-color;
+    } @else {
+      color: #fff;
+      > a {
+        color: rgba(#fff, .8);
+        &:hover  {
+          color: #fff
+        }
+      }
+    }
+  }
+
+  .bg-#{$colorlist}-lighten {
+    background-color: lighten($color, 5%) !important;
+    @if $colorlist == faded{
+      color: inherit;
+    } @else {
+      color: #fff;
+      > a {
+        color: rgba(#fff, .8);
+        &:hover  {
+          color: #fff
+        }
+      }
+    }
+  }
+
+
+  .text-#{$colorlist}{
+    color: $color !important;
+    @if $colorlist == faded {
+      color: darken($color, 25%)!important;
+    }
+  }
+  .border-#{$colorlist} {
+    border-color: $color !important;
+    @if $colorlist == faded {
+      border-color: darken($color, 25%)!important;
+    }
+  }
+}
+
+.bg-white {
+  background-color: #fff!important;
+}
+
+.text-white {
+  color: #fff!important;
+}
+
+@for $i from 1 through 99 {
+  .bg-dark-opacity-#{$i} {
+    background-color: rgba(0, 0, 0, $i/100);
+  }
+  .bg-white-opacity-#{$i} {
+    background-color: rgba(255, 255, 255, $i/100);
+  }
+}

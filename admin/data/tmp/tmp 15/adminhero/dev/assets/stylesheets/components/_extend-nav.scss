@@ -1,0 +1,129 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+//
+// Tabs
+//
+.nav-quick,
+.nav-inline,
+.nav-tabs {
+  border: none;
+  font-size: 13px;
+  @include clearfix();
+
+  > li {
+    white-space: nowrap;
+    a {
+      color: #B9B9B9;
+    }
+    &.active a,
+    &.active a:focus,
+    &.active a:hover,
+    a:focus,
+    a:hover {
+      border: none;
+      background-color: transparent;
+      color: $nav-tabs-active-link-hover-color;
+    }
+  }
+
+  &.nav-justified  {
+    width: 100%;
+    overflow: auto;
+    > li {
+      display: table-cell;
+      width: 1%;
+      float: none;
+      text-align: center;
+
+      > a {
+        border-bottom: 1px solid $nav-tabs-border-color;
+        padding: $nav-link-padding-justified;
+        @media all and (max-width: 992px) {
+          padding: 8px 10px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    > .active > a,
+    > .active > a:hover {
+      @include plain-hover-focus {
+        color: $nav-tabs-active-link-hover-color;
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-color: $nav-tabs-active-link-hover-border-color;
+      }
+    }
+
+  }
+
+  .nav-item {
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: 0;
+
+    + .nav-item {
+      margin-left: .5rem;
+    }
+  }
+
+  .nav-link {
+    display: block;
+    padding: $nav-link-padding;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    @include border-radius($border-radius $border-radius 0 0);
+
+    @include hover-focus {
+      border-bottom-color: $nav-tabs-active-link-hover-border-color;
+    }
+
+    &.disabled {
+      @include plain-hover-focus {
+        color: $nav-disabled-link-color;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+      color: $nav-tabs-active-link-hover-color;
+      background-color: $nav-tabs-active-link-hover-bg;
+      border-bottom-color: $nav-tabs-active-link-hover-border-color;
+    }
+  }
+
+  &.nav-tabs-icon-only .nav-link {
+    border-bottom: none
+  }
+}
+
+.nav-quick {
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-around;
+  @include media-breakpoint-down(md) {
+    justify-content: space-between;
+  }
+  .nav-item {
+    float: none;
+    @include media-breakpoint-down(md) {
+      min-width: 80px;
+    }
+  }
+}
+
+.responsive-nav {
+  overflow-x: auto;
+}

@@ -1,0 +1,18 @@
+.toolbar
+  padding: .5rem 
+  font-size: 12px
+  display: flex
+  align-items: center
+  border: 1px solid $gray
+  .form-group
+    display: flex
+    margin-bottom: 0
+    + .form-group
+      margin-left: $grid-gutter-width/2
+  .form-control
+    padding: 0.1rem 0.7rem
+  .form-control-search .form-control
+    padding-left: 2em
+    border: none
+  .btn
+    @extend .btn-sm

@@ -1,0 +1,29 @@
+# Disable directory browsing
+Options All -Indexes
+
+# bad syntax
+ErrorDocument 400 /admin/data/error/400.php
+ 
+# unautorized
+ErrorDocument 401 /admin/data/error/400.php
+ 
+# not used
+ErrorDocument 402 /admin/data/error/400.php
+ 
+# forbiden
+ErrorDocument 403 /admin/data/error/400.php
+ 
+ 
+# error di server
+ 
+# internal server error
+ErrorDocument 500 /admin/data/error/400.php
+ 
+# not implemented
+ErrorDocument 501 /admin/data/error/400.php
+ 
+# overload
+ErrorDocument 502 /admin/data/error/400.php
+ 
+# gateway timeout
+ErrorDocument 503 admin/data/error/400.php

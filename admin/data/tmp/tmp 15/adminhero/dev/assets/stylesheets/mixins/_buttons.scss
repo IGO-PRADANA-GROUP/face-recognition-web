@@ -1,0 +1,135 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+  $active-background: darken($background, 5%);
+  $active-border: darken($border, 5%);
+
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  box-shadow: none;
+
+  @include hover {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+
+  &.hover {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+    // Remove the gradient for the pressed/active state
+    background-image: none;
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: $active-background;
+          border-color: $active-border;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+    @include hover {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  .badge {
+    border-color: inherit;
+  }
+}
+
+
+
+@mixin button-outline-variant($color) {
+  color: $color;
+  background-image: none;
+  background-color: transparent;
+  border-color: rgba($color, .2);
+
+  &.hover {
+    color: $color;
+    background-color: rgba($color, .1);
+        border-color: rgba($color, .2);
+    box-shadow: none;
+  }
+
+  .badge {
+    border-color: inherit;
+  }
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: rgba($color, .1);
+        border-color: rgba($color, .2);
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: rgba($color, .1);
+          border-color: rgba($color, .2);
+      box-shadow: none;
+    }
+  }
+  @include hover {
+    color: $color;
+    background-color: rgba($color, .1);
+        border-color: rgba($color, .2);
+    box-shadow: none;
+  }
+
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      border-color: #f1f1f1;
+    }
+    @include hover {
+      border-color: #f1f1f1;
+    }
+  }
+}
+
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+  @include border-radius($border-radius);
+}

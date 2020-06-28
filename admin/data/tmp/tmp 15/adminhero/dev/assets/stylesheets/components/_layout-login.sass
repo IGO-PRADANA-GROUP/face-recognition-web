@@ -1,0 +1,36 @@
+.login
+  .login-form
+    width: 90%
+    max-width: 450px
+    margin: 10% auto 0
+    background-color: #fff
+    padding: 2rem
+    border-radius: $border-radius-lg
+    box-shadow: 0 2px 10px rgba(#000, .1)
+  &.login-transparent
+    .login-form
+      background: none
+      box-shadow: none
+      color: #fff
+      .form-control
+        color: #fff
+        border-color: rgba(#ccc, .6)
+        $color: inherit
+        $fw: 300
+        $fz: 1rem
+        &::-moz-placeholder
+          color: $color
+          font-weight: $fw
+          font-size: $fz
+        &:-ms-input-placeholder
+          color: $color
+          font-weight: $fw
+          font-size: $fz
+        &::-webkit-input-placeholder
+          color: $color
+          font-weight: $fw
+          font-size: $fz
+        &:placeholder-shown
+          color: $color
+          font-weight: $fw
+          font-size: $fz

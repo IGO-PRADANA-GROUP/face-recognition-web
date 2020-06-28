@@ -1,0 +1,344 @@
+extends ./partials/_base
+
+block vars
+  - var menu = true
+  - var layout_drawer = true
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #SIDEBAR           |                                        |
+       | 11. #WEATHER           | Right top side weather info            |
+       | 12. #ACTIVITY          | Right side status stream               |
+       | 13. #NUMBER BOX        | Oversale demo                          |
+       | 13. #STATUS            | Table                                  |
+       | 13. #MEMBER            | Member table                           |
+       | 14. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  .layout
+
+    = '\n'
+    .layout-content
+      .panel.bg-aqua(data-mh='g1')
+        .panel-body
+          .block-header Good Morning, Weber
+          ul.nav.nav-inline.m-t-3
+            li.nav-item
+              a.nav-link.text-white(href="#") Overview
+            li.nav-item
+              a.nav-link.text-white(href="#") Products
+            li.nav-item
+              a.nav-link.text-white(href="#") Quotes
+            li.nav-item
+              a.nav-link.text-white(href="#") Sales
+            li.nav-item
+              a.nav-link.text-white(href="#") Purchases
+
+      .bg-white(data-mh='g2')
+        // #NUMBER BOX
+        .row-no-gutter
+          .col-sm-4.p-a-3.text-xs-center
+            span.text-uppercase overall sales
+            h4.m-y-2
+              | $
+              span(data-plugin="counterUp") 14,000
+            progress.progress.progress-success(value="15" max="100")
+          .col-sm-4.p-a-3.text-xs-center
+            span.text-uppercase this week sales
+            h4.m-y-2
+              | $
+              span(data-plugin="counterUp") 4,000
+            progress.progress.progress-info(value="55" max="100")
+          .col-sm-4.p-a-3.text-xs-center
+            span.text-uppercase total sales
+            h4.m-y-2
+              | $
+              span(data-plugin="counterUp") 34,000
+            progress.progress.progress-primary(value="75" max="100")
+        = '\n'
+
+        // #STATUS
+        .panel
+          progress.progress.progress-primary.loader.js-loader.hidden(value="1" max="100")
+          .panel-heading
+            h6.panel-title Status
+            .panel-tool.btn-group
+              button.btn.btn-xs.btn-secondary(type="button") Today
+              button.btn.btn-xs.btn-secondary.active(type="button") Week
+              button.btn.btn-xs.btn-secondary(type="button") Month
+              button.js-reload.btn-secondary.btn.btn-xs(type="button"): i.icon.ion-refresh
+          .panel-body
+            .row-no-gutter
+              .col-sm-6
+                canvas#demo-doughnut-chart
+                #demo-chart-doughnut-legend.legend.legend-inline.text-xs-center.m-y-1
+              .col-sm-6
+                  table.table
+                    thead
+                      tr
+                        th OrderDate
+                        th Item
+                        th Units
+                    tbody
+                      tr
+                        td 1/6/2014
+                        td Pencil
+                        td 95
+                      tr
+                        td 1/6/2014
+                        td Pencil
+                        td 95
+                      tr
+                        td 2/9/2014
+                        td Binder
+                        td 50
+                      tr
+                        td 2/26/2014
+                        td Pen
+                        td 27
+        = '\n'
+
+        // #MEMBER
+        .panel
+          progress.progress.loader.js-loader.hidden(value="1" max="100")
+          .panel-heading
+            h6.panel-title Members
+            .panel-tool
+              a.js-reload(href="#"): i.icon.ion-refresh
+          .panel-body
+            .table-responsive
+              table.table
+                thead
+                  tr
+                    th Name
+                    th(width="200")
+                    th Item
+                    th(width="100") Sale
+                    th(width="100")
+                tbody
+                  tr
+                    td
+                      .media
+                        .media-left
+                          img.img-rounded.media-object(src="assets/images/face/1.jpg", alt="" width="50")
+                        .media-body
+                          b Jefferson Patton
+                          p.small Netgen Corporation Corp.
+                    td
+                      .btn-group(role="group")
+                        button.btn.btn-link.text-success(type='button'): i.fa-lg.fa.ion-ios-play
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-pause
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-fastforward
+                    td Binder
+                    td 95
+                    td: a.btn.btn-primary(href="#") View more
+                  tr
+                    td
+                      .media
+                        .media-left
+                          img.img-rounded.media-object(src="assets/images/face/2.jpg", alt="" width="50")
+                        .media-body
+                          b Kaia O'Hara
+                          p.small Greenmoon Corporation Ltd.
+                    td
+                      .btn-group(role="group")
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-play
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-pause
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-fastforward
+                    td Pencil
+                    td 95
+                    td: a.btn.btn-primary(href="#") View more
+                  tr
+                    td
+                      .media
+                        .media-left
+                          img.img-rounded.media-object(src="assets/images/face/3.jpg", alt="" width="50")
+                        .media-body
+                          b Fernanda Lawson
+                          p.small Capsoft
+                    td
+                      .btn-group(role="group")
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-play
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-pause
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-fastforward
+                    td Binder
+                    td 50
+                    td: a.btn.btn-primary(href="#") View more
+                  tr
+                    td
+                      .media
+                        .media-left
+                          img.img-rounded.media-object(src="assets/images/face/4.jpg", alt="" class="img-rounded" width="50")
+                        .media-body
+                          b Justin Cross
+                          p Yasyas Ltd.
+                    td
+                      .btn-group(role="group")
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-play
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-pause
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-fastforward
+                    td Pen
+                    td 27
+                    td: a.btn.btn-primary(href="#") View more
+                  tr
+                    td
+                      .media
+                        .media-left
+                          img.img-rounded.media-object(src="assets/images/face/1.jpg", alt="" width="50")
+                        .media-body
+                          b Jefferson Patton
+                          p.small Netgen Corporation Corp.
+                    td
+                      .btn-group(role="group")
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-play
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-pause
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-fastforward
+                    td Binder
+                    td 95
+                    td: a.btn.btn-primary(href="#") View more
+                  tr
+                    td
+                      .media
+                        .media-left
+                          img.img-rounded.media-object(src="assets/images/face/2.jpg", alt="" width="50")
+                        .media-body
+                          b Kaia O'Hara
+                          p.small Greenmoon Corporation Ltd.
+                    td
+                      .btn-group(role="group")
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-play
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-pause
+                        button.btn.btn-link.text-dark(type='button'): i.fa-lg.fa.ion-ios-fastforward
+                    td Pencil
+                    td 95
+                    td: a.btn.btn-primary(href="#") View more
+        = '\n'
+
+        .panel.bg-dark
+          .panel-body
+            a.btn.btn-danger.pull-xs-right(href="#") Download
+            ul.nav.nav-inline
+              li.nav-item
+                a.nav-link.text-white(href="#") Documentation
+              li.nav-item
+                a.nav-link.text-white(href="#") Help
+              li.nav-item
+                a.nav-link.text-white(href="#") Bug Report
+              li.nav-item
+                a.nav-link.text-white(href="#") Testimonial
+        = '\n'
+
+    = '\n'
+    // #SIDEBAR
+    .layout-sidebar
+      = '\n'
+      // #WEATHER
+      // Need a padding div with aqua background
+      .panel.bg-aqua-lighten(data-mh='g1')
+        .panel-body
+          p.pull-xs-right.small
+            | Preciptation: 0%
+            br
+            | Humidity: 53%
+            br
+            | Wind: 3 km/h
+          .block-header
+            .wi.wi-night-snow-wind
+            .lead
+              | 6 &#8451;
+            .lead
+              | Taiwan,
+              b Taipei
+
+      = '\n'
+      // #ACTIVITY
+      .panel.panel-default.bg-faded(data-mh='g2')
+        progress.progress.progress-primary.loader.js-loader.hidden(value="1" max="100")
+        .panel-heading.bg-faded
+          .panel-title Recent activity
+          .panel-tool
+            a.js-reload(href="#"): i.icon.ion-refresh
+        .panel-body
+          ul.list-group.list-group-tasks
+            li.list-group-item.border-info(href="#")
+              p.list-group-item-text
+                a(href="#") Zx Network
+                | replied to the thread
+                a(href="#")  Follow a posters Twitter account?.
+              p
+                small.text-muted 20 minutes ago · 5 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") Orx4me
+                | replied to the thread
+                a(href="#")  RM Marketplace
+              p
+                small.text-muted 20 minutes ago · 0 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") CabCon
+                | set their home page.
+              p
+                small.text-muted 20 minutes ago · 1 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") CabCon
+                | set their location as Germany.
+              p
+                small.text-muted 24 minutes ago · 0 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") CabCon
+                | has a new avatar.
+              p
+                small.text-muted 26 minutes ago · 0 replies
+            li.list-group-item(href="#")
+              p.list-group-item-text
+                a(href="#") iGee
+                | posted a new
+                a(href="#") thread.
+              p
+                small.text-muted 28 minutes ago · 21 replies
+            li.list-group-item.border-success(href="#")
+              p.list-group-item-text
+                a(href="#") melbo
+                | replied to the thread
+                a(href="#") Content = More Members.
+              p
+                small.text-muted 35 minutes ago · 2 replies
+            li.list-group-item.border-info(href="#")
+              p.list-group-item-text
+                a(href="#") lazy llama
+                | liked
+                a(href="#") Brogan's post
+                | in the thread
+                a(href="#") RM Marketplace
+              p
+                small.text-muted 39 minutes ago · 9 replies
+            li.list-group-item.border-danger(href="#")
+              p.list-group-item-text
+                a(href="#") iGee
+                | Delete a
+                a(href="#") thread.
+
+
+      a.sidebar-togger(href="#"): i.ion-android-more-vertical
+
+
+block js
+  // This page demo js
+  script(src="assets/scripts/demo/doughnut-chart.js")

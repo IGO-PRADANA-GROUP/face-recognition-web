@@ -1,0 +1,42 @@
+.panel-wrapper:last-child
+	padding-bottom: $grid-gutter-width
+
+.panel
+	position: relative
+	margin-bottom: 0
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1)
+	.panel-wrapper &
+		margin-top: $grid-gutter-width
+	.loader
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+
+.panel-heading
+	+clearfix()
+
+.panel-title
+	float: left
+	color: inherit
+	margin-bottom: 0
+
+.panel-tool
+	float: right
+	transition: all .2s ease
+	.icon
+		font-size: 14px
+		margin: 0 2px
+		display: inline-block
+		width: 22px
+		text-align: center
+
+
+
+
+
+
+
+
+
+

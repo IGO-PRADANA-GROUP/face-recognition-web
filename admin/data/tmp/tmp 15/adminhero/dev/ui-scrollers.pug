@@ -1,0 +1,109 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #LAYOUT            | Basic left right coloums               |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Scroll bar
+
+  = '\n'
+  // #LAYOUT
+  .container-fluid
+    .row.panel-wrapper.js-grid-wrapper
+
+      = '\n'
+      // #PANEL
+      = '\n'
+      .col-sm-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title TOP 100 MOVIES OF 2015
+          .panel-body
+            .scroll-wrapper.scroll-wrapper-horizontal
+              table.table.font-weight-bold
+                tr
+                  td  Mad Max: Fury Road (2015)
+                  td  97%
+                tr
+                  td  Inside Out (2015)
+                  td  98%
+                tr
+                  td  Selma (2015)
+                  td  99%
+                tr
+                  td  Brooklyn (2015)
+                  td  98%
+                tr
+                  td  Spotlight (2015)
+                  td  96%
+                tr
+                  td  Star Wars: Episode VII - The Force Awakens (2015)
+                  td  92%
+                tr
+                  td  It Follows (2015)
+                  td  97%
+                tr
+                  td  Shaun the Sheep Movie (2015)
+                  td  99%
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-sm-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title TOP 100 MOVIES OF 2015
+          .panel-body
+            .scroll-wrapper
+              table.table.font-weight-bold(style="width:700px")
+                tr
+                  td  Mad Max: Fury Road (2015)
+                  td  97%
+                tr
+                  td  Inside Out (2015)
+                  td  98%
+                tr
+                  td  Selma (2015)
+                  td  99%
+                tr
+                  td  Brooklyn (2015)
+                  td  98%
+                tr
+                  td  Spotlight (2015)
+                  td  96%
+                tr
+                  td  Star Wars: Episode VII - The Force Awakens (2015)
+                  td  92%
+                tr
+                  td  It Follows (2015)
+                  td  97%
+                tr
+                  td  Shaun the Sheep Movie (2015)
+                  td  99%
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+
+

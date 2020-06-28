@@ -1,0 +1,163 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TABLE             |                                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-body
+            .display-6 Table UI
+            p.small.text-muted 
+              | Info Table Design
+      .col-md-8
+        .pull-xs-right(role="toolbar")
+          a.btn.btn-icon.icon-only: i.fa.fa-rss
+          a.btn.btn-icon.icon-only: i.fa.fa-star.text-warning
+          button.btn.btn-secondary(type="button" data-toggle="collapse" href="#qmenu" aria-expanded="false" aria-controls="qmenu") Open menu
+          button.btn.btn-success(type="button") Add Data
+
+ 
+  #qmenu.bg-darken-lighten.responsive-nav.collapse.p-y-2
+      ul.nav.nav-inline.nav-quick.text-xs-center
+        li.nav-item.active
+          a.nav-link(href="#") 
+            .ion-person-add.fa-2x
+            .menu-lable Customers
+        li.nav-item
+          a.nav-link(href="#")
+            .ion-soup-can-outline.fa-2x
+            .menu-lable Databases
+        li.nav-item
+          a.nav-link(href="#") 
+            .ion-clipboard.fa-2x
+            .menu-lable Quotes
+        li.nav-item
+          a.nav-link(href="#") 
+            .ion-calculator.fa-2x
+            .menu-lable Sales
+        li.nav-item
+          a.nav-link(href="#") 
+            .ion-podium.fa-2x
+            .menu-lable Purchases
+        li.nav-item
+          a.nav-link(href="#") 
+            .ion-beaker.fa-2x
+            .menu-lable Beaker
+        li.nav-item
+          a.nav-link(href="#") 
+            .ion-camera.fa-2x
+            .menu-lable Album
+        li.nav-item
+          a.nav-link(href="#") 
+            .ion-power.fa-2x
+            .menu-lable Power
+
+  // #TABLE
+  .container-fluid
+    .panel-wrapper
+          
+      .panel
+        ul.nav.nav-tabs(role="tablist")
+          li.nav-item
+            a.nav-link.active(href="#demotab-1" aria-controls="demotab-1" role="tab" data-toggle="tab") ASIA
+          li.nav-item
+            a.nav-link(href="#demotab-2" aria-controls="demotab-2" role="tab" data-toggle="tab") USA
+          li.nav-item
+            a.nav-link(href="#demotab-3" aria-controls="demotab-3" role="tab" data-toggle="tab") EUROPE
+
+        .table-bar
+          .form-inline
+            .form-group
+              label.form-control-label Office
+              select.form-control.c-select.form-control-sm
+                option Edinburgh
+                option Tokyo
+                option San Francisco
+            .form-group
+              label.form-control-label Position
+              select.form-control.c-select.form-control-sm
+                option System Architect
+                option Accountant
+                option Junior Technical Author
+            .pull-sm-right
+              .form-group
+                a.btn.btn-icon.icon-only: i.fa.fa-yen
+                a.btn.btn-icon.icon-only: i.fa.fa-usd.text-danger
+                a.btn.btn-icon.icon-only: i.fa.fa-gbp
+                a.btn.btn-icon.icon-only: i.fa.fa-euro
+              .form-group
+                .dropdown
+                  button#tabletopdd.btn.btn-primary.btn-sm.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                    | Go to
+                  .dropdown-menu.dropdown-menu-right(aria-labelledby="tabletopdd")
+                    button.dropdown-item(type="button") 2016
+                    button.dropdown-item(type="button") 2015
+                    button.dropdown-item(type="button") 2014
+        
+        
+        .responsive-nav
+          include ./partials/_table-data-full-demo
+        
+
+        .table-bar
+          small Showing 1 to 10 of 57 entries
+          .dropup
+            button#tabletopdd.btn.btn-link.btn-sm.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+              | Change mode
+            .dropdown-menu(aria-labelledby="tabletopdd")
+              button.dropdown-item(type="button") Google doc
+              button.dropdown-item(type="button") Zoho
+              button.dropdown-item(type="button") Dochub
+          nav.pull-xs-right
+            ul.pagination.pagination-sm
+              li.page-item
+                a.page-link(href="#", aria-label="Previous")
+                  span(aria-hidden="true") &#171;
+                  span.sr-only Previous
+              li.page-item.active
+                a.page-link(href="#") 1
+              li.page-item
+                a.page-link(href="#") 2
+              li.page-item
+                a.page-link(href="#") 3
+              li.page-item
+                a.page-link(href="#") 4
+              li.page-item
+                a.page-link(href="#") 5
+              li.page-item
+                a.page-link(href="#", aria-label="Next")
+                  span(aria-hidden="true") &#187;
+                  span.sr-only Next
+
+
+
+
+
+
+
+
+
+
+

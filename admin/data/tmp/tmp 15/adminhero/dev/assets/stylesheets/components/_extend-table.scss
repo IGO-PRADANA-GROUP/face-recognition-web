@@ -1,0 +1,43 @@
+//
+// Basic Bootstrap table
+//
+
+.table {
+  th {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+  th {
+    border-top: 2px solid $gray
+  }
+
+  td {
+    border-top: $table-border-width solid $table-border-color;
+    // padding: 1rem 0.8rem;
+    vertical-align: middle;
+    &.table-label {
+      width:4px;
+    }
+  }
+
+  // reset all btn in table
+  .btn {
+    padding: $table-btn-y $table-btn-x !important;
+    font-size: 12px;
+  }
+
+  &.table-no-border {
+    th,
+    td {
+      border: none;
+    }
+  }
+}
+
+.table-bar {
+  padding: $grid-gutter-width/2;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  @include clearfix();
+}

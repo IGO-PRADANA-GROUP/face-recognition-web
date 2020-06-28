@@ -1,0 +1,45 @@
+
+.scroll-board
+  padding: $grid-gutter-width
+
+.scroll-wrapper
+  width: 100%
+  white-space: nowrap
+  overflow-x: scroll
+  overflow-y: hidden
+  &::-webkit-scrollbar
+    -webkit-appearance: none
+    height: 6px
+    background: rgba(22,22,22, .1)
+  &::-webkit-scrollbar-thumb
+    background: #939FAD
+    border-radius: 2px
+  &::-webkit-scrollbar-corner
+    background-color: transparent
+  +clearfix
+  .scroll-item
+    white-space: normal
+    width: 280px
+    display: inline-block
+    vertical-align: top
+    padding-bottom: 20px
+    margin-right: $grid-gutter-width/2
+    &:last-child
+      margin-right: 0
+
+  &.scroll-wrapper-horizontal
+    height: 280px
+    padding-right: 2rem
+    overflow-y: scroll
+    overflow-x: hidden
+    &::-webkit-scrollbar
+      -webkit-appearance: none
+      width: 6px
+
+
+
+
+
+
+
+

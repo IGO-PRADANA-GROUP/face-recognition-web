@@ -1,0 +1,242 @@
+extends ./partials/_base
+
+block contents
+  // TABLE OF CONTENTS.
+     Use search to find needed section.
+     ===================================================================
+     | 01. #CSS               | All CSS links and file paths           |
+     | 02. #FAVICONS          | Favicon icon, app icons                |
+     | 03. #BODY              | Body tag                               |
+     | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+     | 05. #MAIN              | Dashboard right wrapper                |
+     | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+     | 07. #TOP               | Top header navigation                  |
+     | 08. #TOP NAV           | Top header right navigation            |
+     ===================================================================
+
+block main
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-body
+            h4.page-header-title
+              | Dashboard
+              b AdminHero
+            .small.text-muted
+              | Make it Better
+      .col-md-8
+        .pull-xs-right
+          .small.text-muted.m-b-1 Live Data
+          span(data-plugin='peityBar' data-peity='{ "fill": ["#ccc"], "width": 50 }') 0,3,6,5,2,3,7,3,5,2
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper.js-grid-wrapper
+
+      .col-xs-12.col-sm-6.col-md-3.js-grid.js-sizer
+        a(href="")
+          .widget.widget-v.bg-aqua
+            .w-main.w-center.bg-aqua-lighten
+              i.fa.fa-download
+            .w-section
+              .small DOWNLOAD
+              .display-6 212 K
+              .small + 102 %
+
+      .col-xs-12.col-sm-6.col-md-3.js-grid
+        a(href="")
+          .widget.widget-v.bg-primary
+            .w-main.w-center.bg-primary-lighten
+              i.fa.fa-user
+            .w-section
+              .small USERS
+              .display-6 872 K
+              .small - 2 %
+
+      .col-xs-12.col-sm-6.col-md-3.js-grid
+        a(href="")
+          .widget.widget-v.bg-success
+            .w-main.w-center.bg-success-lighten
+              i.fa.fa-shopping-cart
+            .w-section
+              .small ORDERS
+              .display-6 98 K
+              .small + 98 %
+
+      .col-xs-12.col-sm-6.col-md-3.js-grid
+        a(href="")
+          .widget.widget-v.bg-warning
+            .w-main.w-center.bg-warning-lighten
+              i.fa.fa-money
+            .w-section
+              .small PROFITS
+              .display-6 52.2 K
+              .small + 21 %
+
+      .col-xs-12.col-sm-6.js-grid
+        .panel
+          .list-group
+            a.list-group-item(href="#") Getting Started
+            a.list-group-item(href="#") Bootstrap 4
+            a.list-group-item(href="#") Build system
+            a.list-group-item(href="#") Supported browsers
+
+      .col-xs-12.col-sm-6.js-grid
+        .panel
+          .list-group
+            a.list-group-item(href="#") Community
+            a.list-group-item(href="#") Suggested page
+            a.list-group-item(href="#") Download AdminHero
+            a.list-group-item(href="#") Other theme
+
+      .col-xs-12.col-sm-6.col-md-3.js-grid
+        .widget.bg-dark
+          a.w-section.w-center(style="background: url(assets/images/cd-1.jpg); background-size: cover" href="#")
+            .ion-ios-play.fa-2x
+            .w-pin-bottom-left.small 465 watching now
+
+      .col-xs-12.col-sm-6.col-md-3.js-grid
+        .widget.bg-dark
+          a.w-section.w-center(style="background: url(assets/images/cd-2.jpg); background-size: cover" href="#")
+            .ion-ios-play.fa-2x
+            .w-pin-bottom-left.small 465 watching now
+
+      .col-xs-12.col-md-6.js-grid
+        .panel
+          .image
+            img.img-fluid(src="assets/images/7.jpg", alt="")
+          table.table
+            thead
+              tr
+                th OrderDate
+                th Region
+                th Rep
+                th Item
+                th Units
+            tbody.small
+              tr
+                td 1/6/2014
+                td East
+                td Jones
+                td Pencil
+                td 95
+              tr
+                td 1/6/2014
+                td East
+                td Jones
+                td Pencil
+                td 95
+              tr
+                td 2/9/2014
+                td Central
+                td Kivell
+                td Binder
+                td 50
+              tr
+                td 2/26/2014
+                td Central
+                td Gill
+                td Pen
+                td 27
+              tr
+                td 3/15/2014
+                td West
+                td Sorvino
+                td Pencil
+                td 56
+          .bg-faded-darken.p-a-1
+            a.btn.btn-secondary(href="#") Download
+
+      .col-xs-12.col-md-6.js-grid
+        .panel
+          .panel-body
+            #demo-bar-chart-legend.legend.legend-inline
+            canvas#demo-bar-chart
+
+      .col-xs-12.col-md-6.js-grid
+        .widget.widget-v
+          .w-section.w-main(style="background: url(assets/images/2.jpg); background-size: cover") 22
+          .w-section
+            dl
+              dd
+               i.fa.fa-circle.m-r-1.text-warning
+               | Meeting HK
+              dd
+               i.fa.fa-money.m-r-1.text-success
+               | Bank in
+            .w-pin-bottom-right
+              a.btn.btn-sm.btn-link + Add
+
+      .col-xs-12.col-md-6.js-grid
+        .widget
+          .w-section
+            .media
+              .media-left
+                img.media-object(src="assets/images/face/0.jpg", alt="" width="60")
+              .media-body
+                strong Braydon Dominguez
+                .small bdominguez@netaddress.com
+
+          .w-section.bg-faded
+            .row.text-xs-center
+              .col-xs-4
+                .text-desc Followers
+                b 1729
+              .col-xs-4
+                .text-desc Following
+                b 212
+              .col-xs-4
+                .text-desc Tweets
+                b 200
+
+      .col-xs-12.col-md-6.js-grid
+        .panel
+          .panel-heading.bg-faded-darken
+            .panel-title Chat
+          .panel-body
+            .message-wrapper.message-inbox
+              .message-wrapper-inner
+                .media
+                  .media-left
+                    a(href="").circle-box
+                      img(src="assets/images/face/1.jpg", alt="")
+                      span.dot.dot-online
+                  .media-body
+                    .message-is
+                      p That did offers her took we to a had feedback not mostly than country.
+                .media.owner
+                  .media-left
+                    a(href="").circle-box
+                      img(src="assets/images/face/0.jpg", alt="")
+                      span.dot.dot-online
+                  .media-body
+                    .message-is
+                      p Phase it skyline is it prudently, can sense a another,
+                .media
+                  .media-left
+                    a(href="").circle-box
+                      img(src="assets/images/face/1.jpg", alt="")
+                      span.dot.dot-online
+                  .media-body
+                    .message-is
+                      p Counter. Derived his and watch than catch
+                .media.owner
+                  .media-left
+                    a(href="").circle-box
+                      img(src="assets/images/face/0.jpg", alt="")
+                      span.dot.dot-online
+                  .media-body
+                    .message-is
+                      p Phase it skyline is it prudently, can sense a another,
+
+            .row
+              .col-sm-9
+                .form-group
+                  input.form-control(type="text")
+              .col-sm-3
+                .form-group
+                  button.btn.btn-primary.btn-block(type="button") SEND
+block js
+  script(src="assets/scripts/demo/bar-chart.js")

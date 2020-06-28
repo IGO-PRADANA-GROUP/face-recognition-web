@@ -1,0 +1,103 @@
+doctype
+html(lang="en-us")
+  head
+    // Web config
+    = '\n'
+
+    block contents
+      // TABLE OF CONTENTS.
+         Use search to find needed section.
+         ===================================================================
+         | 01. #CSS               | All CSS links and file paths           |
+         | 02. #FAVICONS          | Favicon icon, app icons                |
+         | 03. #BODY              | Body tag                               |
+         | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+         | 05. #MAIN              | Dashboard right wrapper                |
+         | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+         | 07. #TOP               | Top header navigation                  |
+         | 08. #TOP NAV           | Top header right navigation            |
+         | 09. #RIGHT BLOCK       | Right slide panel                      |
+         |                        |                                        |
+         |                        |                                        |
+         |                        |                                        |
+         |                        |                                        |
+         |                        |                                        |
+         | #. #PLUGINS            | All scripts and plugins                |
+         ===================================================================
+    = '\n'
+    = '\n'
+    - var title = "AdminHero"
+
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title #{title}
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+
+    = '\n'
+    //- #CSS
+    //- Bootstrap
+    //- link(rel="stylesheet", href="assets/bootstrap/css/bootstrap.min.css")
+
+    = '\n'
+    // lib
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic')
+    link(rel='stylesheet' href='assets/stylesheets/ionicons.css')
+    link(rel='stylesheet' href='assets/stylesheets/font-awesome.css')
+
+    = '\n'
+    // Theme
+    link(id="mainstyle" rel="stylesheet", href="assets/stylesheets/skin.css")
+    link(id="mainstyle" rel="stylesheet", href="assets/stylesheets/demo.css")
+
+    = '\n'
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    <!--[if lt IE 9]>
+    script(src="assets/scripts/html5shiv.js")
+    script(src="assets/scripts/respond.js")
+    <![endif]-->
+
+    script(src="assets/scripts/modernizr-custom.js")
+    script(src="assets/scripts/respond.js")
+
+    = '\n'
+    body.f-dark.login.login-side(style="background:url(../assets/images/bg2.jpg);background-size:cover")
+
+      form#userlogin.login-form(autocomplete="off")
+        .p-a-3.text-xs-center
+          a.demo-logo(href="index.html") AdminHero
+        .row.m-b-3
+          each val in ['facebook', 'twitter']
+            .col-xs-6
+              button.btn.btn-social.m-b-2.btn-block(class="btn-"+val type='button')
+                i.fa.icon(class="fa-"+val)
+                | #{val}
+        .row
+          .form-group.col-xs-6
+            label.sr-only(for="formBasicFirstName") First Name
+            input#formBasicFirstName.form-control(type="text", name="inputFirstName", placeholder="First Name", autocomplete="off")
+          .form-group.col-xs-6
+            label.sr-only(for="formBasicLastName") Last Name
+            input#formBasicLastName.form-control(type="text", name="inputLastName", placeholder="Last Name", autocomplete="off")
+        .form-group
+          label.sr-only Gender
+          div
+            .radio.radio-inline
+              input#formBasicMale(type="radio", name="inputGender")
+              label(for="formBasicMale") Male
+            .radio.radio-inline
+              input#formBasicFemale(type="radio", name="inputGender", checked="")
+              label(for="formBasicFemale") Female
+        .form-group
+          label.sr-only(for="formBasicEmail") Email Address
+          input#formBasicEmail.form-control(type="email", name="inputEmail", placeholder="Email Address", autocomplete="off")
+        .form-group
+          label.sr-only(for="formBasicPassword") Password
+          input#formBasicPassword.form-control(type="password", name="inputPassword", placeholder="Password", autocomplete="off")
+        .form-group
+          .checkbox
+            input#formBasicRemember(type="checkbox", name="inputCheckbox", checked="", autocomplete="off")
+            label(for="formBasicRemember") Remember Me
+        .form-group.row
+          .col-md-4.pull-xs-right
+            button.btn.btn-primary.btn-block(type="button") Sign Up

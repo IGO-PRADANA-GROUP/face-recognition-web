@@ -1,0 +1,201 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #PANEL             | Panel styles                           |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Panel
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper.js-grid-wrapper
+
+
+      = '\n'
+      // #PANEL
+
+      = '\n'
+      .col-sm-4.js-grid.js-sizer
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-success" value="1" max="100")
+          .panel-heading
+            .panel-title Panel
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            p Particular the should continued an their minutes. Small side the just but the dressed safely general parks. There with point instead, was management-science a needed of to legi
+
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-sm-8.js-grid
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-danger" value="1" max="100")
+          .panel-heading
+            .panel-title Panel with p tag & toolbar & column
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .row
+            .col-lg-4
+              .panel-body
+                p Particular the should continued an their minutes. Small side the just but the dressed safely general parks. There with point instead, was management-science a needed of to legi
+            .col-lg-8
+              .panel-body.table-responsive
+                table.table
+                  thead
+                    tr
+                      th OrderDate
+                      th Region
+                      th Rep
+                      th Item
+                      th Units
+                  tbody
+                    tr
+                      td 1/6/2014
+                      td East
+                      td Jones
+                      td Pencil
+                      td 95
+                    tr
+                      td 1/6/2014
+                      td East
+                      td Jones
+                      td Pencil
+                      td 95
+                    tr
+                      td 2/9/2014
+                      td Central
+                      td Kivell
+                      td Binder
+                      td 50
+                    tr
+                      td 2/26/2014
+                      td Central
+                      td Gill
+                      td Pen
+                      td 27
+                    tr
+                      td 3/15/2014
+                      td West
+                      td Sorvino
+                      td Pencil
+                      td 56
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-sm-4.js-grid
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-info" value="1" max="100")
+          .panel-heading
+            .panel-title Panel with block
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            p Particular the should continued an their minutes. Small side the just but the dressed safely general parks. There with point instead, was management-science a needed of to legi
+          .block(style="background-color: #3498DB; height: 200px")
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-sm-8.js-grid
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-info" value="1" max="100")
+          .panel-heading
+            .panel-title Panel
+            .panel-tool
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            p Particular the should continued an their minutes. Small side the just but the dressed safely general parks. There with point instead, was management-science a needed of to legi
+
+
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-sm-4.js-grid
+        .panel.panel-default
+          progress.progress.loader.js-loader.hidden(class="progress-warning" value="1" max="100")
+          .panel-heading
+            .panel-title Panel only block
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body(style="background-color: #3498DB; height: 200px")
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-sm-4.js-grid
+        .panel.panel-default
+          .panel-heading
+            .panel-title Panel with p tag & toolbar
+            .panel-tool
+              a.js-grid-up(href="#"): i.icon.ion-chevron-up
+              a.js-reload(href="#"): i.icon.ion-refresh
+              a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+          .panel-body
+            p Particular the should continued an their minutes. Small side the just but the dressed safely general parks. There with point instead, was management-science a needed of to legi
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      each val in ['primary', 'info', 'warning', 'success', 'danger']
+        .col-sm-4.js-grid
+          .panel(class="panel-"+val)
+            progress.progress.loader.js-loader.hidden(class="progress-"+val value="1" max="100")
+            .panel-heading
+              h6.panel-title Panel with colour
+              .panel-tool
+                a.js-grid-up(href="#"): i.icon.ion-chevron-up
+                a.js-reload(href="#"): i.icon.ion-refresh
+                a.js-grid-expand(href="#"): i.icon.ion-arrow-resize
+            .panel-body
+              p Particular the should continued an their minutes. Small side the just but the dressed safely general parks. There with point instead, was management-science a
+
+            // END PANEL BODY
+          // END PANEL
+        // END COL
+
+
+
+
+    // ROW
+  // END CONTAINER FIUID

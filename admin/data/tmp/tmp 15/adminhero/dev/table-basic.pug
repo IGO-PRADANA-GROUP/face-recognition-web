@@ -1,0 +1,413 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TABLE             | Basic tables                           |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+      h4.page-header-title Tables Basic
+  // END PAGE HEADER
+
+  = '\n'
+  
+  .container-fluid
+    .panel-wrapper
+      
+      = '\n'
+      // #TABLE
+
+      = '\n'
+      .panel.panel-default
+        .panel-body
+          .row
+            = '\n'
+            .col-md-6
+              = '\n'
+              // BASIC TABLE
+              h4.view-header.text-uppercase Basic
+              p
+                code .table
+              table.table
+                thead
+                  tr
+                    th OrderDate
+                    th Region
+                    th Rep
+                    th Item
+                    th Units
+                tbody
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 2/9/2014
+                    td Central
+                    td Kivell
+                    td Binder
+                    td 50
+                  tr
+                    td 2/26/2014
+                    td Central
+                    td Gill
+                    td Pen
+                    td 27
+                  tr
+                    td 3/15/2014
+                    td West
+                    td Sorvino
+                    td Pencil
+                    td 56
+              // END BASIC TABLE
+              = '\n'
+            // END COL 6
+            
+            = '\n'
+            .col-md-6
+              = '\n'
+              // HOVER TABLE
+              h4.view-header.text-uppercase Hover
+              p
+                code .table.table-hover
+              table.table.table-hover
+                thead
+                  tr
+                    th OrderDate
+                    th Region
+                    th Rep
+                    th Item
+                    th Units
+                tbody
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 2/9/2014
+                    td Central
+                    td Kivell
+                    td Binder
+                    td 50
+                  tr
+                    td 2/26/2014
+                    td Central
+                    td Gill
+                    td Pen
+                    td 27
+                  tr
+                    td 3/15/2014
+                    td West
+                    td Sorvino
+                    td Pencil
+                    td 56
+              // END HOVER TABLE
+              = '\n'
+            // END COL 6
+          // END ROW
+        // END PANEL BODY
+      // END PANEL 1
+      
+      = '\n'
+      .panel.panel-default
+        .panel-body
+          .row
+            = '\n'
+            .col-md-6
+              = '\n'
+              // NO BODERED TABLE
+              h4.view-header.text-uppercase NO-BORDERED
+
+              table.table.table-no-border
+                thead
+                  tr
+                    th OrderDate
+                    th Region
+                    th Rep
+                    th Item
+                    th Units
+                tbody
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 2/9/2014
+                    td Central
+                    td Kivell
+                    td Binder
+                    td 50
+                  tr
+                    td 2/26/2014
+                    td Central
+                    td Gill
+                    td Pen
+                    td 27
+                  tr
+                    td 3/15/2014
+                    td West
+                    td Sorvino
+                    td Pencil
+                    td 56
+              // END CONDENSED TABLE
+              = '\n'
+            // END COL 6
+            
+            = '\n'
+            .col-md-6
+              = '\n'
+              // BORDERED TABLE
+              h4.view-header.text-uppercase bordered
+              p
+                code .table.table-bordered
+              table.table.table-bordered
+                thead
+                  tr
+                    th OrderDate
+                    th Region
+                    th Rep
+                    th Item
+                    th Units
+                tbody
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 2/9/2014
+                    td Central
+                    td Kivell
+                    td Binder
+                    td 50
+                  tr
+                    td 2/26/2014
+                    td Central
+                    td Gill
+                    td Pen
+                    td 27
+                  tr
+                    td 3/15/2014
+                    td West
+                    td Sorvino
+                    td Pencil
+                    td 56
+              // END BORDERED TABLE
+              = '\n'
+            // END COL 6
+          // END ROW
+        // END PANEL BODY
+      // END PANEL 2
+
+      = '\n'
+      .panel.panel-default
+        .panel-body
+          .row
+            = '\n'
+            .col-md-6
+              = '\n'
+              // STRIPED TABLE
+              h4.view-header.text-uppercase striped
+              p
+                code .table.table-striped
+              table.table.table-striped
+                thead
+                  tr
+                    th OrderDate
+                    th Region
+                    th Rep
+                    th Item
+                    th Units
+                tbody
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 2/9/2014
+                    td Central
+                    td Kivell
+                    td Binder
+                    td 50
+                  tr
+                    td 2/26/2014
+                    td Central
+                    td Gill
+                    td Pen
+                    td 27
+                  tr
+                    td 3/15/2014
+                    td West
+                    td Sorvino
+                    td Pencil
+                    td 56
+              // END STRIPED TABLE
+              = '\n'
+            // END COL 6
+            
+            = '\n'
+            .col-md-6
+              = '\n'
+              // CONTEXTUAL TABLE
+              h4.view-header.text-uppercase Contextual
+              p Use contextual classes to color table rows or individual cells.
+              table.table
+                thead
+                  tr
+                    th OrderDate
+                    th Region
+                    th Rep
+                    th Item
+                    th Units
+                tbody
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 1/6/2014
+                    td East
+                    td.table-success Jones
+                    td Pencil
+                    td 95
+                  tr
+                    td 2/9/2014
+                    td Central
+                    td Kivell
+                    td Binder
+                    td 50
+                  tr.table-success
+                    td 2/26/2014
+                    td Central
+                    td Gill
+                    td Pen
+                    td 27
+                  tr
+                    td 3/15/2014
+                    td West
+                    td Sorvino
+                    td Pencil
+                    td 56
+              // END CONTEXTUAL TABLE
+              = '\n'
+            // END COL 6
+          // END ROW
+        // END PANEL BODY
+      // END PANEL 3
+
+      = '\n'
+      .panel.panel-default
+        .panel-body
+              = '\n'
+              // RESPONSIVE TABLE
+              h4.view-header.text-uppercase responsive
+              p
+                code .table-responsive > .table
+              .table-responsive
+                table.table
+                  thead
+                    tr
+                      th OrderDate
+                      th Region
+                      th Rep
+                      th Item
+                      th Units
+                  tbody
+                    tr
+                      td 1/6/2014
+                      td East
+                      td Jones
+                      td Pencil
+                      td 95
+                    tr
+                      td 1/6/2014
+                      td East
+                      td Jones
+                      td Pencil
+                      td 95
+                    tr
+                      td 2/9/2014
+                      td Central
+                      td Kivell
+                      td Binder
+                      td 50
+                    tr
+                      td 2/26/2014
+                      td Central
+                      td Gill
+                      td Pen
+                      td 27
+                    tr
+                      td 3/15/2014
+                      td West
+                      td Sorvino
+                      td Pencil
+                      td 56
+              // END RESPONSIVE TABLE
+              = '\n'
+        // END PANEL BODY
+      // END PANEL 4
+    // END PAGE WRAPPER
+  // END CONTAINER FIUID
+
+
+  

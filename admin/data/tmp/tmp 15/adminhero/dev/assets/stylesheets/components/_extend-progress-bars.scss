@@ -1,0 +1,113 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+
+// Bar animations
+// -------------------------
+
+// WebKit
+@-webkit-keyframes progress-bar-stripes {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}
+
+
+// Bar itself
+// -------------------------
+
+// Outer container
+.progress {
+  margin-bottom: .5rem;
+  height: 2px;
+  position: relative;
+  &.loader {
+    border-radius: 0;
+    height: 2px;
+  }
+  &.progress-lg {
+    height: 10px;
+  }
+  &.progress-vertical {
+    display: flex;
+    align-items: flex-end;
+    min-height: 100px;
+    width: 1rem;
+  }
+}
+
+.loader-wrapper {
+  position: relative;
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    }
+}
+
+
+.progress {
+  background-color: #eee;
+  @include border-radius($border-radius);
+  @include box-shadow(inset 0 .1rem .1rem rgba(0,0,0,.1));
+}
+.progress-bar {
+  float: left;
+  height: 2px;
+  text-indent: -999rem; // Simulate hiding of value as in native `<progress>`
+  background-color: #0074d9;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+  .progress-lg & {
+    height: 10px;
+  }
+  .progress-vertical & {
+    width: 100%;
+    height: 1px;
+  }
+}
+.progress[width^="0"] {
+  min-width: 2rem;
+  color: $gray-light;
+  background-color: transparent;
+  background-image: none;
+}
+.progress[width="100%"] {
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.progress-desc {
+  font-size: 12px;
+  color: #212121;
+  .progress-vertical-wrapper & {
+    transform: rotate(270deg);
+    transform-origin: center;
+    position: absolute;
+    bottom: .2rem;
+    left: 0
+  }
+}
+
+.progress-vertical-wrapper {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+
+@each $colorlist, $color in $colorlist {
+  .progress-#{$colorlist} {
+    // color: $color !important;
+    @include progress-variant($color);
+  }
+}
+
+
+

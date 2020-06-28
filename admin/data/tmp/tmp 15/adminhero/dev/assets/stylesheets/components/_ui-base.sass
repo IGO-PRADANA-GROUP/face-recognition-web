@@ -1,0 +1,31 @@
+body,html
+  height: 100%
+
+html
+  font-size: 12px
+
+@include media-breakpoint-up(sm)
+  html
+    font-size: 12px
+@include media-breakpoint-up(md)
+  html
+    font-size: 14px
+@include media-breakpoint-up(lg)
+  html
+    font-size: 14px
+
+a
+  color: $gray-dark
+  &:hover
+    color: #000
+    text-decoration: none
+p
+  font-size: 14px
+  a
+    color: #c66272
+
+table a
+  color: #c66272
+
+*:focus
+  outline: none !important

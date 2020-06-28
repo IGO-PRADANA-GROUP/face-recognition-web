@@ -1,0 +1,482 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #NAVIGATION        | Navigation styles                      |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Navigation
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper
+
+          = '\n'
+          // #NAVIGATION
+
+          = '\n'
+          .col-md-12
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Quick list
+              .panel-body
+                .responsive-nav
+                  ul.nav.nav-quick.text-xs-center
+                    li.nav-item.active
+                      a.nav-link(href="#")
+                        .ion-person-add.fa-2x
+                        .menu-lable Customers
+                    li.nav-item
+                      a.nav-link(href="#")
+                        .ion-soup-can-outline.fa-2x
+                        .menu-lable Products
+                    li.nav-item
+                      a.nav-link(href="#")
+                        .ion-clipboard.fa-2x
+                        .menu-lable Quotes
+                    li.nav-item
+                      a.nav-link(href="#")
+                        .ion-calculator.fa-2x
+                        .menu-lable Sales
+                    li.nav-item
+                      a.nav-link(href="#")
+                        .ion-podium.fa-2x
+                        .menu-lable Purchases
+                    li.nav-item
+                      a.nav-link(href="#")
+                        .ion-beaker.fa-2x
+                        .menu-lable Quotes
+                    li.nav-item
+                      a.nav-link(href="#")
+                        .ion-camera.fa-2x
+                        .menu-lable Sales
+                    li.nav-item
+                      a.nav-link(href="#")
+                        .ion-power.fa-2x
+                        .menu-lable Purchases
+              // END NAV 1
+          // END COL
+
+          = '\n'
+          .col-md-12
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Inline list
+              .panel-body
+                ul.nav.nav-inline
+                  li.nav-item.active
+                    a.nav-link(href="#") Customers
+                  li.nav-item
+                    a.nav-link(href="#") Products
+                  li.nav-item
+                    a.nav-link(href="#") Quotes
+                  li.nav-item
+                    a.nav-link(href="#") Sales
+                  li.nav-item
+                    a.nav-link.disabled(href="#") Purchases
+              // END NAV 1
+          // END COL
+
+          = '\n'
+          .col-md-12
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Pagination
+              .panel-body
+                .row
+                  .col-md-6
+                    nav
+                      ul.pagination
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous")
+                            span(aria-hidden="true"): i.ion-chevron-left
+                            span.sr-only Previous
+                        li.page-item.active
+                          a.page-link(href="#") 1
+                        li.page-item
+                          a.page-link(href="#") 2
+                        li.page-item
+                          a.page-link(href="#") 3
+                        li.page-item
+                          a.page-link(href="#") 4
+                        li.page-item
+                          a.page-link(href="#") 5
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next")
+                            span(aria-hidden="true"): i.ion-chevron-right
+                            span.sr-only Next
+                  .col-md-6
+                    nav
+                      ul.pagination
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous")
+                            span(aria-hidden="true"): i.ion-chevron-left
+                            span.sr-only Previous
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next")
+                            span(aria-hidden="true"): i.ion-chevron-right
+                            span.sr-only Next
+                .row.m-t-3
+                  .col-md-5
+                    nav
+                      ul.pagination
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous")  PREV
+                        li.page-item.active
+                          a.page-link(href="#") 1
+                        li.page-item
+                          a.page-link(href="#") 2
+                        li.page-item
+                          a.page-link(href="#") 3
+                        li.page-item
+                          a.page-link(href="#") 4
+                        li.page-item
+                          a.page-link(href="#") 5
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next") NEXT
+                  .col-md-4
+                    nav
+                      ul.pagination
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous") PREV
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next") NEXT
+                .row.m-t-3
+                  .col-md-5
+                    nav
+                      ul.pagination.pagination-merge
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous")  PREV
+                        li.page-item.active
+                          a.page-link(href="#") 1
+                        li.page-item
+                          a.page-link(href="#") 2
+                        li.page-item
+                          a.page-link(href="#") 3
+                        li.page-item
+                          a.page-link(href="#") 4
+                        li.page-item
+                          a.page-link(href="#") 5
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next") NEXT
+                  .col-md-3
+                    nav
+                      ul.pagination.pagination-merge
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous") PREV
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next") NEXT
+                  .col-md-3
+                    nav
+                      ul.pagination.pagination-merge
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous")
+                            span(aria-hidden="true"): i.ion-chevron-left
+                            span.sr-only Previous
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next")
+                            span(aria-hidden="true"): i.ion-chevron-right
+                            span.sr-only Next
+                .row.m-t-3
+                  .col-md-5
+                    nav
+                      ul.pagination.pagination-bar
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous")
+                            span(aria-hidden="true"): i.ion-chevron-left
+                            span.sr-only Previous
+                        li.page-item.active
+                          a.page-link(href="#") 1
+                        li.page-item
+                          a.page-link(href="#") 2
+                        li.page-item
+                          a.page-link(href="#") 3
+                        li.page-item
+                          a.page-link(href="#") ...
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next")
+                            span(aria-hidden="true"): i.ion-chevron-right
+                            span.sr-only Next
+                  .col-md-3
+                    nav
+                      ul.pagination.pagination-merge
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous")
+                            span(aria-hidden="true"): i.ion-chevron-left
+                            span.sr-only Previous
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next")
+                            span NEXT
+                            span(aria-hidden="true"): i.ion-chevron-right.m-l-1
+                  .col-md-3
+                    nav
+                      ul.pagination.pagination-bar
+                        li.page-item
+                          a.page-link(href="#", aria-label="Previous")
+                            span(aria-hidden="true"): i.ion-chevron-left
+                            span.sr-only Previous
+                        li.page-item
+                          a.page-link(href="") 2 OF 12
+                        li.page-item
+                          a.page-link(href="#", aria-label="Next")
+                            span(aria-hidden="true"): i.ion-chevron-right
+                            span.sr-only Next
+                .row.m-t-3
+                  .col-md-6
+                    nav
+                      ul.pager
+                        li
+                          a(href="#") Prev
+                        li
+                          a(href="#") Next
+                  .col-md-6
+                    nav
+                      ul.pager
+                        li.pager-prev
+                          a(href="#") Older
+                        li.pager-next
+                          a(href="#") Newer
+          // END PAGENAVIGAION
+          = '\n'
+
+          .col-md-4
+            = '\n'
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Default list
+              .panel-body
+                ul.list-group
+                  li.list-group-item.active Customers
+                  li.list-group-item Products
+                  li.list-group-item Quotes
+                  li.list-group-item Sales
+                  li.list-group-item.disabled Purchases
+                // END NAV 2
+            // END PANEL
+          // END COL
+          = '\n'
+
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title bordered list
+              .panel-body
+                ul.list-group.list-group-brodered
+                  li.list-group-item.active
+                    i.icon.ion-hammer
+                    | Customers
+                  li.list-group-item
+                    i.icon.ion-cloud
+                    | Products
+                  li.list-group-item
+                    i.icon.ion-paper-airplane
+                    | Quotes
+                  li.list-group-item
+                    i.icon.ion-chatboxes
+                    | Sales
+                  li.list-group-item.disabled
+                    i.icon.ion-image
+                    | Purchases
+                // END NAV 3
+            // END PANEL
+          // END COL
+          = '\n'
+
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title striped List
+              .panel-body
+                ul.list-group.list-group-striped
+                  li.list-group-item.active
+                    i.icon.ion-hammer
+                    | Customers
+                  li.list-group-item(href="#")
+                    i.icon.ion-cloud
+                    | Products
+                  li.list-group-item(href="#")
+                    i.icon.ion-paper-airplane
+                    | Quotes
+                  li.list-group-item(href="#")
+                    i.icon.ion-chatboxes
+                    | Sales
+                  li.list-group-item.disabled(href="#")
+                    i.icon.ion-image
+                    | Purchases
+                // END NAV 4
+            // END PANEL
+          // END COL
+
+          .col-md-4
+            = '\n'
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Labels
+              .panel-body
+                ul.list-group
+                  li.list-group-item.active
+                    | Customers
+                    span.label.label-danger.label-pill.pull-xs-right 22
+                  li.list-group-item
+                    | Products
+                    span.label.label-success.pull-xs-right new
+                  li.list-group-item Quotes
+                  li.list-group-item Sales
+                  li.list-group-item.disabled Purchases
+                // END NAV 5
+            // END PANEL
+          // END COL
+          = '\n'
+
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Linked items
+              .panel-body
+                .list-group
+                  a.list-group-item.active(href="#")
+                    i.icon.ion-hammer
+                    | Customers
+                  a.list-group-item(href="#")
+                    i.icon.ion-cloud
+                    | Products
+                  a.list-group-item(href="#")
+                    i.icon.ion-paper-airplane
+                    | Quotes
+                  a.list-group-item(href="#")
+                    i.icon.ion-chatboxes
+                    | Sales
+                  a.list-group-item.disabled(href="#")
+                    i.icon.ion-image
+                    | Purchases
+                // END NAV 3
+            // END PANEL
+          // END COL
+          = '\n'
+
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title striped List
+              .panel-body
+                .list-group.list-group-striped
+                  a.list-group-item.active(href="#")
+                    i.icon.ion-hammer
+                    | Customers
+                  a.list-group-item(href="#")
+                    i.icon.ion-cloud
+                    | Products
+                  a.list-group-item(href="#")
+                    i.icon.ion-paper-airplane
+                    | Quotes
+                  a.list-group-item(href="#")
+                    i.icon.ion-chatboxes
+                    | Sales
+                  a.list-group-item.disabled(href="#")
+                    i.icon.ion-image
+                    | Purchases
+                // END NAV 4
+            // END PANEL
+          // END COL
+
+          .col-md-4
+            = '\n'
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Custom content
+              .panel-body
+                .list-group
+                  a.list-group-item.active(href="#")
+                    h6.list-group-item-heading Customers
+                    p.list-group-item-text Discipline clasEmergeEncouraged sh
+                  a.list-group-item(href="#")
+                    h6.list-group-item-heading Customers
+                    p.list-group-item-text Discipline clasEmergeEncouraged should absolutely the assumed that kind safe cities able examples, he may and
+                  a.list-group-item(href="#")
+                    h6.list-group-item-heading Customers
+                    p.list-group-item-text Discipline clasEmergeEncouraged should absolutely the assumed that kind safe cities able examples, he may and
+                // END NAV 8
+            // END PANEL
+          // END COL
+          = '\n'
+
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Background List
+              .panel-body
+                p
+                  | add any
+                  code bg-*
+                  | to parent element
+                .list-group.bg-faded
+                  a.list-group-item.active(href="#")
+                    i.icon.ion-hammer
+                    | Customers
+                  a.list-group-item(href="#")
+                    i.icon.ion-cloud
+                    | Products
+                  a.list-group-item(href="#")
+                    i.icon.ion-paper-airplane
+                    | Quotes
+                  a.list-group-item(href="#")
+                    i.icon.ion-chatboxes
+                    | Sales
+                  a.list-group-item(href="#")
+                    i.icon.ion-image
+                    | Purchases
+                // END NAV 9
+            // END PANEL
+          // END COL
+
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Tasks List
+              .panel-body
+                p
+                  | Add
+                  code .list-group-tasks
+                  | And use with
+                  code border-*
+                  | to change active status or style you want
+                .list-group.list-group-tasks
+                  a.list-group-item.border-info(href="#")
+                    h6.list-group-item-heading Customers
+                    p.list-group-item-text Discipline class. Emerged. Encouraged sh
+                  a.list-group-item.border-warning(href="#")
+                    h6.list-group-item-heading Customers
+                    p.list-group-item-text Discipline class. Emerged. Encouraged sh
+                  a.list-group-item(href="#")
+                    h6.list-group-item-heading Customers
+                    p.list-group-item-text Discipline class. Emerged. Encouraged should absolutely the assumed that kind safe cities able examples, he may and
+                  a.list-group-item(href="#")
+                    h6.list-group-item-heading Customers
+                    p.list-group-item-text Discipline class. Emerged. Encouraged should absolutely the assumed that kind safe cities able examples, he may and
+                // END NAV 10
+              // END PANEL
+            // END COL
+          // END PAGE WRAPPER
+    // ROW
+  // END CONTAINER FIUID

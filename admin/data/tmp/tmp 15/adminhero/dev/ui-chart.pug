@@ -1,0 +1,156 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #CHART             |                                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-left.media-middle
+            i.ion-stats-bars.fa-2x
+          .media-body
+            .display-6 Chart UI
+            .small.text-muted 
+              | Chart UI Design
+  
+  // #CHART
+  .container-fluid
+    .panel-wrapper
+
+      .panel
+        .panel-heading
+          h6.panel-title 
+            | Peity
+            a.small(href="http://benpickles.github.io/peity/" target="_blank") official website
+        .panel-body
+          .row
+            .col-md-6
+              table.table
+                thead
+                  tr
+                    th OrderDate
+                    th Region
+                    th Rep
+                    th Units
+                tbody
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td: span(data-plugin="peityPie" data-peity='{ "fill": ["#4183D7", "#f1f1f1"], "radius": 10 }') 1/6
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td: span(data-plugin='peityBar' data-peity='{ "fill": ["#4183D7"], "width": 50 }') 0,-3,-6,-4,-5,-4,-7,-3,-5,-2
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td: span(data-plugin='peityBar' data-peity='{ "fill": ["#4183D7"], "width": 50 }') 0,-3,-6,5,2,3,-7,-3,-5,-2
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td: span(data-plugin="peityDonut" data-peity='{ "fill": ["#4183D7", "#f1f1f1"], "radius": 10 }') 4/6
+                  tr
+                    td 1/6/2014
+                    td East
+                    td Jones
+                    td: span(data-plugin='peityLine' data-peity='{ "fill": ["#4183D7"], "width": 50 }')  22,14,12,43,32
+
+            .col-md-6
+              p Peity (sounds like deity) is a simple jQuery plugin that converts an element's content into a simple mini pie  donut  line  or bar chart  and is compatible with any browser that supports: Chrome, Firefox, IE9+, Opera, Safari.
+              
+              h4.demo-sub-title.m-t-3 Theme usage
+              pre(data-src="assets/markups/chart-peity.html")
+
+      .panel
+        .panel-heading
+          h6.panel-title 
+            | Easy pie chart
+            a.small(href="https://rendro.github.io/easy-pie-chart/" target="_blank") official website
+        .panel-body
+          .row
+            .col-md-6
+              .row
+                .col-sm-6
+                  .easypie.center-block
+                    span(data-plugin="easyPieChart" data-percent="73") 73 %
+                .col-sm-6
+                  .easypie.center-block
+                    span(data-plugin="easyPieChart" data-percent="22") 22 %
+
+            .col-md-6
+              p Easy pie chart is a jQuery plugin that uses the canvas element to render simple pie charts for single values. These charts are highly customizable, very easy to implement, scale to the resolution of the display of the client to provide sharp charts even on retina displays, and use requestAnimationFrame for smooth animations on modern devices.
+              
+              h4.demo-sub-title.m-t-3 Theme usage
+              pre(data-src="assets/markups/chart-easy-pie.html")
+      
+      .panel
+        .panel-heading
+          h6.panel-title 
+            | Chart js
+            a.small(href="http://www.chartjs.org/" target="_blank") official website
+        .panel-body
+          .row
+            .col-md-6
+              #demo-bar-chart-legend.legend.legend-inline.pull-xs-right
+              canvas#demo-bar-chart
+
+              .m-t-3
+                #demo-line-chart-legend.legend.legend-inline.pull-xs-right
+                canvas#demo-line-chart
+
+              .m-t-3
+                #demo-doughnut-chart-legend.legend.legend-inline.pull-xs-right
+                canvas#demo-doughnut-chart
+            .col-md-6
+              p: strong Six chart types
+              p Visualize your data in 6 different ways. Each of them animated, with a load of customisation options and interactivity extensions. get more infomation, please check 
+                a(href="http://www.chartjs.org/docs/" target="_blank") chart js official documentation
+              
+              h4.demo-sub-title.m-t-3 Theme usage
+              p Make sure change your chart legend template markup.
+              pre(data-src="assets/markups/chart-theme.js")
+                  
+
+
+
+block js
+  script(src="assets/scripts/demo/bar-chart.js")
+  script(src="assets/scripts/demo/line-chart.js")
+  script(src="assets/scripts/demo/doughnut-chart.js")
+
+
+
+
+
+
+
+
+
+
+
+

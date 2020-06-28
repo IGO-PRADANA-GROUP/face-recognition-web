@@ -1,0 +1,32 @@
+.broadcard
+  text-align: center
+  padding: 5px 10px
+  position: relative
+  border-radius: 2px
+  @include media-breakpoint-down(md)
+    margin-bottom: $grid-gutter-width
+  .broadcard-info
+    margin: .3rem 0 1rem 0
+    font-size: .9rem
+  &.active
+    background: #eee
+    .broadcard-info
+      color: #010101
+
+a.broadcard
+  display: block
+  &:hover
+    .broadcard-info
+      color: $brand-primary
+
+.broadcard-summary
+  text-align: left
+  padding: 1rem
+  background: #f8f8f8
+.row.broadcard-reduce
+  margin: 0
+  display: flex
+  [class^='col-']
+    padding: 0
+    + [class^='col-']
+      border-left: 1px solid #eee

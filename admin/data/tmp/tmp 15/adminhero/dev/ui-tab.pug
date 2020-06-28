@@ -1,0 +1,186 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TAB               | Tab styles                             |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Tab
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper.js-grid-wrapper
+
+      = '\n'
+      // #TAB
+
+      = '\n'
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .responsive-nav
+            ul.nav.nav-tabs.nav-justified
+              li.nav-item
+                a.nav-link.active(href="#demotab-1" aria-controls="demotab-1" role="tab" data-toggle="tab") Total quotes
+              li.nav-item
+                a.nav-link(href="#demotab-2" aria-controls="demotab-2" role="tab" data-toggle="tab") Total sales
+              li.nav-item
+                a.nav-link(href="#demotab-3" aria-controls="demotab-3" role="tab" data-toggle="tab") Total purchases
+              li.nav-item
+                a.nav-link(href="#demotab-4" aria-controls="demotab-4" role="tab" data-toggle="tab") Total quotes
+              li.nav-item
+                a.nav-link(href="#demotab-5" aria-controls="demotab-5" role="tab" data-toggle="tab") Total sales
+              li.nav-item
+                a.nav-link(href="#demotab-6" aria-controls="demotab-6" role="tab" data-toggle="tab") Total purchases
+          .tab-content
+            .tab-pane.p-a-3.active.fade.in(role="tabpanel" id="demotab-1")
+              p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+            .tab-pane.p-a-3.fade(role="tabpanel" id="demotab-2")
+              p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+            .tab-pane.p-a-3.fade(role="tabpanel" id="demotab-3")
+              p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+          // END TAB 1
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid
+        .panel
+          .tab-content
+            .tab-pane.p-a-3.active.fade.in(role="tabpanel" id="demo2tab-1")
+              p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+            .tab-pane.p-a-3.fade(role="tabpanel" id="demo2tab-2")
+              p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+            .tab-pane.p-a-3.fade(role="tabpanel" id="demo2tab-3")
+              p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+          .responsive-tab
+            ul.nav.nav-tabs.nav-justified
+              li.nav-item
+                a.nav-link.active(href="#demo2tab-1" aria-controls="demo2tab-1" role="tab" data-toggle="tab") 30 nov
+              li.nav-item
+                a.nav-link(href="#demo2tab-2" aria-controls="demo2tab-2" role="tab" data-toggle="tab") 15 dec
+              li.nav-item
+                a.nav-link(href="#demo2tab-3" aria-controls="demo2tab-3" role="tab" data-toggle="tab") 30 dec
+          // END TAB 2
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid
+        .panel
+          .panel-body
+            ul.nav.nav-pills.nav-justified.text-uppercase(role="tablist")
+              li.nav-item
+                a.nav-link.active(href="#demo3tab-1" aria-controls="demo3tab-1" role="tab" data-toggle="tab") All
+              li.nav-item
+                a.nav-link(href="#demo3tab-2" aria-controls="demo3tab-2" role="tab" data-toggle="tab") Teams
+              li.nav-item
+                a.nav-link(href="#demo3tab-3" aria-controls="demo3tab-3" role="tab" data-toggle="tab") Project
+            .tab-content
+              .tab-pane.p-y-2.active.fade.in( role="tabpanel" id="demo3tab-1")
+                p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+              .tab-pane.p-y-2.fade( role="tabpanel" id="demo3tab-2")
+                p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+              .tab-pane.p-y-2.fade( role="tabpanel" id="demo3tab-3")
+                p Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+          // END TAB 3
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid
+        .panel
+          .panel-body
+            .row-no-gutter
+              .col-sm-3
+                ul.nav.nav-pills.nav-stacked(role="tablist")
+                  li.nav-item
+                    a.nav-link.active(href="#demo4tab-1" aria-controls="demo4tab-1" role="tab" data-toggle="tab") Settings
+                  li.nav-item
+                    a.nav-link(href="#demo4tab-2" aria-controls="demo4tab-2" role="tab" data-toggle="tab") The order process
+                  li.nav-item
+                    a.nav-link(href="#demo4tab-3" aria-controls="demo4tab-1" role="tab" data-toggle="tab") FAQ
+              .col-sm-9
+                .tab-content
+                  .tab-pane.fade.active.in.p-a-2( role="tabpanel" id="demo4tab-1")
+                    p Interfaces the bright confidence the refinement bored like parameters each he she live concepts
+                    p It ridden my more answers.
+                    p Buy live concepts it ridden my more answers.
+                  .tab-pane.fade.p-a-2( role="tabpanel" id="demo4tab-2")
+                    p Interfaces the bright confidence the refinement bored like parameters each he she live concepts
+                    p It ridden my more answers.
+                    p Buy live concepts it ridden my more answers.
+                  .tab-pane.fade.p-a-2( role="tabpanel" id="demo4tab-3")
+                    p Interfaces the bright confidence the refinement bored like parameters each he she live concepts
+                    p It ridden my more answers.
+                    p Buy live concepts it ridden my more answers.
+
+          // END TAB 4
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid
+        .panel
+          .panel-body
+            ul.nav.nav-pills(role="tablist")
+              li.nav-item
+                a.nav-link.active(href="#demo5tab-1" aria-controls="demo5tab-1" role="tab" data-toggle="tab"): i.ion-gear-b
+              li.nav-item
+                a.nav-link(href="#demo5tab-1" aria-controls="demo5tab-1" role="tab" data-toggle="tab"): i.ion-chatboxes
+              li.nav-item
+                a.nav-link(href="#demo5tab-1" aria-controls="demo5tab-1" role="tab" data-toggle="tab"): i.ion-code-working
+
+            .tab-content
+              each val, index in ['active fade in', 'fade', 'fade']
+                .tab-pane.p-y-2(class=""+val+"" role="tabpanel" id="demo5tab-"+index)
+                  p #{index} Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+            // END TAB 5
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid
+        .panel
+          .panel-body
+            ul.nav.nav-tabs.nav-tabs-icon-only(role="tablist")
+              li.nav-item
+                a.nav-link.active(href="#demo6tab-1" aria-controls="demo6tab-1" role="tab" data-toggle="tab"): i.icon.ion-document-text
+              li.nav-item
+                a.nav-link(href="#demo6tab-1" aria-controls="demo6tab-1" role="tab" data-toggle="tab"): i.icon.ion-archive
+              li.nav-item
+                a.nav-link(href="#demo6tab-1" aria-controls="demo6tab-1" role="tab" data-toggle="tab"): i.icon.ion-paperclip
+              li.nav-item
+                a.nav-link(href="#demo6tab-1" aria-controls="demo6tab-1" role="tab" data-toggle="tab"): i.icon.ion-calendar
+            .tab-content
+              each val, index in ['active fade in', 'fade', 'fade', 'fade']
+                .tab-pane.p-y-2(class=""+val+"" role="tabpanel" id="demo6tab-"+index)
+                  p #{index} Interfaces the bright confidence the refinement bored like parameters each he she live concepts it ridden my more answers.
+          // END TAB 5
+          // END PANEL BODY
+        // END PANEL
+      // END COL
+
+    // END PAGE WRAPPER
+  // END CONTAINER FIUID

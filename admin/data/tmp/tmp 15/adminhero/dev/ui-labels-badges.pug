@@ -1,0 +1,133 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #NOTIFICATIONS     | Notifications styles                   |
+       | 12. #BADGES            | Badges styles                          |
+       | 13. #LABLES            | Lables styles                          |
+       | 14. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Badges & Labels
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .panel-wrapper
+
+        = '\n'
+        // #LABELS
+        = '\n'
+        .panel
+          .panel-heading
+            h6.panel-title
+              | Badge
+          .panel-body
+            .row
+              .col-md-4
+                h6.demo-sub-title Basic
+                each val in ['primary', 'success', 'danger',  'warning', 'info', '']
+                  span.badge.m-l-1(class="badge-"+val) A
+              // END COL
+
+              .col-md-4
+                h6.demo-sub-title Badge in button
+                button.btn.m-b-1(class="btn-primary")
+                  | Message
+                  span.badge 2
+                button.btn.m-l-1.m-b-1(class="btn-primary-outline")
+                  | Message
+                  span.badge 2
+              // END COL
+
+              .col-md-4
+                h6.demo-sub-title Position top
+                span.m-l-1
+                  a(href="#")
+                    i.fa.fa-columns
+                    span.badge.badge-success.status 4
+                span.m-l-1
+                  a(href="#") Message
+                    span.badge.badge-success.status 4
+                span.m-l-1
+                  a(href="#") Error
+                    span.badge.badge-danger.status 2
+              // END COL
+            // END ROW 1
+
+            .row.m-t-3
+              .col-md-4
+                h6.demo-sub-title User online status
+                each val in ['online', 'offline',  'busy']
+                  a.m-r-1(href="")
+                    .circle-box.circle-box-sm
+                      img(src="assets/images/face/0.jpg", alt="")
+                      .dot(class="dot-"+val)
+                each val in ['online', 'offline',  'busy']
+                  a.m-r-1(href="")
+                    .circle-box
+                      img(src="assets/images/face/2.jpg", alt="")
+                      .dot(class="dot-"+val)
+              // END COL
+              .col-md-8
+                h6.demo-sub-title Nav have badge
+                ul.nav.nav-inline
+                  li.nav-item.active
+                    a.nav-link(href="#")
+                      | Customers
+                      .badge.badge-primary 2
+                  li.nav-item
+                    a.nav-link(href="#") Products
+                  li.nav-item
+                    a.nav-link(href="#") Quotes
+            // END ROW 2
+          // END PANEL BODY
+        // END PANEL
+
+        = '\n'
+        // #LABELS
+        = '\n'
+        .panel
+          .panel-heading
+            h6.panel-title
+              | Lables
+          .panel-body
+            .row
+              .col-md-4
+                h6.demo-sub-title Basic
+                each val in ['primary', 'success', 'danger',  'warning', 'info', '']
+                  span.label.m-l-1(class="label-"+val) Heard
+              // END COL
+
+              .col-md-4
+                h6.demo-sub-title Pill labels
+                each val in ['primary', 'success', 'danger',  'warning', 'info', '']
+                  span.label.label-pill.m-l-1(class="label-"+val) Heard
+              // END COL
+
+
+            // END ROW 2
+          // END PANEL BODY
+        // END PANEL
+
+    // END PAGE WRAPPER
+  // END CONTAINER FIUID

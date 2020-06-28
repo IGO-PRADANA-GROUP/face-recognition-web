@@ -1,0 +1,187 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TASKS             | Start tasks style                      |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-left
+            img.img-rounded(src="assets/images/app.png", alt="" width="45")
+          .media-body
+            .display-6 E Project
+            p.small.text-muted
+              | 4 people in teams
+        .nav.nav-inline.m-y-1
+          each val in ['1','2','3','4']
+            a(href="").circle-box.nav-item
+              img(src="assets/images/face/"+val+".jpg", alt="")
+              .dot.dot-online
+          .nav-item.dropdown.dropdown-right
+            button#addpeople.btn.btn-link.text-primary.nav-item(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+              i.icon.ion-plus
+            .dropdown-menu.dropdown-menu-vertical(aria-labelledby="addpeople")
+              button.dropdown-item(type="button") New member
+              button.dropdown-item(type="button") New group
+
+      .col-md-8
+        .btn-toolbar.pull-xs-right(role="toolbar")
+          .btn-group.btn-group-sm
+            button.btn.btn-primary(type="button")
+              | New task
+          .btn-group.btn-group-sm
+            button.btn.btn-secondary-outline(type="button")
+              i.icon.fa.fa-bug
+              .btn-label Reports
+            button.btn.btn-secondary-outline(type="button")
+              i.icon.fa.fa-gear
+              .btn-label Settings
+          .btn-group.btn-group-sm
+            button.btn.btn-secondary-outline(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+              span.sr-only Toggle Dropdown
+              i.ion-more
+            .dropdown-menu.dropdown-menu-right
+              button.dropdown-item(type="button") Close project
+              button.dropdown-item(type="button") Merge
+              button.dropdown-item(type="button") Download
+  // END PAGE HEADER
+
+  //TASKS
+  .scroll-board
+    .scroll-wrapper
+
+      .scroll-item
+        .panel
+          .panel-heading
+            a.panel-title(href="#") Backlog
+            .panel-tool
+              a(href="#" data-toggle="tooltip" title="Lock Dashboard")
+                i.icon.ion-unlocked
+              a(href="#" data-toggle="modal" data-target="#edit")
+                i.icon.ion-edit(data-toggle="tooltip" title="Edit")
+
+          .panel-body
+            .list-group.list-group-tasks.js-sortable-connet(data-jqui="sortable")
+              a.list-group-item.border-info(href="#" data-toggle="modal" data-target="#quick" data-plugin='sortable')
+                h6.list-group-item-heading Click quick view
+                p.list-group-item-text Click this to demo side view
+                span.label.label-info v.1.1
+              a.list-group-item.border-warning(href="#")
+                h6.list-group-item-heading Try move me
+                p.list-group-item-text Demo use jquery ui sortable
+              a.list-group-item(href="#")
+                h6.list-group-item-heading Customers
+                p.list-group-item-text Discipline class. Emerged. Encouraged should absolutely the assumed that kind safe cities able examples, he may and
+                span.label.label-default bug fix
+              a.list-group-item(href="#")
+                h6.list-group-item-heading Customers
+                p.list-group-item-text Discipline class. Emerged. Encouraged should absolutely the assumed that kind safe cities able examples, he may and
+              a.list-group-item.mocktext(href="#")
+                h6.list-group-item-heading New
+                p.list-group-item-text Discipline class. Emerged. Encouraged should absolutely the assumed that kind safe cities able examples, he may and
+            a.btn.btn-placeholder.btn-block(href="#") Add
+
+      .scroll-item
+        .panel
+          .panel-heading
+            .panel-title In Progress
+          .panel-body
+            .list-group.list-group-tasks.js-sortable-connet(data-jqui="sortable")
+              a.list-group-item(href="#" )
+                h6.list-group-item-heading Customers
+                p.list-group-item-text Discipline class. Emerged. Encourxamples, he may and
+              a.list-group-item(href="#")
+                h6.list-group-item-heading Customers
+                p.list-group-item-text Et kind safe cities able examples, he may and
+            a.btn.btn-placeholder.btn-block(href="#") Add
+
+      .scroll-item
+        .panel
+          .panel-heading
+            .panel-title Review
+          .panel-body
+            .list-group.list-group-tasks.js-sortable-connet(data-jqui="sortable")
+            a.btn.btn-placeholder.btn-block(href="#") Add
+
+      .scroll-item
+        .panel
+          .panel-heading
+            .panel-title Done
+          .panel-body
+            .list-group.list-group-tasks.js-sortable-connet(data-jqui="sortable")
+            a.btn.btn-placeholder.btn-block(href="#") Add
+
+      .scroll-item
+        .panel
+          .panel-body
+            a.btn.btn-placeholder.btn-block(href="#") Add New Board
+
+block bottomhtml
+  #edit.modal(class="fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true'): i.ion-close
+            h4.modal-title Edit dashboard
+          .modal-body
+            form
+              .form-group.row
+                label.form-control-label.col-md-3.text-xs-right Title
+                .col-md-9
+                  input.form-control.focus(type="text" placeholder="Backlog")
+              .form-group.row
+                label.form-control-label.col-md-3.text-xs-right Lead
+                .col-md-9
+                  select.form-control.c-select
+                    option Jason
+                    option Eason
+                    option Ason
+
+              .form-group.row
+                label.form-control-label.col-md-3.text-xs-right Access
+                .col-md-9
+                  .checkbox.checkbox-inline
+                    input(type="checkbox" value="" checked)
+                    label Free join
+                  .checkbox.checkbox-inline
+                    input(type="checkbox" value="")
+                    label Member Edit
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes
+
+  #quick.modal(class="fade-scale side" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog(role='document')
+        .modal-content
+          .block-header How it works
+          .modal-body
+            p
+              | Modal markup. add
+              code .side
+              | class.
+            p Ourselves, and its was. Of furniture to hazardous tag titles to the it of first window what considerations, negatives, what's bored understanding parents word facilitate is were she last better that and fly could the tyrannize. Only we every good the best arduous effort. The it
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(type='button') More

@@ -1,0 +1,214 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #BROADCARD         | BROADCARD styles                             |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Broadcard
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper.js-grid-wrapper
+
+      = '\n'
+      // #BROADCARD
+
+      = '\n'
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title View only
+          .panel-body
+            .broadcard
+              .broadcard-info #2212
+              .circle-box
+                img(src="assets/images/face/2.jpg")
+              .broadcard-info Kurumi Nara
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title With A tag & dot
+          .panel-body
+            a.broadcard(href="#")
+              .broadcard-info #2212
+              .circle-box
+                img(src="assets/images/face/2.jpg")
+                .dot.dot-busy
+              .broadcard-info Kurumi Nara
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title A List
+          .panel-body
+            .row
+              each item in ['2','3','4']
+                .col-xs-6.col-sm-4
+                  a.broadcard(href="#")
+                    .broadcard-info #221#{item}
+                    .circle-box
+                      img(src="assets/images/face/"+item+".jpg")
+                    .broadcard-info Kurumi Nara
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title Active
+          .panel-body
+            .row
+              each item in ['2','3']
+                .col-xs-6.col-sm-4
+                  a.broadcard(href="#")
+                    .broadcard-info #221#{item}
+                    .circle-box
+                      img(src="assets/images/face/"+item+".jpg")
+                    .broadcard-info Kurumi Nara
+              .col-xs-6.col-sm-4
+                .broadcard.active
+                  .broadcard-info #221#{item}
+                  .circle-box
+                    img(src="assets/images/face/4.jpg")
+                  .broadcard-info Kurumi Nara
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title Custom UI background
+          .panel-body
+            p Add #[code.code .bg-*] to broadcard item
+            .row
+              each item in ['2','3']
+                .col-xs-6.col-sm-4
+                  a.broadcard(href="#")
+                    .broadcard-info #221#{item}
+                    .circle-box
+                      img(src="assets/images/face/"+item+".jpg")
+                    .broadcard-info Kurumi Nara
+              .col-xs-6.col-sm-4
+                .broadcard.bg-brown-lighten
+                  .broadcard-info #221#{item}
+                  .circle-box
+                    img(src="assets/images/face/4.jpg")
+                  .broadcard-info Kurumi Nara
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title Border
+          .panel-body
+            p Add #[code.code .border] to broadcard item
+            .row
+              each item in ['2','3','4']
+                .col-xs-6.col-sm-4
+                  a.broadcard(href="#")
+                    .broadcard-info #221#{item}
+                    .circle-box
+                      img(src="assets/images/face/"+item+".jpg")
+                    .broadcard-info Kurumi Nara
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-12.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title Reduce List
+          .panel-body
+            p Add #[code.code .broadcard-reduce] to the row container as #[code.code .row.broadcard-reduce]
+            .row.broadcard-reduce
+              each item in ['2','3','4','5','6','7']
+                .col-xs-6.col-sm-3.col-md-2
+                  a.broadcard(href="#")
+                    .broadcard-info #221#{item}
+                    .circle-box
+                      img(src="assets/images/face/"+item+".jpg")
+                    .broadcard-info Kurumi Nara
+        // END PANEL
+      // END COL
+
+      = '\n'
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title With Dropdown
+          .panel-body
+            .row.broadcard-reduce
+              each item in ['2','3','4']
+                .col-xs-6.col-sm-4
+                  .broadcard(href="#")
+                    .broadcard-info #221#{item}
+                    .circle-box
+                      img(src="assets/images/face/"+item+".jpg")
+                    .broadcard-info Kurumi Nara
+                    .btn-group.btn-group-sm
+                      button.btn.btn-secondary(type="button") Edit
+                      button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+                       span.sr-only Toggle Dropdown
+                      .dropdown-menu
+                        h6.dropdown-header Dropdown header
+                        button.dropdown-item(type="button") Action
+                        button.dropdown-item(type="button") Another action
+                        button.dropdown-item(type="button") Something else here
+                        .dropdown-divider
+                        a.dropdown-item.dropdown-item-more(href="#")
+                          i.ion-more
+
+        // END PANEL
+      // END COL
+
+      .col-md-6.js-grid.js-sizer
+        .panel
+          .panel-heading
+            .panel-title With Summary
+          .panel-body
+            .broadcard
+              .broadcard-info #2212
+              .circle-box
+                img(src="assets/images/face/2.jpg")
+              .broadcard-info Kurumi Nara
+              .broadcard-summary
+                p Things were not looking good for Duke at halftime on Saturday. After all, a 10-point deficit at the intermission in a tough road environment at Wake Forest is not exactly the recipe for a road win. But something in the halftime locker room started a fire in the belly of swingman Luke Kennard, and he helped pace the Blue Devils to a big comeback win.
+        // END PANEL
+      // END COL
+
+
+    // END PAGE WRAPPER
+  // END CONTAINER FIUID

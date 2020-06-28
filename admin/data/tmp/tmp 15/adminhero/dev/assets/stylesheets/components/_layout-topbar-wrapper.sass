@@ -1,0 +1,108 @@
+.topbar-wrapper
+  
+  .topbar-wrapper-mobile-nav
+    +rwd($md-up)
+      float: left
+
+  // logo text and img
+  .topbar-wrapper-logo
+    font-weight: 800
+    line-height: $mainmenu-height
+    height: $mainmenu-height
+    display: inline-block
+    &:hover
+      background-color: transparent
+    +rwd($md-down)
+      text-align: center
+      display: block
+      position: relative
+      z-index: 1
+
+  // close btn for mobile
+  .close-mobile-nav
+    +rwd($md-up)
+      display: none
+
+  // reset nav
+  .topbar-wrapper-nav
+    +rwd($md-up)
+      float: right
+    +rwd($md-down)
+      position: absolute
+      z-index: 10
+      width: 100%
+      height: $mainmenu-height
+      left: 0
+      top: 0
+      background: #fff
+      border-bottom: 1px solid #eee
+      display: none 
+      &.active
+        display: flex
+        > li
+          flex: 1
+  
+  .nav-item
+    &.open
+      background-color: $dropdown-link-hover-bg;
+      > a
+        color: #000
+      
+  .nav-link
+    text-align: center
+    line-height: $mainmenu-height
+    height: $mainmenu-height
+    padding-top: 0
+    padding-bottom: 0
+    &:hover
+      color: #000
+    +rwd($md-up)
+      padding-left: 20px
+      padding-right: 20px
+  
+  // Custom search input
+  // Use same html markup in topbar-wrapper
+  // 
+  // when small view, change it to fixed
+  .topbar-wrapper-search
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 11
+    border-bottom: 1px solid #eee
+    opacity: 0
+    visibility: hidden
+    +hero_transition
+    input
+      box-shadow: none
+      font-weight: 400
+      border: none
+      border-radius: 0
+      margin: 0
+      height: $mainmenu-height
+      padding: 0 80px 0 20px
+      background-color: #fff
+    .topbar-togger
+      position: absolute
+      top: 0
+      background: none
+      box-shadow: none
+      border: none
+    .topbar-togger-search
+      position: absolute
+      top: 0
+      right: 0
+    &.active
+      opacity: 1
+      visibility: visible
+    
+
+
+.topbar-togger
+  float: left
+  line-height: $mainmenu-height
+  height: $mainmenu-height
+  width: $mainmenu-minibar-width
+  text-align: center
+  position: relative
+  z-index: 2

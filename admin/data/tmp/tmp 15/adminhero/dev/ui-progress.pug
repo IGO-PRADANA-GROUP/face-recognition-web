@@ -1,0 +1,166 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #PROGRESS          | Progress styles                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Progress
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper.js-grid-wrapper
+
+          = '\n'
+          // #PANEL
+
+          = '\n'
+          .col-sm-12.js-grid
+            .panel.loader-wrapper
+              .panel-heading.bg-faded
+                .panel-title Loader
+              .panel-body
+                p Particular the should continued an their minutes. Small side the just but the dressed safely general parks. There with point instead, was management-science a needed of to legi
+                button.btn.btn-primary.js-demo-loader(type="button") Click to load
+                button.btn.btn-primary.js-reset-loader(type="button") Reset
+
+                progress.progress.progress-danger.loader.js-loader.hidden(value="1" max="100")
+
+              // END PANEL BODY
+            // END PANEL
+          // END COL
+
+          = '\n'
+
+          .col-sm-4.js-grid.js-sizer
+            .panel
+              .panel-heading.bg-faded
+                .panel-title Color
+              .panel-body
+                each val in ['primary', 'info', 'danger', 'warning', 'success','purple', 'aqua', 'coral', 'brown', 'pink', 'red', 'inverse', 'dark', 'faded']
+                  p
+                    progress.progress.progress-lg(class="progress-"+val value="25" max="100")
+              // END PANEL BODY
+            // END PANEL
+          // END COL
+
+          .col-sm-4.js-grid
+            .panel
+              .panel-heading.bg-faded
+                .panel-title Div Markup & HTML5 progress
+              .panel-body
+                .progress.progress-lg.m-b-1
+                  .progress-bar(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;")
+                progress.progress.progress-lg(class="progress-primary" value="25" max="100")
+
+
+              // END PANEL BODY
+            // END PANEL
+          // END COL
+
+          .col-sm-4.js-grid
+            .panel
+              .panel-heading.bg-faded
+                .panel-title Sizes
+              .panel-body
+                each val in ['', 'lg']
+                  p
+                    progress.progress.progress-primary(class="progress-"+val value="25" max="100")
+              // END PANEL BODY
+            // END PANEL
+          // END COL
+
+          .col-sm-4.js-grid
+            .panel
+              .panel-heading.bg-faded
+                .panel-title Striped
+              .panel-body
+                each val in ['primary', 'info', 'danger', 'warning', 'success','purple', 'aqua', 'coral', 'brown', 'pink', 'red', 'inverse', 'dark', 'faded']
+                  p
+                    progress.progress.progress-lg.progress-striped(class="progress-"+val value="25" max="100")
+              // END PANEL BODY
+            // END PANEL
+          // END COL
+
+          .col-sm-4.js-grid
+            .panel
+              .panel-heading.bg-faded
+                .panel-title WIth Text
+              .panel-body
+                each val in ['primary', 'info']
+                  p
+                    .progress-desc 25%
+                    progress.progress.progress-lg(class="progress-"+val value="25" max="100")
+              // END PANEL BODY
+            // END PANEL
+          // END COL
+
+          .col-sm-4.js-grid
+            .panel
+              .panel-heading.bg-faded
+                .panel-title Vertical
+              .panel-body
+                .row
+                  each val in ['primary', 'info', 'pink']
+                    .col-xs-3
+                      .progress.progress-lg.progress-vertical(class="progress-"+val)
+                        .progress-bar(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 60%;")
+                .row
+                  each val in ['primary', 'info', 'pink']
+                    .col-xs-3
+                      .progress-vertical-wrapper
+                        .progress-desc 60%
+                        .progress.progress-lg.progress-vertical(class="progress-"+val)
+                          .progress-bar(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 60%;")
+              // END PANEL BODY
+            // END PANEL
+          // END COL
+
+
+
+
+
+    // ROW
+  // END CONTAINER FIUID
+
+block js
+  // For demo loader
+  script.
+    var clickTo, loader, resetTo;
+      clickTo = $('.js-demo-loader');
+      resetTo = $('.js-reset-loader');
+      loader = $('.js-loader');
+      clickTo.on('click', function(e) {
+      e.preventDefault;
+      return loader.removeClass('hidden').animate({
+        value: '100'
+      }, 2000);
+      });
+
+      resetTo.on('click', function(e) {
+      e.preventDefault;
+      return loader.addClass('hidden').animate({
+        value: '0'
+      });
+      });

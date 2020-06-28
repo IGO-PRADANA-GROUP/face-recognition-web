@@ -1,0 +1,224 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #TRACKER           |                                        |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-left.media-middle
+            i.ion-android-checkbox-outline.fa-2x
+          .media-body
+            .display-6 Tracker
+            .small.text-muted
+              | Your tasks are a big part of your life.
+
+      .col-md-8
+        .pull-xs-right(role="toolbar")
+          a.btn.btn-icon(href="#"): i.fa.fa-trash-o
+          a.btn.btn-icon(href="#"): i.fa.fa-rss
+          a.btn.btn-icon: i.fa.fa-star.text-warning
+          .dropdown
+            button#tracker-add.btn.btn-success(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown" data-plugin="submenupicker")
+              | Add
+            .dropdown-menu.dropdown-menu-right(aria-labelledby="tracker-add")
+              button.dropdown-item(type="button")
+                i.ion-plus.m-r-1
+                | New traker
+              .dropdown-divider
+              button.dropdown-item(type="button")
+                i.ion-arrow-up-c.m-r-1
+                | Upload project
+              button.dropdown-item(type="button")
+                i.ion-arrow-up-c.m-r-1
+                | Upload file
+              .dropdown-divider
+              button.dropdown-item(type="button")
+                i.ion-social-google.m-r-1
+                | Connect google doc
+              .dropdown-item.dropdown-submenu
+                | more
+                .dropdown-menu
+                  a.dropdown-item(href="#")
+                    i.fa.fa-file-archive-o.m-r-1
+                    | Zip file
+                  a.dropdown-item(href="#")
+                    i.fa.fa-search-plus.m-r-1
+                    | Connect more app
+
+  // #TRACKER
+  .container-fluid
+    = '\n'
+    .panel-wrapper
+
+      .panel
+        .row
+
+          .col-md-3.mobile-sidebar.p-a-3
+            h6.border-heading Assign To
+            .nav.nav-stacked
+              .nav-item
+                .dropdown
+                  a#vdemo(href="#"  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                    .media
+                      .media-left.media-middle
+                        .circle-box.circle-box-sm
+                          img(src="assets/images/face/0.jpg", alt="")
+                          .dot.dot-online
+                      .media-body Owner man
+                  .dropdown-menu(aria-labelledby="vdemo")
+                    each val in ['1','2','3','4']
+                      a.dropdown-item(href="#")
+                        .media
+                          .media-left.media-middle
+                            .circle-box.circle-box-sm
+                              img(src="assets/images/face/"+val+".jpg", alt="")
+                              .dot.dot-online
+                          .media-body Username
+                    a.dropdown-item(href="#")
+                      i.ion-search.m-x-1
+                      | Find more user
+
+              .nav-item
+                .dropdown
+                  a#vdemo(href="#"  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                    .circle-box.circle-box-sm
+                      .circle-object.bg-success +
+                  .dropdown-menu(aria-labelledby="vdemo")
+                    each val in ['1','2','3','4']
+                      a.dropdown-item(href="#")
+                        .media
+                          .media-left.media-middle
+                            .circle-box.circle-box-sm
+                              img(src="assets/images/face/"+val+".jpg", alt="")
+                              .dot.dot-online
+                          .media-body Username
+                    a.dropdown-item(href="#")
+                      i.ion-search.m-x-1
+                      | Find more user
+
+            h6.border-heading.m-t-3 Due Date
+            .nav.nav-stacked
+              .nav-item
+                input.form-control.js-one-date(type="text"  value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM")
+
+
+
+            a.sidebar-togger(href="#"): i.ion-android-more-vertical
+
+          .col-md-9.p-a-3
+            .form-inline.m-b-1
+              .form-group
+                label.form-control-label.border-heading Sort by
+                select.form-control.form-control-sm.c-select
+                  option Priority
+                  option Due Date
+                  option Date Created
+              .form-group.form-control-search.pull-xs-right
+                input.form-control.form-control-sm(type="text" placeholder="Search")
+            .list-group
+              .list-group-item.text-success
+                .list-group-item-heading Done
+              .list-group-item.active
+                .media
+                  .media-left
+                    i.fa.fa-circle.text-info
+                  .media-body Outside to management
+                  .media-right
+                    a.btn.btn-secondary.btn-xs(href="#" data-toggle="modal" data-target="#trackermodal") Edit
+                  .media-right
+                    .checkbox.checkbox-info
+                      input(type="checkbox" checked)
+                      label
+
+              .list-group-item.text-warning.m-t-3
+                .list-group-item-heading Pending
+              each p in ['Finally getting', 'And let itch upper really the', 'Anchors been times it been address', 'control I looked. Result, and sections','To carried later', 'behind like as the findings.', 'Packed, paint, school.', ' No of hero', ' s remember to shall the to box it all beginning of listen.', ' A with the problem', ' other was to and have detailed twice sight', ' tone my highly waved', ' and the ourselves', ' grammar. ']
+                .list-group-item
+                  .media
+                    .media-left
+                      i.fa.fa-circle.text-faded
+                    .media-body #{p}
+                    .media-right
+                      a.btn.btn-secondary.btn-xs(href="#" data-toggle="modal" data-target="#trackermodal") Edit
+                    .media-right
+                      .checkbox
+                        input(type="checkbox")
+                        label
+
+              .list-group-item.text-primary.m-t-3
+                .list-group-item-heading Ready
+              each p in [' No of hero', ' s remember to shall the to box it all beginning of listen.', ' A with the problem', ' other was to and have detailed twice sight', ' tone my highly waved', ' and the ourselves', ' grammar. ']
+                .list-group-item
+                  .media
+                    .media-left
+                      i.fa.fa-circle.text-faded
+                    .media-body #{p}
+                    .media-right
+                      a.btn.btn-secondary.btn-xs(href="#" data-toggle="modal" data-target="#trackermodal") Edit
+                    .media-right
+                      .checkbox
+                        input(type="checkbox")
+                        label
+
+
+
+block bottomhtml
+  #trackermodal.modal( class="fade-scale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+      .modal-dialog(role='document')
+        .modal-content
+          .block-header.bg-primary New
+          .modal-body
+            form
+              .row
+                .form-group.col-sm-8
+                  input#trackerTitleInput.form-control(type="text", name="trackerTitle", placeholder="Learn Portuguese every 2 day", autocomplete="off")
+                .form-group.col-sm-4
+                  input#trackerDateInput.form-control.js-one-date(type="text", name="trackerDate", placeholder="date", autocomplete="off")
+                .form-group.col-sm-12
+                  label.form-control-label Priority
+                  select.form-control.c-select
+                    option 1
+                    option 2
+                    option 3
+                .form-group.col-sm-12
+                  label.form-control-label Select Project
+                  select(data-plugin='multiselect')
+                    include ./partials/_select-option-demo.pug
+
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes
+
+
+
+block js
+  script.
+    $( document ).ready(function() {
+      $('.js-one-date').daterangepicker({
+          singleDatePicker: true,
+          showDropdowns: true
+      });
+
+    });

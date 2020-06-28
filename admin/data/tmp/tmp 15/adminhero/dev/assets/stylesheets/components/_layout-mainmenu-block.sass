@@ -1,0 +1,129 @@
+.menu-block
+  font-size: 12px
+  font-weight: 400
+  position: fixed
+  padding-bottom: 150px
+  height: 100%
+  width: $mainmenu-width
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  // reset all
+  .nav > li > a,
+  .grid-link
+    &:hover,
+    &:focus
+      color: inherit
+      background: $mainmenu-hover-bg
+
+  .nav > li > a
+    color: $side-text
+    position: relative
+    padding: 0
+    display: block
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 100%
+    +hero_transition
+
+
+  // submenu arrow
+  .menu-block-has-sub
+    > a.active:after
+        transform: translateY(-50%)rotate(90deg)
+    > a:after
+      content: "\f3d3"
+      font-family: "Ionicons"
+      position: absolute
+      font-size: 17px
+      right: 30px
+      top: 50%
+      opacity: .4
+      transform: translateY(-50%)
+      +hero_transition
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+  .header
+    padding: 15px 20px 10px 20px
+    text-transform: uppercase
+    color: rgba(#fff, .5)
+    font-size: 11px
+    ~ .header
+      margin-top: 15px
+
+  // sub menu
+  .menu-block-sub
+    background: $mainmenu-hover-bg
+    padding-left: $mainmenu-minibar-width // icon width
+    display: none
+    position: relative
+    &.active
+      display: block
+    .menu-block-sub,
+      background: none
+      padding-left: 15px
+    li
+      position: relative
+      &:before,
+      &:after
+        content: ''
+        width: 8px
+        height: 8px
+        background: #fff
+        background: rgba(#000, .2)
+        border-radius: 50%
+        display: block
+        position: absolute
+        top: 16px
+        left: -($mainmenu-minibar-width/2 + 4)
+        transform-origin: center
+        +hero_transition
+      &:before
+        top: 20px
+        left: -($mainmenu-minibar-width/2)
+        width: 0
+        height: 0
+        background: #fff
+      &.active:before,
+      &:hover:before
+        top: 16px
+        left: -($mainmenu-minibar-width/2 + 4)
+        width: 8px
+        height: 8px
+      a
+        padding: 10px 15px
+      a:focus,
+      a:hover,
+      a:active,
+      a.active
+        background: none
+
+
+  // noti. badge
+  .badge,
+  .label
+    margin: 0 5px
+
+  .icon
+    width: $mainmenu-minibar-width
+    height: 60px
+    line-height: 60px
+    text-align: center
+    display: inline-block
+
+  .menu-block-label
+    padding: 0 15px
+    display: inline-block
+    height: 58px
+    line-height: 58px
+
+.mainmenu-user-profile
+  background-color: rgba(22,22,22, .1)
+  padding: 4px
+  .circle-box
+    float: left
+    margin: 10px 15px 0 8px
+  .menu-block-label
+    line-height: 1.5
+    padding: 10px;

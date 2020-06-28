@@ -1,0 +1,77 @@
+
+.list-group-item {
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  font-weight: 300;
+
+  .icon {
+    width: 22px;
+    text-align: center;
+    margin-right: 10px;
+    line-height: 1;
+    display: inline-block;
+    color: inherit
+  }
+
+  .list-group-brodered & {
+    border-color: $gray;
+    &.active:hover {
+      border-color: $gray;
+    }
+  }
+
+  + .list-group-item {
+    .list-group-striped & {
+      border-top-color: $gray;
+    }
+  }
+
+  .list-group-striped & {
+    &.active:hover {
+      border-color: transparent;
+      border-top-color: $gray;
+    }
+  }
+
+  .list-group-tasks & {
+    border-width: 0 0 0 3px;
+    border-color: transparent transparent transparent $gray;
+    margin-bottom: .2em;
+    background-color: $gray-lightest;
+    &.active {
+      background-color: $list-group-active-bg;
+    }
+    &:hover,
+    &.active:hover {
+      border-left-color: $gray;
+      background-color: $dropdown-link-hover-bg;
+      color: $body-color;
+      .list-group-item-heading  {
+        color: $body-color;
+      }
+    }
+  }
+
+}
+
+
+.list-group-item-text {
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+
+.list-group-tasks {
+  min-height: 2em
+}
+
+
+
+
+
+
+
+
+
+
+
+

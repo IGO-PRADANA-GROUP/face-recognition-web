@@ -1,0 +1,393 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #BUTTON            | Button styles                          |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    .row
+      .col-md-4
+        .media
+          .media-left.media-middle
+            i.ion-mouse.fa-2x
+          .media-body
+            .display-6 Button UI
+            .small.text-muted
+              | A button indicates a possible user action
+
+  = '\n'
+
+  .container-fluid
+    .row.js-grid-wrapper.panel-wrapper
+          = '\n'
+          // #BUTTON
+          // COLOUR BUTTON
+          .col-md-12.js-grid
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Basic
+              .panel-body
+                = '\n'
+                p Use any of the available button classes to quickly create a styled button
+                p For some bootstrap addons or plugins is default use 'btn-default' class. alias 'btn-secondary'
+                .m-t-3
+                  button.btn.btn-default(type="button") Default
+                  button.btn.btn-default(type="button"): i.fa.fa-home
+                  button.btn.btn-placeholder( type="button") Placeholder btn
+                .row.m-t-3
+                  each val in ['secondary', 'primary', 'info', 'warning', 'success', 'danger']
+                    .col-xs-6.col-sm-4.col-md-2.text-capitalize
+                      .btn.btn-block(class="btn-"+val) #{val}
+                      button.btn.btn-block.active.m-b-2(class="btn-"+val type="button")
+
+                .row.m-t-3
+                  each val in ['secondary', 'primary', 'info', 'warning', 'success', 'danger']
+                    .col-xs-6.col-sm-4.col-md-2.text-capitalize
+                      .btn.btn-block(class="btn-"+val+"-outline") Outline
+                      button.btn.btn-block.active.m-b-2(class="btn-"+val+"-outline" type="button")
+
+                .row.m-t-3
+                  each val in ['secondary', 'primary', 'info', 'warning', 'success', 'danger']
+                    .col-xs-6.col-sm-4.col-md-2.text-capitalize
+                      .btn.btn-block.btn-rounded(class="btn-"+val) #{val}
+
+
+          = '\n'
+          // SIZE BUTTON
+          .col-md-12.js-grid
+            .panel.panel-default
+              .panel-heading.m-t-2
+                h6.panel-title Sizes
+              .panel-body
+                .row
+                  .col-md-6
+                    = '\n'
+                    p
+                      | Fancy larger or smaller buttons? Add
+                      code .btn-lg
+                      | 、
+                      code .btn-sm
+                      | and
+                      code .btn-xs
+                      | for additional sizes
+
+                    .m-y-3
+                      each val in ['lg', '', 'sm', 'xs']
+                        button.btn.btn-primary-outline.m-b-2(class="btn-"+val type="button") Click .#{val}
+
+                  = '\n'
+                  .col-md-6
+                    p
+                      | Create block level buttons—those that span the full width of a parent— by adding
+                      code .btn-block
+
+                    .m-y-3
+                      button.btn.btn-primary-outline.btn-block(type="button") Click block
+          = '\n'
+          = '\n'
+          // DROPDOWN BUTTON
+          .col-md-6.js-grid
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Dropdown with icon
+              .panel-body
+                .list-inline
+                  li.dropdown.list-inline-item
+                    button#demoDd-1.btn.btn-primary.dropdown-toggle.m-t-1(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                      i.ion-gear-b
+                    .dropdown-menu(aria-labelledby="demoDd-1")
+                      button.dropdown-item(type="button") Keep
+                      button.dropdown-item(type="button") Reply
+                      button.dropdown-item(type="button") Reply All
+                  li.dropdown.list-inline-item
+                    button#demoDd-2.btn.btn-primary-outline.dropdown-toggle.m-t-1(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                      i.ion-gear-b
+                    .dropdown-menu(aria-labelledby="demoDd-2")
+                      button.dropdown-item(type="button") Keep
+                      button.dropdown-item(type="button") Reply
+                      button.dropdown-item(type="button") Reply All
+                  li.dropdown.list-inline-item
+                    button#demoDd-3.btn.btn-secondary.dropdown-toggle.m-t-1(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                      i.ion-gear-b
+                    .dropdown-menu(aria-labelledby="demoDd-3")
+                      button.dropdown-item(type="button") Keep
+                      button.dropdown-item(type="button") Reply
+                      button.dropdown-item(type="button") Reply All
+                  li.dropdown.list-inline-item
+                    button#demoDd-4.btn.btn-danger.dropdown-toggle.m-t-1(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                      i.ion-gear-b
+                      .btn-label Dropdown have icon
+                    .dropdown-menu.dropdown-menu-right(aria-labelledby="demoDd-4")
+                      button.dropdown-item(type="button")
+                        i.fa.fa-hdd-o.m-r-1
+                        .btn-label Keep
+                      button.dropdown-item(type="button")
+                        i.fa.fa-reply.m-r-1
+                        .btn-label Reply
+                      button.dropdown-item(type="button")
+                        i.fa.fa-cloud.m-r-1
+                        .btn-label Reply All
+          = '\n'
+          = '\n'
+          // TABLE BUTTON
+          .col-md-6.js-grid
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Button in table
+              .panel-body
+                table.table
+                  tbody
+                    tr
+                      td Data
+                      td: a.btn.btn-primary(href="#") Edit
+
+          = '\n'
+          // RWD BUTTON
+          .col-md-6.js-grid
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Responsive icon button
+              .panel-body
+                .row.m-t-2
+                  .col-md-8
+                    p.text-muted Desktop screen
+                    button.btn.btn-primary.m-b-1(type="button")
+                      .btn-label Checked
+                      i.ion-checkmark
+                    button.btn.btn-danger.m-b-1(type="button")
+                      i.ion-checkmark
+                      .btn-label Checked
+                  .col-md-4
+                    p.text-muted Below 992px
+                    each val in ['primary', 'danger']
+                      button.btn.m-b-1(class="btn-"+val type="button")
+                        i.ion-checkmark
+          = '\n'
+          // ICON BUTTON
+          .col-md-6.js-grid.js-sizer
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Icon button
+              .panel-body
+                button.btn.btn-primary.m-b-2(type="button")
+                  i.ion-checkmark
+                button.btn.btn-info.m-b-2(type="button")
+                  i.ion-loop
+                button.btn.btn-success.m-b-2(type="button")
+                  i.ion-gear-b
+                button.btn.btn-secondary-outline.m-b-2(type="button")
+                  i.ion-scissors
+                button.btn.btn-danger-outline.m-b-2(type="button")
+                  i.ion-forward
+                button.btn.btn-warning.m-b-2(type="button")
+                  i.ion-power
+                button.btn.btn-link.text-danger.m-b-2(type="button")
+                  i.ion-headphone
+          = '\n'
+          // SOCIAL BUTTON
+          .col-md-12.js-grid
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Social
+              .panel-body
+                = '\n'
+                p Icon button with social icon
+                .row.m-b-3
+                  each val in ['facebook', 'twitter', 'google', 'google-plus', 'dribbble', 'github', 'instagram', 'whatsapp', 'foursquare', 'pinterest', 'tumblr', 'reddit', 'linkedin', 'skype', 'youtube', 'twitch', 'spotify', 'behance']
+                    .col-xs-6.col-sm-4.col-md-2
+                      button.btn.m-b-2(class="btn-"+val type="button")
+                        i.fa.icon(class="fa-"+val)
+
+                h5.demo-sub-title RWD Social login button
+                p Icon button with social icon
+                .row.m-b-3
+                  for val in ['facebook', 'twitter', 'google', 'google-plus', 'dribbble', 'github', 'instagram', 'whatsapp', 'foursquare', 'pinterest', 'tumblr', 'reddit', 'linkedin', 'skype', 'youtube', 'twitch', 'spotify', 'behance']
+                    .col-xs-6.col-sm-4.col-md-3
+                      button.btn.btn-social.m-b-2.btn-block(class="btn-"+val type='button')
+                        i.fa.icon(class="fa-"+val)
+                        | #{val}
+
+                h5.demo-sub-title Social login button without RWD
+                p Icon button with social icon
+                .row.m-b-3
+                  each val in ['google']
+                    .col-sm-4.col-md-3
+                      button.btn.btn-social.m-b-2.btn-block(class="btn-"+val type='button')
+                        i.fa.icon(class="fa-"+val)
+                        span.m-x-1 Sign Up with Google
+
+                h5.demo-sub-title Sizes you need
+                .row.m-b-3
+                  each val in ['lg', 'sm']
+                    .col-sm-6
+                      .row
+                        .col-sm-2
+                          button.btn.m-b-3(class="btn-google btn-"+val+"" type="button")
+                            i.fa.icon(class="fa-google")
+                        .col-sm-6
+                          button.btn.btn-social.btn-google.btn-block.m-b-1(class="btn-"+val type='button')
+                            i.fa.icon.fa-google
+                            span.m-x-1 Sign Up with Google
+          = '\n'
+          // GROUP BUTTON
+          .col-md-12.js-grid
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Button Group
+              .panel-body
+                = '\n'
+                p
+                  | Wrap a series of buttons with
+                  code .btn-group > .btn
+
+                .btn-group.m-b-1(role="group")
+                  each val in ['ion-ios-play', 'ion-ios-pause', 'ion-ios-fastforward']
+                    button.btn.btn-primary(type='button'): i.fa(class="#{val}")
+                .btn-group.m-b-1(role="group")
+                  each val in ['ion-ios-play', 'ion-ios-pause', 'ion-ios-fastforward']
+                    button.btn.btn-default(type='button'): i.fa(class="#{val}")
+                .btn-group.m-b-1(role="group")
+                  button.btn.btn-link.text-success(type='button'): i.fa.ion-ios-play
+                  button.btn.btn-link.text-danger(type='button'): i.fa.ion-ios-pause
+                  button.btn.btn-link.text-default(type='button'): i.fa.ion-ios-fastforward
+                .btn-group.m-b-1(role="group")
+                  each val in ['shuffle', 'loop', 'clock']
+                    button.btn.btn-danger(type='button')
+                      i(class="ion-"+val)
+                      .btn-label #{val}
+                .btn-group.m-b-1(role="group")
+                  button.btn.btn-primary(type='button') 1
+                  button.btn.btn-primary(type='button') 2
+                  .btn-group(role="group")
+                    button#demoDd-5.btn.btn-primary.dropdown-toggle(type='button' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                      | Dropdown
+                    .dropdown-menu.dropdown-menu-right(aria-labelledby="demoDd-5")
+                      button.dropdown-item(type="button")
+                        i.fa.fa-hdd-o.m-r-1
+                        .btn-label Keep
+                      button.dropdown-item(type="button")
+                        i.fa.fa-reply.m-r-1
+                        .btn-label Reply
+                      button.dropdown-item(type="button")
+                        i.fa.fa-cloud.m-r-1
+                        .btn-label Reply All
+          = '\n'
+          // VERTICAL GROUP BUTTON
+          .col-md-6.js-grid
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title Vertical Button Group
+              .panel-body
+                = '\n'
+                p
+                  | Wrap a series of buttons with
+                  code .btn-group-vertical > .btn
+
+                .btn-group-vertical.m-b-1(role="group")
+                  each val in ['shuffle', 'loop', 'clock']
+                    button.btn.btn-danger(type='button')
+                      i(class="ion-"+val)
+
+                .btn-group-vertical.m-b-1(role="group")
+                  each val in ['shuffle', 'loop', 'clock']
+                    button.btn.btn-primary(type='button')
+                      i(class="ion-"+val)
+
+                .btn-group-vertical.m-b-1(role="group")
+                  each val in ['shuffle', 'loop', 'clock']
+                    button.btn.btn-link(type='button')
+                      i(class="ion-"+val)
+          = '\n'
+          // GROUP BUTTON SIZES
+          .col-md-6.js-grid
+            .panel
+              .panel-heading
+                h6.panel-title Button Group Sizes
+              .panel-body
+                = '\n'
+                p
+                  | Wrap a series of buttons with
+                  code .btn-group-lg > .btn
+                  | or
+                  code .btn-group-sm > .btn
+
+                .btn-group.btn-group-lg.m-b-1(role="group")
+                  each val in ['shuffle', 'loop', 'clock']
+                    button.btn.btn-danger(type='button')
+                      i(class="ion-"+val)
+
+                .btn-group.m-b-1(role="group")
+                  each val in ['shuffle', 'loop', 'clock']
+                    button.btn.btn-primary(type='button')
+                      i(class="ion-"+val)
+
+                .btn-group.btn-group-sm.m-b-1(role="group")
+                  each val in ['shuffle', 'loop', 'clock']
+                    button.btn.btn-primary(type='button')
+                      i(class="ion-"+val)
+          = '\n'
+          // ANIMATION BUTTON
+          .col-md-12.js-grid
+            .panel.panel-default
+              .panel-heading
+                h6.panel-title
+                  | Animation button
+                  small: a(href="https://github.com/hakimel/Ladda" target="_blank") Ladda Buttons
+              .panel-body
+                = '\n'
+                p  Buttons with built-in loading indicators, effectively bridging the gap between action and feedback.
+                button.btn.btn-primary.ladda-button.m-b-1.js-btn(type="button" data-style="expand-right")
+                  .ladda-label Expand right
+                button.btn.btn-warning.ladda-button.m-b-1.js-btn(type="button" data-style="expand-left")
+                  .ladda-label Expand left
+                button.btn.btn-danger.ladda-button.m-b-1.js-btn(type="button" data-style="expand-up")
+                  .ladda-label Expand up
+                button.btn.btn-info.ladda-button.m-b-1.js-btn(type="button" data-style="expand-down")
+                  .ladda-label Expand down
+                button.btn.btn-success.ladda-button.m-b-1.js-btn(type="button" data-style="zoom-in")
+                  .ladda-label Zoom in
+                button.btn.btn-success.ladda-button.m-b-1.js-progress-btn(type="button" data-style="zoom-in")
+                  .ladda-label Built-in Progress bar
+                button.btn.btn-primary.ladda-button.m-b-1.js-progress-btn(type="button" data-style="contract")
+                  .ladda-label Contract
+    // END PANEL
+  // END CONTAINER FIUID
+
+block js
+  script.
+    // Ladda btton
+    Ladda.bind('.js-btn', { timeout: 2000 } )
+
+    // Bind progress buttons and simulate loading progress
+      Ladda.bind( '.js-progress-btn', {
+        callback: function( instance ) {
+          var progress = 0;
+          var interval = setInterval( function() {
+            progress = Math.min( progress + Math.random() * 0.1, 1 );
+            instance.setProgress( progress );
+            if( progress === 1 ) {
+              instance.stop();
+              clearInterval( interval );
+            }
+          }, 200 );
+        }
+      } );

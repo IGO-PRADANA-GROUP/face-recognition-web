@@ -1,0 +1,23 @@
+.profile-cover
+  position: relative
+  overflow: hidden
+  height: 160px
+  @include media-breakpoint-up(md)
+    height: 260px
+  .profile-cover-img
+    width: 100%
+    max-width: 100%
+    height: auto
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+  .page-header
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 2
+    background-color: rgba(#000, .8)
+    background: -webkit-linear-gradient(to top, rgba(#E8EEF5, 1) 40%, rgba(#fff, 0)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgba(#E8EEF5, 1) 40%, rgba(#fff, 0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+

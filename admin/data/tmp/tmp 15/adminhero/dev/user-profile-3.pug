@@ -1,0 +1,310 @@
+extends ./partials/_base
+
+block contents
+  // TABLE OF CONTENTS.
+     Use search to find needed section.
+     ===================================================================
+     | 01. #CSS               | All CSS links and file paths           |
+     | 02. #FAVICONS          | Favicon icon, app icons                |
+     | 03. #BODY              | Body tag                               |
+     | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+     | 05. #MAIN              | Dashboard right wrapper                |
+     | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+     | 07. #TOP               | Top header navigation                  |
+     | 08. #TOP NAV           | Top header right navigation            |
+     
+     ===================================================================
+
+block main
+  .layout.bg-white
+  
+    = '\n'
+    .layout-content
+      .profile-cover
+        // you may allow user drag image position
+        img.profile-cover-img(src="assets/images/2.jpg", alt="" style="margin-top: -70px")
+        .page-header
+          .media
+            .media-left.media-meddle
+              img.img-rounded(src="assets/images/face/0.jpg", alt="" width="80")
+            .media-body
+              .row
+                .col-sm-6
+                  .display-6 Malcolm Bragg
+                  .small
+                    | Operations Director
+                    br
+                    | Margem International Ltd.
+                  a.small(href="")
+                    | sthurston@bushstad.com
+                .col-sm-6
+                  .row
+                    .col-xs-4
+                      .strong Followers 
+                      b 1729
+                    .col-xs-4 
+                      .strong Following
+                      b 212
+                    .col-xs-4 
+                      .strong Tweets
+                      b 200
+        
+      .container-fluid.bg-faded
+        .row.panel-wrapper.js-grid-wrapper
+
+          = '\n'
+          .col-xs-12.col-sm-6.js-grid.js-sizer
+            .panel
+              img.img-fluid(src="assets/images/1.jpg", alt="")
+              .panel-body
+                | Confession of a Job Hopper: Lessons I Learned From Frequent Job Switchings
+              .row-no-gutter.text-xs-center.p-y-2
+                .col-xs-4
+                  a(href="")
+                    i.ion-heart.m-r-1
+                    | Likes
+                .col-xs-4
+                  a(href="")
+                    i.ion-chatbubble.m-r-1
+                      span.badge.badge-success.status 4
+                    | Comments
+                .col-xs-4
+                  a(href="")
+                    i.ion-forward.m-r-1
+                    | Share
+          
+          = '\n'
+          .col-xs-12.col-sm-6.js-grid
+            .panel
+              img.img-fluid(src="assets/images/2.jpg", alt="")
+              .panel-body
+                p Don't Give Everything Away In the Job Interview!
+              .row-no-gutter.text-xs-center.p-y-2
+                .col-xs-4
+                  a(href="")
+                    i.ion-heart.m-r-1
+                    | Likes
+                .col-xs-4
+                  a(href="")
+                    i.ion-chatbubble.m-r-1
+                    | Comments
+                .col-xs-4
+                  a(href="")
+                    i.ion-forward.m-r-1
+                    | Share
+          
+          = '\n'
+          .col-xs-12.col-sm-6.js-grid.js-sizer
+            .panel
+              img.img-fluid(src="assets/images/5.jpg", alt="")
+              .panel-body
+                p Happiness through be quarter continues sleepiness pushed him the what
+              .row-no-gutter.text-xs-center.p-y-2
+                .col-xs-4
+                  a(href="")
+                    i.ion-heart.m-r-1
+                    | Likes
+                .col-xs-4
+                  a(href="")
+                    i.ion-chatbubble.m-r-1
+                    | Comments
+                .col-xs-4
+                  a(href="")
+                    i.ion-forward.m-r-1
+                    | Share
+          
+          = '\n'
+          .col-xs-12.col-sm-6.js-grid
+            .panel
+              img.img-fluid(src="assets/images/6.jpg", alt="")
+              .panel-body
+                p Looked The own become review screen
+              .row-no-gutter.text-xs-center.p-y-2
+                .col-xs-4
+                  a(href="")
+                    i.ion-heart.m-r-1
+                    | Likes
+                .col-xs-4
+                  a(href="")
+                    i.ion-chatbubble.m-r-1
+                      span.badge.badge-success.status 1
+                    | Comments
+                .col-xs-4
+                  a(href="")
+                    i.ion-forward.m-r-1
+                    | Share
+
+          = '\n'
+          .col-xs-12.col-sm-6.js-grid.js-sizer
+            .panel
+              img.img-fluid(src="assets/images/7.jpg", alt="")
+              .panel-body
+                p MONDAY, 25TH AUGUST 2008
+                p Unmolested duckthemed came met learn with
+              .row-no-gutter.text-xs-center.p-y-2
+                .col-xs-4
+                  a(href="")
+                    i.ion-heart.m-r-1
+                    | Likes
+                .col-xs-4
+                  a(href="")
+                    i.ion-chatbubble.m-r-1
+                    | Comments
+                .col-xs-4
+                  a(href="")
+                    i.ion-forward.m-r-1
+                    | Share
+
+          
+          = '\n'
+          .col-xs-12.col-sm-6.js-grid
+            .panel
+              img.img-fluid(src="assets/images/8.jpg", alt="")
+              .panel-body
+                p Looked The own become review screen
+              .row-no-gutter.text-xs-center.p-y-2
+                .col-xs-4
+                  a(href="")
+                    i.ion-heart.m-r-1
+                    | Likes
+                .col-xs-4
+                  a(href="")
+                    i.ion-chatbubble.m-r-1
+                    | Comments
+                .col-xs-4
+                  a(href="")
+                    i.ion-forward.m-r-1
+                    | Share
+
+          = '\n'
+          .col-xs-12.js-grid
+            .panel.text-xs-center
+              button.btn.btn-secondary.ladda-button.btn-block.js-btn(type="button" data-style="zoom-in")
+                .ladda-label More
+                  
+
+
+    = '\n'
+    .layout-sidebar
+      .list-group
+        .list-group-item
+          .form-control-search
+            input.form-contro.form-control.form-control-clean.c-placeholder(type="text" placeholder="Search")
+        //- a.list-group-item(href="#") 
+        //-   i.icon.ion-android-mail
+        //-   | Message
+        //- a.list-group-item(href="#") 
+        //-   i.icon.ion-android-time
+        //-   | Timeline
+        //- a.list-group-item(href="#")
+        //-   i.icon.ion-paper-airplane
+        //-   | Mail
+        a.list-group-item(href="#")
+          .media
+            .media-left
+              .circle-box.circle-box-sm
+                img.circle-object(src="assets/images/face/0.jpg", alt="")
+                .dot.dot-offline
+            .media-body.media-middle Judith Sullivan
+        a.list-group-item(href="#")
+          .media
+            .media-left
+              .circle-box.circle-box-sm
+                img.circle-object(src="assets/images/face/1.jpg", alt="")
+                .dot.dot-offline
+            .media-body.media-middle  Marie Bailey
+        a.list-group-item(href="#")
+          .media
+            .media-left
+              .circle-box.circle-box-sm
+                img.circle-object(src="assets/images/face/2.jpg", alt="")
+                .dot.dot-offline
+            .media-body.media-middle  Jayden Campbell
+        a.list-group-item(href="#")
+          .media
+            .media-left
+              .circle-box.circle-box-sm
+                img.circle-object(src="assets/images/face/3.jpg", alt="")
+                .dot.dot-offline
+            .media-body.media-middle  Madelyn Fallon
+
+        a.list-group-item(href="#")
+          .media
+            .media-left
+              .circle-box.circle-box-sm
+                img.circle-object(src="assets/images/face/4.jpg", alt="")
+                .dot.dot-online
+            .media-body.media-middle  Brice Kendall
+        a.list-group-item(href="#")
+          .media
+            .media-left
+              .circle-box.circle-box-sm
+                img.circle-object(src="assets/images/face/5.jpg", alt="")
+                .dot.dot-online
+            .media-body.media-middle  Trey Monahan
+        a.list-group-item(href="#")
+          .media
+            .media-left
+              .circle-box.circle-box-sm
+                img.circle-object(src="assets/images/face/6.jpg", alt="")
+                .dot.dot-busy
+            .media-body.media-middle  Shamar Clark
+        a.list-group-item(href="#")
+          .media
+            .media-left
+              .circle-box.circle-box-sm
+                img.circle-object(src="assets/images/face/7.jpg", alt="")
+                .dot.dot-offline
+            .media-body.media-middle  Tessa Clarke
+
+      
+      hr
+      .list-group
+        a.list-group-item(href="user-profile.html") 
+          i.icon.ion-paintbucket
+          | User profile 1
+        a.list-group-item(href="user-profile-2.html") 
+          i.icon.ion-paintbucket
+          | User profile 2
+        a.list-group-item(href="user-profile-3.html") 
+          i.icon.ion-paintbucket
+          | User profile 3
+      a.sidebar-togger(href="#"): i.ion-android-more-vertical
+
+
+
+
+block js
+  script.
+    // Ladda btton
+    Ladda.bind('.js-btn', { timeout: 2000 } )
+
+    // Bind progress buttons and simulate loading progress
+      Ladda.bind( '.js-progress-btn', {
+        callback: function( instance ) {
+          var progress = 0;
+          var interval = setInterval( function() {
+            progress = Math.min( progress + Math.random() * 0.1, 1 );
+            instance.setProgress( progress );
+            if( progress === 1 ) {
+              instance.stop();
+              clearInterval( interval );
+            }
+          }, 200 );
+        }
+      } );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,313 @@
+extends ./partials/_base
+
+block contents
+  // TABLE OF CONTENTS.
+     Use search to find needed section.
+     ===================================================================
+     | 01. #CSS               | All CSS links and file paths           |
+     | 02. #FAVICONS          | Favicon icon, app icons                |
+     | 03. #BODY              | Body tag                               |
+     | 04. #SIDEMENU          | Dashboard panel & left navigation      |
+     | 05. #MAIN              | Dashboard right wrapper                |
+     | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+     | 07. #TOP               | Top header navigation                  |
+     | 08. #TOP NAV           | Top header right navigation            |
+     | 09. #DROPDOWNS         | Dropdowns styles                       |
+     | 10. #PLUGINS           | All scripts and plugins                |
+     ===================================================================
+
+block main
+
+  // #PAGE HEADER
+  // PAGE HEADER
+  .page-header
+    h2.page-header-title Dropdowns
+  // END PAGE HEADER
+
+  = '\n'
+
+  .container-fluid
+    .row.panel-wrapper
+
+      = '\n'
+      // #DROPDOWNS
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title Vertical
+          .panel-body(style="min-height:170px")
+            .dropdown
+              button#vdemo.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu.dropdown-menu-vertical(aria-labelledby="vdemo")
+                button.dropdown-item(type="button") Action
+                button.dropdown-item(type="button") Another action
+                button.dropdown-item(type="button") Something else here
+
+      .col-sm-8
+        .panel.panel-default
+          .panel-heading
+            .panel-title Position
+          .panel-body(style="min-height:170px")
+            .row
+              .col-sm-6
+                .dropdown.dropdown-right
+                  button#vdemo.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                    | Right
+                  .dropdown-menu.dropdown-menu-vertical(aria-labelledby="vdemo")
+                    button.dropdown-item(type="button") Action
+                    button.dropdown-item(type="button") Another action
+                    button.dropdown-item(type="button") Something else here
+
+                .dropdown.dropdown-right
+                  button#vdemo.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                    | Right
+                  .dropdown-menu(aria-labelledby="vdemo")
+                    button.dropdown-item(type="button") Action
+                    button.dropdown-item(type="button") Another action
+                    button.dropdown-item(type="button") Something else here
+
+              .col-sm-6
+                .dropdown.dropdown-left
+                  button#vdemo.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                    | Left
+                  .dropdown-menu.dropdown-menu-vertical(aria-labelledby="vdemo")
+                    button.dropdown-item(type="button") Action
+                    button.dropdown-item(type="button") Another action
+                    button.dropdown-item(type="button") Something else here
+
+                .dropdown.dropdown-left
+                  button#vdemo.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                    | Left
+                  .dropdown-menu(aria-labelledby="vdemo")
+                    button.dropdown-item(type="button") Action
+                    button.dropdown-item(type="button") Another action
+                    button.dropdown-item(type="button") Something else here
+      = '\n'
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title Button elements
+          .panel-body(style="min-height:270px")
+            .dropdown.open
+              button#dropdownMenu2.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu(aria-labelledby="dropdownMenu2")
+                button.dropdown-item(type="button") Action
+                button.dropdown-item(type="button") Another action
+                button.dropdown-item(type="button") Something else here
+
+            .dropdown.dropup(style="position:absolute; bottom: 1em")
+              button#dropdownMenu2.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropup
+              .dropdown-menu(aria-labelledby="dropdownMenu2")
+                button.dropdown-item(type="button") Action
+                button.dropdown-item(type="button") Another action
+                button.dropdown-item(type="button") Something else here
+
+      = '\n'
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title Alignment
+          .panel-body(style="min-height:270px")
+            .dropdown.open.pull-xs-right
+              button#dropdownMenu3.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenu3")
+                button.dropdown-item(type="button") Action
+                button.dropdown-item(type="button") Another action
+                button.dropdown-item(type="button") Something else here
+
+      = '\n'
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title Header & divider
+          .panel-body(style="min-height:270px")
+            .dropdown.open.pull-xs-right
+              button#dropdownMenu4.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenu4")
+                h6.dropdown-header Dropdown header
+                button.dropdown-item(type="button") Action
+                button.dropdown-item(type="button") Another action
+                button.dropdown-item(type="button") Something else here
+                .dropdown-divider
+                a.dropdown-item.dropdown-item-more(href="#")
+                  i.ion-more
+
+      = '\n'
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title Icon
+          .panel-body(style="min-height:270px")
+            .dropdown.open
+              button#dropdownMenu5.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu(aria-labelledby="dropdownMenu5")
+                button.dropdown-item(type="button")
+                  i.ion-plus.m-r-1
+                  | Action
+                button.dropdown-item(type="button")
+                  i.ion-shuffle.m-r-1
+                  | Another action
+                button.dropdown-item(type="button")
+                  i.ion-soup-can.m-r-1
+                  | Something else here
+
+      = '\n'
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title Desc text
+          .panel-body(style="min-height:270px")
+            .dropdown.open
+              button#dropdownMenu6.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu(aria-labelledby="dropdownMenu6")
+                button.dropdown-item(type="button")
+                  | Action
+                  .dropdown-item-desc  8 items
+                button.dropdown-item(type="button")
+                  | Another action
+                  .dropdown-item-desc 12 items
+                button.dropdown-item(type="button")
+                  | Something else here Action
+                  .dropdown-item-desc 2 items
+
+      = '\n'
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title Mixin components
+          .panel-body(style="min-height:270px")
+            p This example mixin three components
+            .dropdown.open
+              button#dropdownMenu6.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu
+                .dropdown-header Notifications (5)
+                .dropdown-menu-inner
+                  a.dropdown-item.media.circle-box(href="#")
+                    .media-left
+                      img.media-object.circle-object(src="assets/images/face/2.jpg", alt="")
+                    .media-body
+                      .media-heading Ryan Sears
+                      p.text-muted.small Pink do well together specially name if design postage briefs big into in her working
+                  a.dropdown-item.media.circle-box(href="#")
+                    .media-left
+                      .media-object.circle-object.bg-danger
+                        i.fa.fa-bug
+                    .media-body
+                      .media-heading Server Error
+                      p.text-muted.small 3 minutes ago
+                  a.dropdown-item.media.circle-box(href="#")
+                    .media-left
+                      .media-object.circle-object.bg-success
+                        i.fa.fa-check
+                    .media-body
+                      .media-heading Server Error Reports
+                      p.text-muted.small 3 minutes ago
+                  for val in ['1','2','3','4','5']
+                    a.dropdown-item.media.circle-box(href="#")
+                        .media-left
+                          img.media-object.circle-object(src="assets/images/face/"+val+".jpg", alt="")
+                        .media-body
+                          .media-heading Judith Sullivan
+                          p.text-muted.small Option wouldn't small hardly of and more believe The fundamentals
+                a.dropdown-item(href="#")
+                  .text-xs-center: i.ion-more
+
+      = '\n'
+      .col-sm-8
+        .panel.panel-default
+          .panel-heading
+            .panel-title Large & Checkbox
+          .panel-body(style="min-height:270px")
+            .dropdown.open
+              button#dropdownMenu6.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu.dropdown-menu-lg(aria-labelledby="dropdownMenu6")
+                .dropdown-item
+                  .checkbox.checkbox-success
+                    input(type="checkbox" checked)
+                    label Action
+                  .dropdown-item-desc  8 items
+                .dropdown-item
+                  .checkbox.checkbox-info
+                    input(type="checkbox" checked)
+                    label Another action
+                  .dropdown-item-desc  1 items
+                .dropdown-item
+                  .checkbox
+                    input(type="checkbox" checked)
+                    label Something else here Action
+                  .dropdown-item-desc  2 items
+
+      = '\n'
+      .col-sm-8
+        .panel.panel-default
+          .panel-heading
+            .panel-title Multilevel dropdown
+          .panel-body(style="min-height:380px")
+            .dropdown.open.pull-xs-left
+              button#dropdownMenu7.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-plugin="submenupicker" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu(aria-labelledby="dropdownMenu7")
+                a.dropdown-item(href="#") Action
+                a.dropdown-item(href="#") Another action
+                .dropdown-item.dropdown-submenu
+                  | Something else here
+                  .dropdown-menu
+                    a.dropdown-item(href="#") Action
+                    a.dropdown-item(href="#") Another action
+                    .dropdown-item.dropdown-submenu
+                      | Something else here
+                      .dropdown-menu
+                        a.dropdown-item(href="#") Action
+                        a.dropdown-item(href="#") Another action
+                    a.dropdown-item(href="#") Action
+                    a.dropdown-item(href="#") Another action
+                a.dropdown-item(href="#") Action
+                a.dropdown-item(href="#") Another action
+            .dropdown.pull-xs-right
+              button#dropdownMenu8.btn.btn-secondary.dropdown-toggle(type="button",  aria-haspopup="true", aria-expanded="false" data-plugin="submenupicker" data-toggle="dropdown")
+                | Dropdown
+              .dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenu8")
+                a.dropdown-item(href="#") Action
+                a.dropdown-item(href="#") Another action
+                .dropdown-item.dropdown-submenu
+                  | Something else here
+                  .dropdown-menu
+                    a.dropdown-item(href="#") Action
+                    a.dropdown-item(href="#") Another action
+                    .dropdown-item.dropdown-submenu
+                      | Something else here
+                      .dropdown-menu
+                        a.dropdown-item(href="#") Action
+                        a.dropdown-item(href="#") Another action
+                    a.dropdown-item(href="#") Action
+                    a.dropdown-item(href="#") Another action
+                a.dropdown-item(href="#") Action
+                a.dropdown-item(href="#") Another action
+
+      = '\n'
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title Split button dropdowns
+          .panel-body(style="min-height:380px")
+            .btn-group.open
+              button.btn.btn-secondary(type="button") Action
+              button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" )
+               span.sr-only Toggle Dropdown
+              .dropdown-menu
+                h6.dropdown-header Dropdown header
+                button.dropdown-item(type="button") Action
+                button.dropdown-item(type="button") Another action
+                button.dropdown-item(type="button") Something else here
+                .dropdown-divider
+                a.dropdown-item.dropdown-item-more(href="#")
+                  i.ion-more

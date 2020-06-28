@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<humans>
+<!-- MASTER MENU -->
+<menu><id>A</id><s>0</s><t>s</t><i>fa fa-home</i><n>Home</n><l>../home/index.php</l></menu>
+<menu><id>A1</id><s>0</s><t>m</t><i>fa fa-user</i><n>Absensi Wajah</n><l>#</l></menu>
+<menu><id>B</id><s>0</s><t>m</t><i>fa fa-edit</i><n>Master Data</n><l>#</l></menu>
+<menu><id>C</id><s>0</s><t>m</t><i>fa fa-calendar</i><n>Laporan</n><l>#</l></menu>
+
+<menu><id>B1</id><s>A1</s><t>sm</t><i>fa fa-edit</i><n>Absen Masuk</n><l>../data_absensi/index.php?input=tambah</l></menu>
+<menu><id>B1</id><s>A1</s><t>sm</t><i>fa fa-edit</i><n>Absen Keluar</n><l>../data_absensi2/index.php?input=tambah</l></menu>
+
+
+<!-- SUB MENU -->
+
+<menu><id>B1</id><s>B</s><t>sm</t><i>fa fa-edit</i><n>Data Absensi</n><l>../data_absensi/index.php</l></menu>
+<menu><id>B2</id><s>B</s><t>sm</t><i>fa fa-edit</i><n>Data Admin</n><l>../data_admin/index.php</l></menu>
+<menu><id>B3</id><s>B</s><t>sm</t><i>fa fa-edit</i><n>Data mahasiswa</n><l>../data_mahasiswa/index.php</l></menu>
+<menu><id>B4</id><s>B</s><t>sm</t><i>fa fa-edit</i><n>Data Jadwal</n><l>../data_jadwal/index.php</l></menu>
+<!-- SUB MENU -->
+<menu><id>C1</id><s>C</s><t>sm</t><i>fa fa-calendar</i><n>Data Absensi</n><l>../data_absensi/index.php?input=cetak</l></menu>
+<menu><id>C2</id><s>C</s><t>sm</t><i>fa fa-calendar</i><n>Data Admin</n><l>../data_admin/index.php?input=cetak</l></menu>
+<menu><id>C3</id><s>C</s><t>sm</t><i>fa fa-calendar</i><n>Data mahasiswa</n><l>../data_mahasiswa/index.php?input=cetak</l></menu>
+<menu><id>C4</id><s>C</s><t>sm</t><i>fa fa-calendar</i><n>Data Jadwal</n><l>../data_jadwal/index.php?input=cetak</l></menu>
+<!-- SUB MENU -->
+<menu><id>X1</id><s>X</s><t>x</t><i>fa fa-home</i><n>Data Absensi</n><l>../data_absensi/index.php</l></menu>
+<menu><id>X2</id><s>X</s><t>x</t><i>fa fa-home</i><n>Data Admin</n><l>../data_admin/index.php</l></menu>
+<menu><id>X3</id><s>X</s><t>x</t><i>fa fa-home</i><n>Data mahasiswa</n><l>../data_mahasiswa/index.php</l></menu>
+<menu><id>X4</id><s>X</s><t>x</t><i>fa fa-home</i><n>Data Jadwal</n><l>../data_jadwal/index.php</l></menu></humans>

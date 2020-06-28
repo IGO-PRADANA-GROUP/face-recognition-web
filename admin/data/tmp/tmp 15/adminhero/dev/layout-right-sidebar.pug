@@ -1,0 +1,61 @@
+extends ./partials/_base
+
+block contents
+    // TABLE OF CONTENTS.
+       Use search to find needed section.
+       ===================================================================
+       | 01. #CSS               | All CSS links and file paths           |
+       | 02. #FAVICONS          | Favicon icon, app icons                |
+       | 03. #BODY              | Body tag                               |
+       | 04. #SIDEMENU          | Dashboard panel & left navigation      |        
+       | 05. #MAIN              | Dashboard right wrapper                |
+       | 06. #VIEW              | Dashboard right wrapper inner wrapper  |
+       | 07. #TOP               | Top header navigation                  |
+       | 08. #TOP NAV           | Top header right navigation            |
+       | 09. #RIGHT BLOCK       | Right slide panel                      |
+       | 10. #PAGE HEADER       | Page top                               |
+       | 11. #LAYOUT            | Basic left right coloums               |
+       | 12. #PLUGINS           | All scripts and plugins                |
+       |                        |                                        |
+       |                        |                                        |
+       ===================================================================
+
+block main
+
+  = '\n'
+  // #LAYOUT
+  .layout
+    
+    = '\n'
+    // CONTENT
+    .layout-content(data-mh)
+
+      // #PAGE HEADER
+      // PAGE HEADER
+      .page-header
+        h2.page-header-title Right Sidebar Layout
+      ol.breadcrumb
+        li: a(href="index.html") Home
+        li.active Right Sidebar Layout
+      // END PAGE HEADER
+      = '\n'
+
+      // YOUR CONTENT
+      .container-fluid
+        .panel-wrapper
+          .panel
+            .panel-body
+              .demo-grid
+    // END CONTENT
+
+    = '\n'
+    // SIDEBAR
+    .layout-sidebar
+      .demo-grid.bg-dark(data-mh)
+      a.sidebar-togger(href="#"): i.ion-android-more-vertical
+    // END SIDEBAR
+
+
+
+
+

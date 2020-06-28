@@ -1,0 +1,74 @@
+a.file-item.selected,
+a.file-item:hover
+  border-color: $brand-primary
+  background-color: $brand-primary
+  .file-body
+    color: #fff
+
+.file-item
+  background-color: $gray-lighter
+  border-radius: $border-radius
+  margin-bottom: $grid-gutter-width
+  border: 1px solid $gray-lighter
+  display: block
+  width: 100%
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1)
+
+  .file-object
+    padding: $grid-gutter-width
+    background-color: #fff
+
+    iframe,
+    img
+      margin: -($grid-gutter-width)
+      width: 100%
+      width: calc(100% + #{$grid-gutter-width*2})
+      height: auto
+      +border-top-radius($border-radius)
+
+  .file-body
+    padding: $grid-gutter-width/2 $grid-gutter-width
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.file-group
+  +make-row
+  &.grid-view
+    .file-item
+      width: 18%
+      margin: 1%
+      float: left
+      .file-object
+        height: 120px
+        line-height: 120px
+        padding: 0
+        overflow: hidden
+        img,
+        iframe
+          margin: 0
+        iframe
+          width: 100%
+
+  &.list-view
+    margin: 0
+    .file-item
+      display: block
+      margin-bottom: 2px
+      +clearfix
+      .file-object
+        width: 40px
+        height: 40px
+        line-height: 40px
+        float: left
+        padding: 0
+        img
+          width: 38px
+          margin: 1px
+          top: -1px
+          position: relative
+      .file-body
+        padding: 0 $grid-gutter-width/2
+        line-height: 40px
+        overflow: auto
+

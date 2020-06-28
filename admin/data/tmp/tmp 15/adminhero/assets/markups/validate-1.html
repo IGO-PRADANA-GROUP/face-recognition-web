@@ -1,0 +1,89 @@
+<form class="js-validate-1" method="get" action="">
+  <div class="form-group text-xs-right">
+    <button class="btn btn-primary" type="submit">Click Submit to validate</button>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control-label" for="v-username">Username</label>
+    <input class="form-control focus" required="" data-parsley-trigger="change" id="v-username" name="v-username" type="text" placeholder="username">
+  </div>
+
+  <div class="form-group">
+    <label class="form-control-label" for="v-email">Email</label>
+    <input class="form-control focus" required="" id="v-email" name="v-email" type="email" placeholder="username">
+  </div>
+
+  <div class="form-group">
+    <label class="form-control-label" for="v-language">Language</label>
+    <select class="form-control c-select" required="" id="v-language">
+      <option value="">Select</option>
+      <option value="us">US</option>
+      <option value="uk">UK</option>
+      <option value="cn">CN</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control-label" for="v-message">Message</label>
+    <textarea class="form-control" required="" id="v-message" name="v-message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="At least a 20 character comment.." data-parsley-validation-threshold="10" rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 98px;"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control-label" for="v-sizes">Sizes</label>
+    <div class="checkbox">
+      <input name="v-sizes" id="sizesF" type="checkbox" value="" required="" data-parsley-mincheck="2" data-parsley-multiple="v-sizes">
+      <label>S</label>
+    </div>
+    <div class="checkbox">
+      <input name="v-sizes" id="sizesM" type="checkbox" value="" data-parsley-multiple="v-sizes">
+      <label>M</label>
+    </div>
+    <div class="checkbox">
+      <input name="v-sizes" id="sizesO" type="checkbox" value="" data-parsley-multiple="v-sizes">
+      <label>L</label>
+    </div>
+    <div class="checkbox">
+      <input name="v-sizes" id="sizesXL" type="checkbox" value="" data-parsley-multiple="v-sizes">
+      <label>XL</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control-label" for="v-colour">Colour</label>
+    <div class="radio">
+      <input name="v-colour" id="colourB" type="radio" value="" required="" data-parsley-multiple="v-colour">
+      <label>Block</label>
+    </div>
+    <div class="radio">
+      <input name="v-colour" id="colourW" type="radio" value="" data-parsley-multiple="v-colour">
+      <label>White</label>
+    </div>
+  </div>
+
+  <div class="form-group text-xs-right">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
+
+<script>
+  $(".js-validate-1").parsley({
+      successClass: "has-success",
+      errorClass: "has-danger",
+      classHandler: function (el) {
+        return el.$element.closest('.form-group');
+      },
+      errorsContainer: function (el) {
+        return el.$element.closest('.form-group');
+      },
+      errorsWrapper: "<small class='text-danger help-block'></small>",
+      errorTemplate: "<span></span>",
+  });
+
+  window.Parsley.on('field:error', function() {
+    this.$element.addClass('form-control-danger')
+  });
+
+  window.Parsley.on('field:success', function() {
+    this.$element.addClass('form-control-success')
+  });
+</script>
